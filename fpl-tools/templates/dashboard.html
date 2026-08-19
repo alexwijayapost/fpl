@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FPL 2026/27 — GW1 Squad</title>
+<style>
+:root{
+  color-scheme: dark;
+  --surface-1:#1a1a19; --plane:#0d0d0d;
+  --ink:#ffffff; --ink-2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --ring:rgba(255,255,255,0.10);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  --fdr1:#184f95; --fdr2:#2a78d6; --fdr3:#383835; --fdr4:#e17070; --fdr5:#d03b3b;
+  --ink1:#fff; --ink2:#fff; --ink3:#fff; --ink4:#0d0d0d; --ink5:#fff;
+}
+@media (prefers-color-scheme: light){
+ :root:where(:not([data-theme="dark"])){
+  color-scheme: light;
+  --surface-1:#fcfcfb; --plane:#f9f9f7;
+  --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --ring:rgba(11,11,11,0.10);
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300;
+  --fdr1:#184f95; --fdr2:#86b6ef; --fdr3:#f0efec; --fdr4:#ec835a; --fdr5:#d03b3b;
+  --ink1:#fff; --ink2:#0b0b0b; --ink3:#0b0b0b; --ink4:#0b0b0b; --ink5:#fff;
+ }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--plane);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;
+  padding:16px 14px 64px;-webkit-text-size-adjust:100%}
+.wrap{max-width:900px;margin:0 auto}
+h1{font-size:22px;margin:0 0 2px;letter-spacing:-0.01em}
+h2{font-size:15px;margin:30px 0 10px;letter-spacing:-0.005em}
+h2 span{color:var(--muted);font-weight:400;font-size:13px;margin-left:6px}
+.sub{color:var(--ink-2);font-size:13px;margin:0 0 18px}
+.card{background:var(--surface-1);border:1px solid var(--ring);border-radius:12px;
+  padding:14px;margin-bottom:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin-bottom:6px}
+.tile{background:var(--surface-1);border:1px solid var(--ring);border-radius:10px;padding:10px 12px}
+.tile .v{font-size:22px;font-weight:600;letter-spacing:-0.02em;line-height:1.15}
+.tile .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th{text-align:right;color:var(--muted);font-weight:500;font-size:11px;text-transform:uppercase;
+  letter-spacing:.05em;padding:0 0 7px;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+td{padding:7px 0;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.nm{font-weight:500;color:var(--ink)}
+.mt{color:var(--muted);font-size:11px;font-weight:400}
+.pos{display:inline-block;min-width:30px;font-size:10px;color:var(--muted);
+  border:1px solid var(--axis);border-radius:4px;padding:1px 4px;text-align:center;margin-right:6px}
+.cap{display:inline-block;background:var(--s4);color:#0d0d0d;font-size:10px;font-weight:700;
+  border-radius:4px;padding:1px 4px;margin-left:5px;vertical-align:1px}
+.bar{display:flex;height:9px;border-radius:4px;overflow:hidden;background:var(--grid);min-width:74px}
+.bar i{display:block;height:100%;box-shadow:0 0 0 1px var(--surface-1) inset}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:var(--ink-2);margin:10px 0 2px}
+.legend b{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.tk{width:100%;border-collapse:separate;border-spacing:2px;font-size:11px;font-variant-numeric:tabular-nums}
+.tk th{padding:0 0 5px;border:none;text-align:center}
+.tk td{padding:0;border:none;text-align:center}
+.tk .tm{text-align:left;color:var(--ink);font-weight:500;font-size:12px;width:44px;padding-right:4px}
+.cell{border-radius:5px;padding:5px 2px;font-weight:500;letter-spacing:.02em}
+.cell.f1{background:var(--fdr1);color:var(--ink1)}
+.cell.f2{background:var(--fdr2);color:var(--ink2)}
+.cell.f3{background:var(--fdr3);color:var(--ink3)}
+.cell.f4{background:var(--fdr4);color:var(--ink4)}
+.cell.f5{background:var(--fdr5);color:var(--ink5)}
+.cell small{display:block;font-size:9px;opacity:.75;font-weight:400;letter-spacing:0}
+.tabs{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.tabs button{background:var(--surface-1);color:var(--ink-2);border:1px solid var(--ring);
+  border-radius:7px;padding:5px 11px;font:inherit;font-size:12px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--s1);color:#fff;border-color:transparent}
+.note{font-size:12.5px;color:var(--ink-2);margin:8px 0 0}
+.note b{color:var(--ink);font-weight:600}
+.pill{display:inline-block;font-size:10px;padding:1px 6px;border-radius:99px;border:1px solid var(--axis);color:var(--muted)}
+.scn{display:grid;grid-template-columns:1fr auto auto;gap:6px 12px;font-size:13px;align-items:baseline}
+.scn .d{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.scn .best{color:var(--good);font-weight:600}
+.hr{height:1px;background:var(--grid);margin:26px 0 0}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--muted)}
+.foot{color:var(--muted);font-size:11.5px;margin-top:26px;line-height:1.6}
+.banner{font-size:12px;color:var(--ink-2);border:1px solid var(--ring);border-left:3px solid var(--s1);
+  border-radius:8px;padding:8px 11px;margin:0 0 14px;background:var(--surface-1)}
+.banner.stale{border-left-color:var(--warn)}
+.verdict{font-size:16px;font-weight:600;margin:0 0 10px;letter-spacing:-0.01em}
+@media(max-width:520px){ .hide-s{display:none} body{font-size:14px} h1{font-size:19px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1 id="title">FPL 2026/27</h1>
+<p class="sub" id="sub"></p>
+<div class="banner" id="prov"></div>
+
+<div class="tiles" id="tiles"></div>
+
+<section id="transfer-block" hidden>
+  <h2>The transfer call</h2>
+  <div class="card">
+    <p class="verdict" id="verdict"></p>
+    <div class="scn" id="topts"></div>
+    <p class="note" id="tnote"></p>
+  </div>
+</section>
+
+<h2 id="h-xi">Starting XI</h2>
+<div class="card"><table id="xi"></table></div>
+
+<h2>Bench <span>in order</span></h2>
+<div class="card"><table id="bench"></table></div>
+
+<h2>Where the points come from <span>GW1–6 projected, per player</span></h2>
+<div class="card">
+  <div class="legend" id="legend"></div>
+  <table id="comp"></table>
+  <details><summary>Show as numbers</summary><table id="comptab"></table></details>
+</div>
+
+<h2>Fixture ticker <span>GW1–6, 1 = easiest</span></h2>
+<div class="card">
+  <div class="tabs" id="tksort">
+    <button data-s="avg" aria-selected="true">Best run first</button>
+    <button data-s="name" aria-selected="false">A–Z</button>
+  </div>
+  <table class="tk" id="ticker"></table>
+  <p class="note">Difficulty is built from each opponent's own attack and defence rating from last season, adjusted for venue — not FPL's official pre-season FDR, which is set before a ball is kicked and goes stale by October. Promoted sides carry a first-season prior.</p>
+</div>
+
+<h2 id="h-cap">Captain</h2>
+<div class="card">
+  <p class="verdict" id="capcall"></p>
+  <table id="caps"></table>
+  <p class="note">Ceiling and blank chance come from a points distribution, not just the average. In your classic league a blank costs you rank against everyone at once, so the steady pick is usually right. In head-to-head you only need to beat one manager, which makes a high ceiling on a player your opponent doesn't own worth more than it looks.</p>
+</div>
+
+<h2>The alternatives I tested</h2>
+<div class="card">
+  <div class="scn" id="scn"></div>
+  <p class="note" id="scnnote"></p>
+</div>
+
+<h2>Differentials <span>under 8% owned, secure minutes</span></h2>
+<div class="card"><table id="diff"></table></div>
+
+<h2>Top projected by position</h2>
+<div class="card">
+  <div class="tabs" id="postabs"></div>
+  <table id="best"></table>
+</div>
+
+<p class="foot" id="foot"></p>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const $ = s => document.querySelector(s);
+const el = (t,c,h) => { const n=document.createElement(t); if(c)n.className=c; if(h!=null)n.innerHTML=h; return n; };
+const f1 = v => (Math.round(v*10)/10).toFixed(1);
+
+const COMP = [
+ ['pts_goal','Goals','var(--s1)'], ['pts_ast','Assists','var(--s2)'],
+ ['pts_cs','Clean sheets','var(--s3)'], ['pts_dc','DefCon','var(--s4)'],
+ ['pts_bonus','Bonus','var(--s5)'], ['pts_app','Appearance','var(--s6)']
+];
+
+/* ---- header ---- */
+const M = D.meta, G0 = M.gw, G1 = M.gw_last;
+$('#title').textContent = `FPL 2026/27 — gameweek ${G0}`;
+$('#h-xi').innerHTML = `Starting XI <span>gameweek ${G0}</span>`;
+$('#h-cap').innerHTML = `Captain <span>gameweek ${G0}</span>`;
+document.title = `FPL — GW${G0}`;
+[...document.querySelectorAll('h2 span')].forEach(s=>{
+  s.textContent = s.textContent.replace(/GW1–6/g, `GW${G0}–${G1}`);
+});
+const dl = M.deadline ? new Date(M.deadline) : null;
+$('#sub').textContent =
+  `Optimised over gameweeks ${G0}–${G1}.` +
+  (dl ? ` Deadline ${dl.toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',
+        hour:'2-digit',minute:'2-digit',timeZone:'Asia/Jakarta'})} Jakarta.` : '');
+
+const prov = $('#prov');
+prov.innerHTML = `Data source: <b>${M.source}</b>, pulled ${new Date(M.fetched_at)
+  .toLocaleString('en-GB',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',
+  timeZone:'Asia/Jakarta'})} Jakarta.` +
+  (M.stale ? ' Injury flags and ownership on this run may be a day behind the live game — check anyone flagged on the FPL site before you confirm.' : '');
+if (M.stale) prov.classList.add('stale');
+
+const tiles = [
+  ['£'+f1(M.cost)+'m','squad cost'],
+  ['£'+f1(M.bank)+'m','in the bank'],
+  [f1(M.xp_gw1),`GW${G0} XI xP`],
+  [f1(M.xp_h),`GW${G0}–${G1} xP`],
+];
+tiles.forEach(([v,k])=>{const t=el('div','tile');t.append(el('div','v',v),el('div','k',k));$('#tiles').append(t)});
+
+/* ---- squad tables ---- */
+const ORD={GK:0,DEF:1,MID:2,FWD:3};
+function playerRows(rows, tbl, showOwn){
+  tbl.innerHTML='';
+  const h=el('tr'); h.innerHTML='<th>Player</th><th class="hide-s">Start%</th>'+
+    (showOwn?'<th class="hide-s">Owned</th>':'')+'<th>£</th><th>GW1 xP</th><th>GW1–6</th>';
+  tbl.append(el('thead','',''), el('tbody'));
+  tbl.querySelector('thead').append(h);
+  const b=tbl.querySelector('tbody');
+  rows.forEach(p=>{
+    const tr=el('tr');
+    tr.innerHTML =
+      `<td><span class="pos">${p.pos}</span><span class="nm">${p.name}</span>`+
+      `${p.captain?'<span class="cap">C</span>':''}`+
+      `${p.prior?' <span class="pill" title="No Premier League minutes to model from — this projection is a price-based guess">guess</span>':''}`+
+      `<div class="mt" style="padding-left:36px">${p.team} · `+
+      `${p.gws.slice(0,3).map(g=>g.opp+(g.home?' (H)':' (A)')).join(', ')}</div></td>`+
+      `<td class="hide-s">${Math.round(p.p_start*100)}%</td>`+
+      (showOwn?`<td class="hide-s">${p.owned}%</td>`:'')+
+      `<td>${f1(p.price)}</td><td>${p.xp_gw1.toFixed(1)}</td><td>${p.xp_h.toFixed(1)}</td>`;
+    b.append(tr);
+  });
+}
+const sq=[...D.squad].sort((a,b)=>ORD[a.pos]-ORD[b.pos]||b.xp_gw1-a.xp_gw1);
+playerRows(sq.filter(p=>p.start), $('#xi'), true);
+const bench=sq.filter(p=>!p.start).sort((a,b)=> (a.pos==='GK')-(b.pos==='GK') || b.xp_gw1-a.xp_gw1);
+playerRows(bench, $('#bench'), true);
+
+/* ---- component bars ---- */
+D.legend = COMP;
+COMP.forEach(([k,label,c])=>{
+  $('#legend').append(el('span','',`<b style="background:${c}"></b>${label}`));
+});
+(function(){
+  const t=$('#comp'); t.append(el('thead'),el('tbody'));
+  t.querySelector('thead').innerHTML='<tr><th>Player</th><th style="width:44%">Breakdown</th><th>GW1–6</th></tr>';
+  const b=t.querySelector('tbody');
+  sq.forEach(p=>{
+    const tot=COMP.reduce((s,[k])=>s+Math.max(0,p.comp[k]),0)||1;
+    const seg=COMP.map(([k,l,c])=>`<i style="width:${Math.max(0,p.comp[k])/tot*100}%;background:${c}" title="${l}"></i>`).join('');
+    b.append(el('tr','',`<td><span class="nm">${p.name}</span> <span class="mt">${p.pos}</span></td>`+
+      `<td><div class="bar">${seg}</div></td><td>${p.xp_h.toFixed(1)}</td>`));
+  });
+  const tt=$('#comptab'); tt.append(el('thead'),el('tbody'));
+  tt.querySelector('thead').innerHTML='<tr><th>Player</th>'+COMP.map(([k,l])=>`<th>${l.split(' ')[0]}</th>`).join('')+'</tr>';
+  const bb=tt.querySelector('tbody');
+  sq.forEach(p=>bb.append(el('tr','',`<td>${p.name}</td>`+COMP.map(([k])=>`<td>${p.comp[k].toFixed(1)}</td>`).join(''))));
+})();
+
+/* ---- fixture ticker ---- */
+const fdrBand = v => v<1.8?'f1' : v<2.6?'f2' : v<3.4?'f3' : v<4.2?'f4' : 'f5';
+function drawTicker(sort){
+  const t=$('#ticker'); t.innerHTML='';
+  const gws=D.ticker[Object.keys(D.ticker)[0]].fixtures.map(f=>f.gw);
+  const head=el('tr'); head.innerHTML='<th class="tm"></th>'+gws.map(g=>`<th>GW${g}</th>`).join('')+'<th>avg</th>';
+  const th=el('thead'); th.append(head); t.append(th);
+  const tb=el('tbody');
+  Object.entries(D.ticker)
+    .sort((a,b)=> sort==='avg' ? a[1].avg-b[1].avg : a[0].localeCompare(b[0]))
+    .forEach(([team,d])=>{
+      const tr=el('tr'); tr.append(el('td','tm',team));
+      d.fixtures.forEach(f=>{
+        tr.append(el('td','',`<div class="cell ${fdrBand(f.fdr)}">${f.opp}<small>${f.home?'H':'A'} · ${f.fdr.toFixed(1)}</small></div>`));
+      });
+      tr.append(el('td','',`<span class="mt">${d.avg.toFixed(2)}</span>`));
+      tb.append(tr);
+    });
+  t.append(tb);
+}
+drawTicker('avg');
+$('#tksort').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b)return;
+  [...$('#tksort').children].forEach(x=>x.setAttribute('aria-selected', x===b));
+  drawTicker(b.dataset.s);
+});
+
+/* ---- captains ---- */
+(function(){
+  const C = D.captain;
+  $('#capcall').textContent = C.note;
+  const t=$('#caps'); t.append(el('thead'),el('tbody'));
+  t.querySelector('thead').innerHTML =
+    '<tr><th>Player</th><th class="hide-s">Owned</th><th>xP</th><th>as (C)</th>'+
+    '<th>Haul ≥10</th><th>Blank ≤2</th></tr>';
+  const b=t.querySelector('tbody');
+  const mine=new Set(D.squad.map(p=>p.id));
+  C.options.forEach(c=>{
+    const tag = c.name===C.safest ? ' <span class="pill">steady</span>'
+              : c.name===C.highest_ceiling ? ' <span class="pill">ceiling</span>' : '';
+    b.append(el('tr','',
+      `<td><span class="pos">${c.pos}</span><span class="nm">${c.name}</span> `+
+      `<span class="mt">${c.team} v ${c.opp} (${c.home?'H':'A'})</span>${tag}`+
+      `${mine.has(c.id)?'':' <span class="pill">not in squad</span>'}</td>`+
+      `<td class="hide-s">${c.owned}%</td><td>${c.xp.toFixed(1)}</td>`+
+      `<td>${(c.xp*2).toFixed(1)}</td><td>${Math.round(c.p_haul*100)}%</td>`+
+      `<td>${Math.round(c.p_blank*100)}%</td>`));
+  });
+})();
+
+/* ---- transfer call (only in transfer mode) ---- */
+if (D.transfer) {
+  const T = D.transfer;
+  $('#transfer-block').hidden = false;
+  $('#verdict').textContent = T.verdict;
+  const g = $('#topts');
+  g.append(el('div','mt','Move'), el('div','mt','xP'), el('div','mt','net of hits'));
+  T.options.forEach(o=>{
+    g.append(el('div','', o.label),
+             el('div','d', o.raw.toFixed(1)),
+             el('div', o.best?'best':'d', o.net.toFixed(1)));
+  });
+  $('#tnote').innerHTML = T.detail;
+}
+
+/* ---- scenarios ---- */
+if (!D.scenarios || !D.scenarios.length) {
+  $('#scn').closest('.card').previousElementSibling.remove();
+  $('#scn').closest('.card').remove();
+} else (function(){
+  const base=D.scenarios[0].total, g=$('#scn');
+  g.append(el('div','mt','Scenario'), el('div','mt','GW1–6 xP'), el('div','mt','vs best'));
+  D.scenarios.forEach(s=>{
+    const d=s.total-base;
+    g.append(el('div','',s.label),
+             el('div','d',s.total.toFixed(1)),
+             el('div', d===0?'best':'d', d===0?'best':d.toFixed(1)));
+  });
+  $('#scnnote').innerHTML = D.scenario_note || '';
+})();
+
+/* ---- differentials ---- */
+(function(){
+  const t=$('#diff'); t.append(el('thead'),el('tbody'));
+  t.querySelector('thead').innerHTML='<tr><th>Player</th><th>Owned</th><th>£</th><th>GW1–6 xP</th></tr>';
+  const b=t.querySelector('tbody');
+  D.differentials.forEach(d=>b.append(el('tr','',
+    `<td><span class="pos">${d.pos}</span><span class="nm">${d.name}</span> <span class="mt">${d.team}</span></td>`+
+    `<td>${d.owned}%</td><td>${f1(d.price)}</td><td>${d.xp_h.toFixed(1)}</td>`)));
+})();
+
+/* ---- best by position ---- */
+(function(){
+  const tabs=$('#postabs');
+  ['GK','DEF','MID','FWD'].forEach((p,i)=>{
+    const b=el('button','',p); b.dataset.p=p; b.setAttribute('aria-selected', i===0); tabs.append(b);
+  });
+  function draw(pos){
+    const t=$('#best'); t.innerHTML=''; t.append(el('thead'),el('tbody'));
+    t.querySelector('thead').innerHTML='<tr><th>Player</th><th class="hide-s">Start%</th><th class="hide-s">Owned</th><th>£</th><th>GW1</th><th>GW1–6</th><th>per £m</th></tr>';
+    const b=t.querySelector('tbody');
+    D.best[pos].forEach(r=>b.append(el('tr','',
+      `<td><span class="nm">${r.name}</span> <span class="mt">${r.team}</span>`+
+      `${r.prior?' <span class="pill">guess</span>':''}</td>`+
+      `<td class="hide-s">${Math.round(r.p_start*100)}%</td><td class="hide-s">${r.owned}%</td>`+
+      `<td>${f1(r.price)}</td><td>${r.xp_gw1.toFixed(1)}</td><td>${r.xp_h.toFixed(1)}</td><td>${r.value.toFixed(2)}</td>`)));
+  }
+  draw('GK');
+  tabs.addEventListener('click',e=>{
+    const b=e.target.closest('button'); if(!b)return;
+    [...tabs.children].forEach(x=>x.setAttribute('aria-selected', x===b));
+    draw(b.dataset.p);
+  });
+})();
+
+$('#foot').innerHTML =
+  'Projections blend 2025-26 per-90 output with 2026/27 prices, clubs and injury status. '+
+  'Team strength is derived from last season\'s expected goals for and against; promoted sides use a '+
+  'first-season prior. DefCon is modelled as P(hitting the 10/12-action threshold) per match. '+
+  'Start probability blends last season\'s starts with price rank inside each club and position — '+
+  'it is the weakest link in any public model and the thing to override when team news lands. '+
+  'Data: vaastav/Fantasy-Premier-League mirror.';
+</script>
+</body>
+</html>
