@@ -11,7 +11,7 @@
    "xp_h": 23.1,
    "start": true,
    "captain": false,
-   "owned": 35.8,
+   "owned": 35.9,
    "prior": false,
    "comp": {
     "pts_goal": 0.0,
@@ -133,7 +133,7 @@
    "xp_h": 27.7,
    "start": true,
    "captain": false,
-   "owned": 19.3,
+   "owned": 19.2,
    "prior": false,
    "comp": {
     "pts_goal": 2.72,
@@ -438,7 +438,7 @@
    "xp_h": 22.0,
    "start": false,
    "captain": false,
-   "owned": 28.6,
+   "owned": 28.7,
    "prior": false,
    "comp": {
     "pts_goal": 9.95,
@@ -560,7 +560,7 @@
    "xp_h": 38.3,
    "start": true,
    "captain": true,
-   "owned": 49.8,
+   "owned": 49.9,
    "prior": false,
    "comp": {
     "pts_goal": 11.32,
@@ -621,7 +621,7 @@
    "xp_h": 28.7,
    "start": true,
    "captain": false,
-   "owned": 33.3,
+   "owned": 33.5,
    "prior": false,
    "comp": {
     "pts_goal": 11.82,
@@ -1747,7 +1747,7 @@
     "p_start": 0.9,
     "xp_gw1": 4.19,
     "xp_h": 23.1,
-    "owned": 35.8,
+    "owned": 35.9,
     "prior": false,
     "value": 3.85
    },
@@ -1813,7 +1813,7 @@
     "p_start": 0.82,
     "xp_gw1": 3.18,
     "xp_h": 18.1,
-    "owned": 19.6,
+    "owned": 19.7,
     "prior": false,
     "value": 4.03
    },
@@ -2068,7 +2068,7 @@
     "p_start": 0.73,
     "xp_gw1": 3.74,
     "xp_h": 20.1,
-    "owned": 4.7,
+    "owned": 4.8,
     "prior": false,
     "value": 4.02
    }
@@ -2081,7 +2081,7 @@
     "p_start": 0.95,
     "xp_gw1": 6.68,
     "xp_h": 38.3,
-    "owned": 49.8,
+    "owned": 49.9,
     "prior": false,
     "value": 3.19
    },
@@ -2103,7 +2103,7 @@
     "p_start": 0.89,
     "xp_gw1": 5.03,
     "xp_h": 28.7,
-    "owned": 33.3,
+    "owned": 33.5,
     "prior": false,
     "value": 3.59
    },
@@ -2114,7 +2114,7 @@
     "p_start": 0.94,
     "xp_gw1": 5.09,
     "xp_h": 27.7,
-    "owned": 19.3,
+    "owned": 19.2,
     "prior": false,
     "value": 3.69
    },
@@ -2158,7 +2158,7 @@
     "p_start": 0.79,
     "xp_gw1": 4.11,
     "xp_h": 26.0,
-    "owned": 10.6,
+    "owned": 10.5,
     "prior": false,
     "value": 2.74
    },
@@ -2169,7 +2169,7 @@
     "p_start": 0.8,
     "xp_gw1": 4.84,
     "xp_h": 25.3,
-    "owned": 8.5,
+    "owned": 8.4,
     "prior": false,
     "value": 3.62
    },
@@ -2270,7 +2270,7 @@
     "p_start": 0.83,
     "xp_gw1": 3.95,
     "xp_h": 24.8,
-    "owned": 61.7,
+    "owned": 61.8,
     "prior": false,
     "value": 3.3
    },
@@ -2303,7 +2303,7 @@
     "p_start": 0.78,
     "xp_gw1": 3.65,
     "xp_h": 22.0,
-    "owned": 28.6,
+    "owned": 28.7,
     "prior": false,
     "value": 3.66
    },
@@ -2447,7 +2447,7 @@
    "team": "BRE",
    "price": 6.5,
    "xp_h": 22.9,
-   "owned": 1.4
+   "owned": 1.3
   },
   {
    "name": "Mateta",
@@ -2515,15 +2515,15 @@
     "pos": "MID",
     "opp": "HUL",
     "home": false,
-    "owned": 49.8,
-    "eo": 79.7,
+    "owned": 49.9,
+    "eo": 79.8,
     "xp": 6.46,
     "p_haul": 0.178,
     "p_blank": 0.047,
     "p_double_digit": 0.178,
     "ceiling": 14,
-    "swing_up": 2.63,
-    "swing_down": -10.29
+    "swing_up": 2.6,
+    "swing_down": -10.32
    },
    {
     "id": 4,
@@ -2549,15 +2549,15 @@
     "pos": "MID",
     "opp": "HUL",
     "home": false,
-    "owned": 33.3,
-    "eo": 53.3,
+    "owned": 33.5,
+    "eo": 53.6,
     "xp": 5.68,
     "p_haul": 0.129,
     "p_blank": 0.115,
     "p_double_digit": 0.129,
     "ceiling": 13,
-    "swing_up": 5.31,
-    "swing_down": -6.05
+    "swing_up": 5.27,
+    "swing_down": -6.09
    },
    {
     "id": 106,
@@ -2672,7 +2672,7 @@
   "xp_gw1": 52.3,
   "xp_h": 344.72,
   "source": "official FPL API",
-  "fetched_at": "2026-08-20T08:20:48+00:00",
+  "fetched_at": "2026-08-20T10:05:10+00:00",
   "deadline": "2026-08-21T17:30:00Z",
   "stale": false
  }

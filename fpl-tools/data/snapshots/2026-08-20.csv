@@ -1,17 +1,17 @@
 id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,status,chance_of_playing_next_round
-1,Raya,60,35.8,0,0,a,
+1,Raya,60,35.9,0,0,a,
 2,Arrizabalaga,50,0.1,0,0,a,
 3,Meslier,50,0.0,0,0,a,
 4,Gabriel,80,29.4,0,0,a,
 5,J.Timber,65,0.2,0,0,i,0.0
 6,Saliba,60,0.4,0,0,i,0.0
 7,Lewis-Skelly,55,0.5,0,0,a,
-8,Calafiori,55,31.1,0,0,a,
+8,Calafiori,55,31.3,0,0,a,
 9,Hincapie,55,2.4,0,0,a,
 10,White,55,3.5,0,0,a,100.0
-11,Mosquera,55,9.5,0,0,a,
+11,Mosquera,55,9.4,0,0,a,
 12,Saka,95,9.4,0,0,a,
-13,Rice,75,19.3,0,0,a,
+13,Rice,75,19.2,0,0,a,
 14,Eze,65,2.3,0,0,a,
 15,Ødegaard,65,6.4,0,0,a,
 16,Madueke,65,0.3,0,0,a,
@@ -25,12 +25,12 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 25,Gyökeres,75,10.2,0,0,a,
 26,Havertz,75,4.7,0,0,a,
 27,G.Jesus,60,0.4,0,0,a,
-452,Bruno G.,70,8.5,0,0,a,
-557,Tzolis,65,18.5,0,0,a,
+452,Bruno G.,70,8.4,0,0,a,
+557,Tzolis,65,18.7,0,0,a,
 28,Martinez,50,4.6,0,0,a,
 29,M.Bizot,45,0.1,0,0,a,
 30,Digne,45,0.3,0,0,u,0.0
-31,Konsa,45,16.1,0,0,a,
+31,Konsa,45,16.0,0,0,a,
 32,Cash,45,8.5,0,0,a,
 33,Mings,45,0.3,0,0,a,
 34,Pau,45,0.4,0,0,a,
@@ -71,7 +71,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 70,Kluivert,60,1.1,0,0,a,
 71,Cook,50,0.1,0,0,a,
 72,Gannon-Doak,50,0.1,0,0,a,
-73,Adams,50,0.4,0,0,d,75.0
+73,Adams,50,0.3,0,0,d,75.0
 74,Brooks,50,0.1,0,0,d,75.0
 75,Christie,50,0.0,0,0,s,0.0
 76,Tóth.A,50,0.0,0,0,a,
@@ -95,7 +95,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 92,Ji-soo,45,0.0,0,0,a,
 93,Schuster,45,0.2,0,0,a,
 94,Schade,60,3.4,0,0,a,
-95,O.Dango,65,1.4,0,0,a,
+95,O.Dango,65,1.3,0,0,a,
 96,Damsgaard,55,0.6,0,0,a,
 97,Jensen,55,0.2,0,0,a,
 98,Janelt,50,0.1,0,0,a,
@@ -108,7 +108,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 107,Furo,45,0.8,0,0,a,
 108,Wilson,55,0.3,0,0,a,
 565,Sangaré,55,2.7,0,0,a,
-109,Verbruggen,45,19.6,0,0,a,
+109,Verbruggen,45,19.7,0,0,a,
 111,Steele,40,4.3,0,0,a,
 113,F.Kadıoğlu,45,3.1,0,0,a,
 114,Boscagli,45,0.2,0,0,a,
@@ -121,15 +121,15 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 121,Mitoma,60,0.1,0,0,i,0.0
 122,Minteh,60,0.2,0,0,i,0.0
 123,Hinshelwood,60,0.4,0,0,a,
-124,Groß,55,13.1,0,0,a,
+124,Groß,55,13.2,0,0,a,
 125,Georginio,55,1.0,0,0,a,
 126,O'Riley,55,0.1,0,0,a,
-127,Gomez,50,2.9,0,0,a,
+127,Gomez,50,3.0,0,0,a,
 128,Buonanotte,50,0.0,0,0,u,0.0
 129,Ayari,55,0.7,0,0,a,
 130,Wieffer,50,0.3,0,0,a,
 131,Baleba,50,0.2,0,0,i,0.0
-132,Howell,45,0.2,0,0,u,0.0
+132,Howell,45,0.1,0,0,u,0.0
 133,Watson,50,0.0,0,0,u,0.0
 134,Oriola,45,0.2,0,0,a,
 135,Yohanna,50,0.1,0,0,a,
@@ -156,7 +156,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 151,Acheampong,45,0.3,0,0,a,
 152,Palestra,55,2.8,0,0,a,
 153,Disasi,45,0.1,0,0,a,
-154,Palmer,95,10.6,0,0,a,
+154,Palmer,95,10.5,0,0,a,
 155,Enzo,70,5.1,0,0,a,
 156,Neto,65,1.3,0,0,a,
 157,Estêvão,65,1.3,0,0,a,
@@ -165,7 +165,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 161,Lavia,50,0.0,0,0,a,
 163,D.Essugo,45,0.2,0,0,a,
 164,Quenda,55,0.0,0,0,a,100.0
-165,João Pedro,75,61.7,0,0,a,
+165,João Pedro,75,61.8,0,0,a,
 166,N.Jackson,65,0.3,0,0,a,
 167,Delap,55,0.5,0,0,a,
 168,Marc Guiu,50,0.4,0,0,a,
@@ -313,7 +313,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 295,McBurnie,55,1.5,0,0,a,
 296,Akintola,50,0.0,0,0,a,
 297,Gyabi,45,0.0,0,0,i,0.0
-298,Destan,45,1.1,0,0,u,0.0
+298,Destan,45,1.0,0,0,u,0.0
 299,Burstow,45,0.1,0,0,u,0.0
 340,Gelhardt,50,0.0,0,0,i,0.0
 556,Targett,40,2.7,0,0,a,
@@ -332,7 +332,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 303,Kipré,40,0.6,0,0,a,
 304,O'Shea,40,3.2,0,0,a,
 305,Davis,40,5.2,0,0,a,
-306,Greaves,40,1.1,0,0,a,
+306,Greaves,40,1.2,0,0,a,
 307,Johnson,40,0.1,0,0,a,
 308,Furlong,40,0.6,0,0,a,
 309,Núñez,50,0.1,0,0,a,
@@ -376,7 +376,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 343,James,50,0.1,0,0,a,
 344,Gruev,50,0.0,0,0,i,0.0
 345,Tanaka,50,0.3,0,0,a,
-346,Calvert-Lewin,60,28.6,0,0,a,
+346,Calvert-Lewin,60,28.7,0,0,a,
 347,Nmecha,55,0.6,0,0,a,
 348,Piroe,50,0.4,0,0,u,0.0
 349,Mateo Joseph,45,0.1,0,0,i,0.0
@@ -410,7 +410,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 376,Bajcetic,50,0.0,0,0,i,0.0
 377,Munoz,65,0.6,0,0,a,
 378,McConnell,45,0.2,0,0,a,
-379,Isak,90,16.0,0,0,a,
+379,Isak,90,16.1,0,0,a,
 380,Ekitiké,75,0.2,0,0,i,0.0
 381,Koumas,50,0.0,0,0,a,
 382,Danns,45,0.0,0,0,i,0.0
@@ -432,7 +432,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 397,Semenyo,85,26.5,0,0,a,
 398,Foden,70,4.5,0,0,a,
 399,Cherki,75,7.9,0,0,a,
-400,Doku,75,4.6,0,0,d,75.0
+400,Doku,75,4.5,0,0,d,75.0
 401,Marmoush,70,0.8,0,0,a,
 402,Rodrigo,65,0.0,0,0,u,0.0
 403,Savinho,65,0.1,0,0,a,
@@ -444,28 +444,28 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 409,Mukasa,45,0.2,0,0,a,
 410,Monga,50,0.0,0,0,a,
 411,Haaland,155,69.5,0,0,a,
-481,Anderson,65,9.0,0,0,a,
+481,Anderson,65,8.9,0,0,a,
 587,Rulli,50,0.0,0,0,a,
 43,Tielemans,60,2.3,0,0,a,100.0
 162,Andrey Santos,50,1.1,0,0,a,
 325,Darlow,45,0.0,0,0,d,75.0
 412,Lammens,50,17.8,0,0,a,
 413,Bayindir,45,0.0,0,0,u,0.0
-414,Heaton,40,0.2,0,0,i,0.0
+414,Heaton,40,0.1,0,0,i,0.0
 415,Dorgu,60,1.5,0,0,a,
 416,De Ligt,50,0.0,0,0,i,0.0
 417,Dalot,50,2.9,0,0,a,
-418,Maguire,50,14.5,0,0,a,
+418,Maguire,50,14.6,0,0,a,
 419,Martinez,50,1.0,0,0,a,100.0
 420,Yoro,50,0.8,0,0,a,
 421,Heaven,45,0.4,0,0,a,
 422,Mazraoui,45,0.7,0,0,a,
 423,Shaw,45,21.7,0,0,a,
 424,Amass,40,0.2,0,0,a,
-425,Fredricson,40,0.1,0,0,u,0.0
-426,B.Fernandes,120,49.8,0,0,a,
-427,Mbeumo,80,33.3,0,0,a,
-428,Cunha,80,10.9,0,0,a,
+425,Fredricson,40,0.0,0,0,u,0.0
+426,B.Fernandes,120,49.9,0,0,a,
+427,Mbeumo,80,33.5,0,0,a,
+428,Cunha,80,10.8,0,0,a,
 429,Rashford,70,1.5,0,0,a,
 430,Mount,55,0.1,0,0,d,50.0
 431,Amad,60,1.6,0,0,a,
@@ -509,7 +509,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 468,John,45,0.1,0,0,a,
 469,N.Williams,50,10.7,0,0,a,
 470,Morato,50,0.1,0,0,a,
-471,Milenković,55,2.2,0,0,a,
+471,Milenković,55,2.1,0,0,a,
 472,Murillo,55,1.4,0,0,a,100.0
 473,Aina,45,3.9,0,0,a,
 474,Jair Cunha,45,0.3,0,0,a,
@@ -533,15 +533,15 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 558,Schlager,50,0.1,0,0,a,
 581,Diomande,55,0.6,0,0,a,
 590,Benda,45,0.0,0,0,a,
-112,Van Hecke,50,9.1,0,0,a,
+112,Van Hecke,50,9.2,0,0,a,
 455,Tonali,55,4.1,0,0,a,
 494,Vicario,45,0.9,0,0,u,0.0
 495,Austin,40,0.8,0,0,a,
-496,Kinsky,45,21.8,0,0,a,
+496,Kinsky,45,21.9,0,0,a,
 497,Dubravka,40,21.1,0,0,a,
 498,Senesi,60,9.1,0,0,a,
 499,Pedro Porro,55,22.8,0,0,a,
-500,Romero,50,0.6,0,0,u,0.0
+500,Romero,50,0.5,0,0,u,0.0
 501,Danso,50,0.2,0,0,a,
 502,Robertson,45,3.3,0,0,a,
 503,Van de Ven,50,7.3,0,0,a,
@@ -572,7 +572,7 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 529,Roefs,50,4.7,0,0,a,
 530,Patterson,40,0.4,0,0,u,0.0
 531,Ellborg,45,0.1,0,0,a,
-532,Ballard,50,4.7,0,0,a,
+532,Ballard,50,4.8,0,0,a,
 533,Mukiele,55,2.1,0,0,d,75.0
 534,Hume,45,6.2,0,0,a,
 535,Alderete,50,0.3,0,0,d,75.0
@@ -592,5 +592,5 @@ id,web_name,now_cost,selected_by_percent,transfers_in_event,transfers_out_event,
 549,Talbi,55,0.2,0,0,a,
 550,Jocelin.T,50,0.0,0,0,a,
 551,Angulo,50,0.1,0,0,a,
-552,Brobbey,60,14.9,0,0,a,
+552,Brobbey,60,14.8,0,0,a,
 553,Isidor,55,1.1,0,0,a,
