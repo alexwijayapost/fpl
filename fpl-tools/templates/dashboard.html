@@ -86,6 +86,31 @@ summary{cursor:pointer;font-size:12px;color:var(--muted)}
   border-radius:8px;padding:8px 11px;margin:0 0 14px;background:var(--surface-1)}
 .banner.stale{border-left-color:var(--warn)}
 .verdict{font-size:16px;font-weight:600;margin:0 0 10px;letter-spacing:-0.01em}
+.ctrl{position:relative;margin-bottom:8px}
+.ctrl input,.ctrl select{width:100%;background:var(--plane);color:var(--ink);font:inherit;
+  font-size:13px;border:1px solid var(--ring);border-radius:8px;padding:8px 10px}
+.ctrl input:focus,.ctrl select:focus{outline:2px solid var(--s1);outline-offset:-1px}
+.results{position:absolute;z-index:5;left:0;right:0;top:100%;margin-top:4px;max-height:230px;
+  overflow:auto;background:var(--surface-1);border:1px solid var(--ring);border-radius:8px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.results div{padding:7px 10px;font-size:13px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.results div:hover,.results div.sel{background:var(--s1);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chip{display:flex;align-items:center;gap:7px;font-size:12px;background:var(--plane);
+  border:1px solid var(--ring);border-radius:999px;padding:4px 6px 4px 10px}
+.chip b{font-weight:600}
+.chip input[type=range]{width:88px;accent-color:var(--s1);vertical-align:middle}
+.chip button{background:none;border:none;color:var(--muted);font:inherit;cursor:pointer;
+  font-size:15px;line-height:1;padding:0 4px}
+.chip button:hover{color:var(--crit)}
+.chip.ban{border-color:var(--crit)}
+.chip.lock{border-color:var(--good)}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.btn{background:var(--plane);color:var(--ink);border:1px solid var(--ring);border-radius:8px;
+  padding:7px 14px;font:inherit;font-size:13px;cursor:pointer}
+.btn.primary{background:var(--s1);border-color:transparent;color:#fff;font-weight:600}
+.btn:disabled{opacity:.5;cursor:default}
+.in{color:var(--good)} .out{color:var(--crit)}
 @media(max-width:520px){ .hide-s{display:none} body{font-size:14px} h1{font-size:19px} }
 </style>
 </head>
@@ -141,6 +166,42 @@ summary{cursor:pointer;font-size:12px;color:var(--muted)}
 <div class="card">
   <div class="scn" id="scn"></div>
   <p class="note" id="scnnote"></p>
+</div>
+
+<h2 id="h-what">What if…</h2>
+<div class="card">
+  <p class="note" style="margin:0 0 12px">
+    Change an assumption and re-solve in your browser. Useful when team news lands after this page
+    was built — drag a player's start chance up if he's declared fit, or ban someone you don't
+    trust. Assumes a fresh build of all 15, like a wildcard.
+    <br><br>The nightly run uses an exact solver; this one runs on your phone in under a second and
+    searches rather than proves. Every squad it shows is legal and its score is real, so the figure
+    it quotes is a <b>bound</b> — a cost can only turn out smaller, a gain only bigger.
+  </p>
+
+  <div class="ctrl">
+    <input id="psearch" type="search" placeholder="Search a player to adjust, lock or ban…"
+           autocomplete="off" spellcheck="false">
+    <div id="presults" class="results" hidden></div>
+  </div>
+
+  <div class="ctrl">
+    <select id="clubban"><option value="">Ban a whole club…</option></select>
+  </div>
+
+  <div id="chips" class="chips"></div>
+
+  <div class="row">
+    <button id="solve" class="btn primary">Re-solve</button>
+    <button id="resetov" class="btn">Reset</button>
+    <span id="solvestat" class="mt"></span>
+  </div>
+
+  <div id="wresult" hidden>
+    <div class="verdict" id="wverdict"></div>
+    <div id="wdiff" class="scn" style="grid-template-columns:auto 1fr;margin-bottom:12px"></div>
+    <table id="wxi"></table>
+  </div>
 </div>
 
 <h2>Differentials <span>under 8% owned, secure minutes</span></h2>
@@ -360,6 +421,390 @@ if (!D.scenarios || !D.scenarios.length) {
     [...tabs.children].forEach(x=>x.setAttribute('aria-selected', x===b));
     draw(b.dataset.p);
   });
+})();
+
+/* ================= what-if explorer =================
+   Re-solves the 15 in the browser. The nightly run uses an exact MILP; this is a
+   hill-climb, which lands on the same squad in easy cases and within a fraction
+   of a point otherwise. It is for interrogating assumptions, not for replacing
+   the overnight answer. */
+(function(){
+  const BUDGET=100.0, DECAY=0.87, BW=0.12, BWG=0.03;
+  const NEED={GK:2,DEF:5,MID:5,FWD:3};
+  const FORMS=[[3,4,3],[3,5,2],[4,3,3],[4,4,2],[4,5,1],[5,2,3],[5,3,2],[5,4,1]];
+  const ov={start:new Map(), lock:new Set(), ban:new Set(), clubs:new Set()};
+  let POOL=null, BY=null, NG=0, baseScore=null;
+
+  const stat = m => { $('#solvestat').textContent = m; };
+
+  async function load(){
+    if (POOL) return POOL;
+    stat('loading player pool…');
+    const r = await fetch('pool.json', {cache:'no-cache'});
+    if (!r.ok) throw new Error('pool.json '+r.status);
+    POOL = await r.json(); NG = POOL.gws.length;
+    BY = new Map(POOL.players.map(p=>[p.i,p]));
+    const clubs=[...new Set(POOL.players.map(p=>p.t))].sort();
+    clubs.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;$('#clubban').append(o)});
+    stat('');
+    return POOL;
+  }
+
+  /* --- scoring --- */
+  function xpTable(){
+    const X=new Map();
+    for (const p of POOL.players){
+      const a=new Float64Array(NG);
+      for (let k=0;k<NG;k++){
+        const s = ov.start.has(p.i) ? ov.start.get(p.i) : p.ps[k];
+        a[k]=s*p.pm[k];
+      }
+      X.set(p.i,a);
+    }
+    return X;
+  }
+  function score(ids,X){
+    let weighted=0, plain=0;
+    const g=[],d=[],m=[],f=[];
+    for (let k=0;k<NG;k++){
+      g.length=d.length=m.length=f.length=0;
+      for (const id of ids){
+        const v=X.get(id)[k], pos=BY.get(id).p;
+        (pos==='GK'?g:pos==='DEF'?d:pos==='MID'?m:f).push(v);
+      }
+      g.sort((a,b)=>b-a); d.sort((a,b)=>b-a); m.sort((a,b)=>b-a); f.sort((a,b)=>b-a);
+      const cum=arr=>{const c=[0];for(let i=0;i<arr.length;i++)c.push(c[i]+arr[i]);return c};
+      const cd=cum(d), cm=cum(m), cf=cum(f), gk=g[0]||0;
+      let best=-1e9, bd=0,bm=0,bf=0;
+      for (const [dd,mm,ff] of FORMS){
+        if (d.length<dd||m.length<mm||f.length<ff) continue;
+        const s=gk+cd[dd]+cm[mm]+cf[ff];
+        if (s>best){best=s;bd=dd;bm=mm;bf=ff;}
+      }
+      if (best<-1e8) return {weighted:-1e9, plain:-1e9};
+      const cap=Math.max(gk, bd?d[0]:0, bm?m[0]:0, bf?f[0]:0);
+      const bench=(cd[d.length]-cd[bd])+(cm[m.length]-cm[bm])+(cf[f.length]-cf[bf]);
+      const gwScore=best+cap;
+      plain+=gwScore;
+      weighted+=Math.pow(DECAY,k)*(gwScore+BW*bench+BWG*(g[1]||0));
+    }
+    return {weighted, plain};
+  }
+
+  /* --- feasibility --- */
+  const allowed = p => !ov.ban.has(p.i) && !ov.clubs.has(p.t) && p.st!=='u';
+  function feasible(ids){
+    const cnt={GK:0,DEF:0,MID:0,FWD:0}, club={}; let cost=0;
+    for (const id of ids){ const p=BY.get(id);
+      if (!p || !allowed(p)) return false;          // bans count as infeasible
+      cnt[p.p]++; cost+=p.c;
+      club[p.t]=(club[p.t]||0)+1; if(club[p.t]>3) return false; }
+    if (cost>BUDGET+1e-9) return false;
+    for (const k in NEED) if (cnt[k]!==NEED[k]) return false;
+    for (const id of ov.lock) if (!ids.includes(id)) return false;
+    return true;
+  }
+
+  /* --- build a starting squad, then hill-climb --- */
+  /* Start from the published squad — it came out of an exact solver, so with no
+     overrides the climb has nothing to improve and returns it untouched. Only
+     the slots the constraints actually break get rebuilt. */
+  function seed(X, anchor, lam){
+    const cands=POOL.players.filter(allowed);
+    const val=p=>{let s=0;for(let k=0;k<NG;k++)s+=Math.pow(DECAY,k)*X.get(p.i)[k];return s};
+    const cheapest={};
+    for (const pos in NEED){
+      const c=cands.filter(p=>p.p===pos).map(p=>p.c);
+      if(!c.length) return null;
+      cheapest[pos]=Math.min(...c);
+    }
+    const ids=[], cnt={GK:0,DEF:0,MID:0,FWD:0}, club={};
+    let cost=0;
+    const take=p=>{ids.push(p.i);cnt[p.p]++;cost+=p.c;club[p.t]=(club[p.t]||0)+1;};
+    const fits=p=>{
+      if (cnt[p.p]>=NEED[p.p] || (club[p.t]||0)>=3) return false;
+      let floor=0;
+      for (const pos in NEED) floor+=(NEED[pos]-cnt[pos]-(pos===p.p?1:0))*cheapest[pos];
+      return cost+p.c+floor<=BUDGET+1e-9;
+    };
+    for (const id of ov.lock){ const p=BY.get(id); if(p&&!ids.includes(id)&&fits(p)) take(p); }
+    for (const id of (anchor||[])){
+      const p=BY.get(id);
+      if (p && allowed(p) && !ids.includes(id) && fits(p)) take(p);
+    }
+    // lam is a price penalty. lam=0 grabs the best players and fills the rest
+    // with whatever is left; a high lam chases value per million. Neither is
+    // right on its own, so solve() sweeps it — an expensive locked-in player
+    // needs a different trade-off than an unconstrained build.
+    const rest=cands.filter(p=>!ids.includes(p.i))
+      .sort((a,b)=>(val(b)-lam*b.c)-(val(a)-lam*a.c));
+    for (const p of rest){ if (fits(p)) take(p); if (ids.length===15) break; }
+    return ids.length===15 ? ids : null;
+  }
+  /* A single swap can never fund an expensive signing: dropping someone good
+     for someone cheap always looks worse on its own, even when the pair of
+     moves together is better. This does the pair — force a player in, then pay
+     for him by taking the cheapest-regret downgrades elsewhere. */
+  function frontier(X){
+    const f={GK:[],DEF:[],MID:[],FWD:[]};
+    const v=p=>{let s=0;for(let k=0;k<NG;k++)s+=Math.pow(DECAY,k)*X.get(p.i)[k];return s};
+    for (const pos in f){
+      const byPrice=new Map();
+      for (const p of POOL.players){
+        if (p.p!==pos || !allowed(p)) continue;
+        const a=byPrice.get(p.c)||[]; a.push(p); byPrice.set(p.c,a);
+      }
+      // at each price point only the best few are ever worth downgrading to
+      for (const [,a] of byPrice) f[pos].push(...a.sort((x,y)=>v(y)-v(x)).slice(0,3));
+    }
+    return f;
+  }
+  function repair(ids,protect,X,F){
+    const v=p=>{let s=0;for(let k=0;k<NG;k++)s+=Math.pow(DECAY,k)*X.get(p.i)[k];return s};
+    const cost=()=>ids.reduce((s,i)=>s+BY.get(i).c,0);
+    const clubs=()=>{const c={};for(const i of ids){const t=BY.get(i).t;c[t]=(c[t]||0)+1}return c};
+    for (let guard=0;guard<8;guard++){
+      const cc=clubs(), bad=Object.keys(cc).find(t=>cc[t]>3);
+      if (!bad) break;
+      let bk=-1,bq=null,bl=Infinity;
+      for (let k=0;k<ids.length;k++){
+        if (k===protect||ov.lock.has(ids[k])) continue;
+        const p=BY.get(ids[k]); if (p.t!==bad) continue;
+        for (const q of F[p.p]){
+          if (ids.includes(q.i)||q.t===bad||(cc[q.t]||0)>=3) continue;
+          const l=v(p)-v(q); if (l<bl){bl=l;bk=k;bq=q.i;}
+        }
+      }
+      if (bk<0) return false;
+      ids[bk]=bq;
+    }
+    for (let guard=0;guard<12;guard++){
+      const over=cost()-BUDGET;
+      if (over<=1e-9) break;
+      const cc=clubs();
+      let bk=-1,bq=null,bestRatio=Infinity;
+      for (let k=0;k<ids.length;k++){
+        if (k===protect||ov.lock.has(ids[k])) continue;
+        const p=BY.get(ids[k]);
+        for (const q of F[p.p]){
+          if (ids.includes(q.i)) continue;
+          const freed=p.c-q.c; if (freed<=1e-9) continue;
+          if (q.t!==p.t && (cc[q.t]||0)>=3) continue;
+          const ratio=Math.max(v(p)-v(q),0)/Math.min(freed,over);
+          if (ratio<bestRatio){bestRatio=ratio;bk=k;bq=q.i;}
+        }
+      }
+      if (bk<0) return false;
+      ids[bk]=bq;
+    }
+    return cost()<=BUDGET+1e-9;
+  }
+  function upgradePass(cur,X,F,budgetMs=1200){
+    const t0=performance.now();
+    const v=p=>{let s=0;for(let k=0;k<NG;k++)s+=Math.pow(DECAY,k)*X.get(p.i)[k];return s};
+    let best=cur.slice(), bestS=score(cur,X).weighted;
+    const top={};
+    for (const pos of ['GK','DEF','MID','FWD'])
+      top[pos]=POOL.players.filter(p=>p.p===pos&&allowed(p))
+        .sort((a,b)=>v(b)-v(a)).slice(0,22);
+    for (let j=0;j<15;j++){
+      if (performance.now()-t0>budgetMs) break;
+      if (ov.lock.has(best[j])) continue;
+      const pos=BY.get(best[j]).p;
+      for (const q of top[pos]){
+        if (best.includes(q.i)) continue;
+        const trial=best.slice(); trial[j]=q.i;
+        if (!repair(trial,j,X,F)) continue;
+        if (!feasible(trial)) continue;
+        const s=score(trial,X).weighted;
+        if (s>bestS+1e-9){ bestS=s; best=trial; }
+      }
+    }
+    return best;
+  }
+
+  function climb(ids,X,budgetMs=2500){
+    const t0=performance.now();
+    const cands=POOL.players.filter(allowed);
+    let cur=ids.slice(), curS=score(cur,X).weighted;
+    for (let pass=0; pass<8; pass++){
+      let improved=false;
+      for (let i=0;i<cur.length;i++){
+        if (performance.now()-t0>budgetMs) return cur;
+        const outId=cur[i]; if (ov.lock.has(outId)) continue;
+        const outP=BY.get(outId);
+        let bestId=null, bestS=curS;
+        for (const inP of cands){
+          if (inP.p!==outP.p || cur.includes(inP.i)) continue;
+          const trial=cur.slice(); trial[i]=inP.i;
+          if (!feasible(trial)) continue;
+          const s=score(trial,X).weighted;
+          if (s>bestS+1e-9){ bestS=s; bestId=inP.i; }
+        }
+        if (bestId!==null){ cur[i]=bestId; curS=bestS; improved=true; }
+      }
+      if (!improved) break;
+    }
+    return cur;
+  }
+
+  /* --- chips --- */
+  function drawChips(){
+    const c=$('#chips'); c.innerHTML='';
+    for (const [id,v] of ov.start){
+      const p=BY.get(id), el=document.createElement('span'); el.className='chip';
+      el.innerHTML=`<b>${p.n}</b> start <span class="v">${Math.round(v*100)}%</span>`;
+      const r=document.createElement('input'); r.type='range'; r.min=0; r.max=100;
+      r.value=Math.round(v*100);
+      r.oninput=()=>{ov.start.set(id,r.value/100); el.querySelector('.v').textContent=r.value+'%';};
+      const x=document.createElement('button'); x.textContent='×';
+      x.onclick=()=>{ov.start.delete(id);drawChips();};
+      el.append(r,x); c.append(el);
+    }
+    for (const id of ov.lock) c.append(chip(BY.get(id).n+' locked in','lock',()=>{ov.lock.delete(id);drawChips();}));
+    for (const id of ov.ban)  c.append(chip(BY.get(id).n+' banned','ban',()=>{ov.ban.delete(id);drawChips();}));
+    for (const t of ov.clubs) c.append(chip('no '+t,'ban',()=>{ov.clubs.delete(t);drawChips();}));
+  }
+  function chip(label,cls,onX){
+    const el=document.createElement('span'); el.className='chip '+cls;
+    el.innerHTML=`<b>${label}</b>`;
+    const x=document.createElement('button'); x.textContent='×'; x.onclick=onX;
+    el.append(x); return el;
+  }
+
+  /* --- search box --- */
+  const box=$('#psearch'), res=$('#presults');
+  box.addEventListener('focus', load);
+  box.addEventListener('input', async ()=>{
+    await load();
+    const q=box.value.trim().toLowerCase();
+    if (q.length<2){ res.hidden=true; return; }
+    // rank exact name first, then names starting with the query, then any
+    // substring — otherwise typing "Obi" surfaces "Robinson" above him
+    const rank=n=>n===q?0:n.startsWith(q)?1:2;
+    const hits=POOL.players.filter(p=>p.n.toLowerCase().includes(q))
+      .sort((a,b)=>rank(a.n.toLowerCase())-rank(b.n.toLowerCase())
+                   || a.n.length-b.n.length).slice(0,12);
+    res.innerHTML='';
+    hits.forEach(p=>{
+      const d=document.createElement('div');
+      d.innerHTML=`<span>${p.n} <span class="mt">${p.t} · ${p.p} · £${p.c.toFixed(1)}</span></span>`+
+                  `<span class="mt">${Math.round(p.ps[0]*100)}% start</span>`;
+      d.onclick=()=>pick(p);
+      res.append(d);
+    });
+    res.hidden=!hits.length;
+  });
+  document.addEventListener('click',e=>{ if(!e.target.closest('.ctrl')) res.hidden=true; });
+
+  function pick(p){
+    res.hidden=true; box.value='';
+    const el=document.createElement('div'); el.className='row';
+    el.style.cssText='margin:8px 0;padding:10px;border:1px solid var(--ring);border-radius:8px';
+    el.innerHTML=`<b>${p.n}</b> <span class="mt">${p.t} · £${p.c.toFixed(1)} · `+
+      `currently ${Math.round(p.ps[0]*100)}% to start${p.pb[0]>p.ps[0]?
+      `, ${Math.round(p.pb[0]*100)}% if fully fit`:''}</span>`;
+    const mk=(t,fn)=>{const b=document.createElement('button');b.className='btn';b.textContent=t;
+      b.onclick=()=>{fn();el.remove();drawChips();};return b};
+    el.append(
+      mk('Set start %', ()=>ov.start.set(p.i, p.pb[0])),
+      mk('Lock in', ()=>{ov.lock.add(p.i); ov.ban.delete(p.i);}),
+      mk('Ban', ()=>{ov.ban.add(p.i); ov.lock.delete(p.i);}));
+    $('#chips').before(el);
+  }
+  $('#clubban').addEventListener('change', async e=>{
+    if(!e.target.value) return; await load();
+    ov.clubs.add(e.target.value); e.target.value=''; drawChips();
+  });
+  $('#resetov').addEventListener('click',()=>{
+    ov.start.clear(); ov.lock.clear(); ov.ban.clear(); ov.clubs.clear();
+    drawChips(); $('#wresult').hidden=true; stat('');
+  });
+
+  /* --- solve --- */
+  $('#solve').addEventListener('click', async ()=>{
+    try{
+      await load();
+      $('#solve').disabled=true; stat('solving…');
+      await new Promise(r=>setTimeout(r,30));
+      const X=xpTable();
+      if (baseScore===null) baseScore=score(POOL.squad,X).plain;
+      const basePlain=score(POOL.squad,X).plain;
+      // Multi-start. Anchoring on the published squad is right when the
+      // constraints barely bite; building fresh is right when an expensive lock
+      // forces the whole budget to be re-laid-out. Run both, keep the better.
+      let ids=null, bestS=-1e9;
+      const F=frontier(X);
+      const starts=[[POOL.squad,1],[null,0],[null,1],[null,2.5]];
+      const t0=performance.now();
+      for (const [anchor,lam] of starts){
+        if (performance.now()-t0>7000 && ids) break;
+        let c=seed(X,anchor,lam); if (!c) continue;
+        // alternate the two move types until neither helps
+        for (let r=0;r<6;r++){
+          const before=score(c,X).weighted;
+          c=climb(c,X,900);
+          c=upgradePass(c,X,F,1400);
+          if (score(c,X).weighted<=before+1e-6) break;
+        }
+        c=climb(c,X,700);
+        const sc=score(c,X).weighted;
+        if (sc>bestS){ bestS=sc; ids=c; }
+      }
+      if (!ids){ stat('no legal squad under those constraints — relax something.');
+                 $('#solve').disabled=false; return; }
+      // never report something worse than the published squad when that squad
+      // is still legal — the heuristic is allowed to fail, not to mislead
+      if (feasible(POOL.squad) && score(POOL.squad,X).weighted > score(ids,X).weighted)
+        ids = POOL.squad.slice();
+      const S=score(ids,X);
+      render(ids,S,basePlain,X);
+      stat('');
+    } catch(err){ stat('failed: '+err.message); }
+    finally{ $('#solve').disabled=false; }
+  });
+
+  function render(ids,S,basePlain,X){
+    const base=new Set(POOL.squad), now=new Set(ids);
+    const outs=[...base].filter(i=>!now.has(i)), ins=ids.filter(i=>!base.has(i));
+    const d=S.plain-basePlain;
+    // This solver returns a *feasible* squad, so its score is a lower bound on
+    // the true optimum. That makes the delta a bound too: a loss can only be
+    // smaller than shown, a gain can only be bigger. Say that, rather than
+    // quoting a precise number the in-browser search cannot guarantee.
+    const span=`GW${POOL.gws[0]}–${POOL.gws[NG-1]}`;
+    $('#wverdict').textContent = outs.length===0
+      ? 'Same fifteen — your assumptions do not change the squad.'
+      : d>=0
+        ? `${ins.length} change${ins.length>1?'s':''}, worth at least `+
+          `${d.toFixed(1)} points over ${span}.`
+        : `${ins.length} change${ins.length>1?'s':''}, costing at most `+
+          `${Math.abs(d).toFixed(1)} points over ${span}.`;
+    const g=$('#wdiff'); g.innerHTML='';
+    if (outs.length){
+      g.append(el('div','mt','Out'), el('div','out',outs.map(i=>BY.get(i).n).join(', ')));
+      g.append(el('div','mt','In'),  el('div','in', ins.map(i=>BY.get(i).n).join(', ')));
+    }
+    const cost=ids.reduce((s,i)=>s+BY.get(i).c,0);
+    g.append(el('div','mt','Cost'), el('div','', '£'+cost.toFixed(1)+'m'));
+
+    const t=$('#wxi'); t.innerHTML=''; t.append(el('thead'),el('tbody'));
+    t.querySelector('thead').innerHTML=
+      '<tr><th>Player</th><th>Start%</th><th>£</th><th>GW'+POOL.gws[0]+'</th><th>Total</th></tr>';
+    const ORD2={GK:0,DEF:1,MID:2,FWD:3};
+    const body=t.querySelector('tbody');
+    ids.map(i=>BY.get(i)).sort((a,b)=>ORD2[a.p]-ORD2[b.p]||X.get(b.i)[0]-X.get(a.i)[0])
+      .forEach(p=>{
+        const tot=[...Array(NG).keys()].reduce((s,k)=>s+X.get(p.i)[k],0);
+        const s=ov.start.has(p.i)?ov.start.get(p.i):p.ps[0];
+        body.append(el('tr','',
+          `<td><span class="pos">${p.p}</span><span class="nm">${p.n}</span> `+
+          `<span class="mt">${p.t}</span>${base.has(p.i)?'':' <span class="pill in">new</span>'}</td>`+
+          `<td>${Math.round(s*100)}%</td><td>${p.c.toFixed(1)}</td>`+
+          `<td>${X.get(p.i)[0].toFixed(1)}</td><td>${tot.toFixed(1)}</td>`));
+      });
+    $('#wresult').hidden=false;
+  }
 })();
 
 $('#foot').innerHTML =
