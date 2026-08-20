@@ -191,6 +191,10 @@ def project(cur, ts, fixtures, gws):
                 xp=ps * per + ps * 1.9, pts_goal=ps * g, pts_ast=ps * a,
                 pts_cs=ps * cs, pts_dc=ps * dc, pts_bonus=ps * p.bonus90,
                 pts_sv=ps * sv, pts_app=ps * 1.9, p_cs=p_cs,
+                # points per appearance, independent of whether he starts. The
+                # dashboard's what-if explorer needs this to answer "and if he
+                # IS fit?" for a player currently projected at zero minutes.
+                per_match=per + 1.9, p_start_base=p.p_start_base,
                 xg=p.xg90 * mult, xa=p.xa90 * mult, bonus90=p.bonus90,
                 selected_by=p.selected_by_percent, status=p.status,
                 news=p.news, pen1=bool(p.pen1), prior=bool(p.no_history)))
