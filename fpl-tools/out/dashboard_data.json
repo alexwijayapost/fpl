@@ -11,7 +11,7 @@
    "xp_h": 23.1,
    "start": true,
    "captain": false,
-   "owned": 35.2,
+   "owned": 35.8,
    "prior": false,
    "comp": {
     "pts_goal": 0.0,
@@ -72,7 +72,7 @@
    "xp_h": 31.4,
    "start": true,
    "captain": false,
-   "owned": 29.1,
+   "owned": 29.4,
    "prior": false,
    "comp": {
     "pts_goal": 3.22,
@@ -133,7 +133,7 @@
    "xp_h": 27.7,
    "start": true,
    "captain": false,
-   "owned": 19.5,
+   "owned": 19.3,
    "prior": false,
    "comp": {
     "pts_goal": 2.72,
@@ -194,7 +194,7 @@
    "xp_h": 27.9,
    "start": true,
    "captain": false,
-   "owned": 17.8,
+   "owned": 17.9,
    "prior": false,
    "comp": {
     "pts_goal": 13.97,
@@ -255,7 +255,7 @@
    "xp_h": 26.1,
    "start": true,
    "captain": false,
-   "owned": 5.2,
+   "owned": 5.1,
    "prior": false,
    "comp": {
     "pts_goal": 8.88,
@@ -316,7 +316,7 @@
    "xp_h": 25.3,
    "start": true,
    "captain": false,
-   "owned": 10.3,
+   "owned": 10.1,
    "prior": false,
    "comp": {
     "pts_goal": 2.85,
@@ -377,7 +377,7 @@
    "xp_h": 23.8,
    "start": true,
    "captain": false,
-   "owned": 15.7,
+   "owned": 15.8,
    "prior": false,
    "comp": {
     "pts_goal": 7.44,
@@ -438,7 +438,7 @@
    "xp_h": 22.0,
    "start": false,
    "captain": false,
-   "owned": 28.2,
+   "owned": 28.6,
    "prior": false,
    "comp": {
     "pts_goal": 9.95,
@@ -499,7 +499,7 @@
    "xp_h": 25.6,
    "start": true,
    "captain": false,
-   "owned": 19.5,
+   "owned": 19.1,
    "prior": false,
    "comp": {
     "pts_goal": 4.11,
@@ -560,7 +560,7 @@
    "xp_h": 38.3,
    "start": true,
    "captain": true,
-   "owned": 49.5,
+   "owned": 49.8,
    "prior": false,
    "comp": {
     "pts_goal": 11.32,
@@ -621,7 +621,7 @@
    "xp_h": 28.7,
    "start": true,
    "captain": false,
-   "owned": 32.4,
+   "owned": 33.3,
    "prior": false,
    "comp": {
     "pts_goal": 11.82,
@@ -804,7 +804,7 @@
    "xp_h": 13.0,
    "start": false,
    "captain": false,
-   "owned": 21.4,
+   "owned": 21.1,
    "prior": false,
    "comp": {
     "pts_goal": 0.0,
@@ -865,7 +865,7 @@
    "xp_h": 25.8,
    "start": true,
    "captain": false,
-   "owned": 9.3,
+   "owned": 9.1,
    "prior": false,
    "comp": {
     "pts_goal": 1.08,
@@ -1747,7 +1747,7 @@
     "p_start": 0.9,
     "xp_gw1": 4.19,
     "xp_h": 23.1,
-    "owned": 35.2,
+    "owned": 35.8,
     "prior": false,
     "value": 3.85
    },
@@ -1769,7 +1769,7 @@
     "p_start": 0.91,
     "xp_gw1": 3.34,
     "xp_h": 19.3,
-    "owned": 8.4,
+    "owned": 8.3,
     "prior": false,
     "value": 3.51
    },
@@ -1791,7 +1791,7 @@
     "p_start": 0.8,
     "xp_gw1": 3.06,
     "xp_h": 18.5,
-    "owned": 18.1,
+    "owned": 17.8,
     "prior": false,
     "value": 3.7
    },
@@ -1813,7 +1813,7 @@
     "p_start": 0.82,
     "xp_gw1": 3.18,
     "xp_h": 18.1,
-    "owned": 19.4,
+    "owned": 19.6,
     "prior": false,
     "value": 4.03
    },
@@ -1824,7 +1824,7 @@
     "p_start": 0.8,
     "xp_gw1": 2.8,
     "xp_h": 18.1,
-    "owned": 4.7,
+    "owned": 4.6,
     "prior": false,
     "value": 3.63
    },
@@ -1835,7 +1835,7 @@
     "p_start": 0.85,
     "xp_gw1": 3.02,
     "xp_h": 18.0,
-    "owned": 9.3,
+    "owned": 9.0,
     "prior": false,
     "value": 3.27
    },
@@ -1901,7 +1901,7 @@
     "p_start": 0.74,
     "xp_gw1": 2.42,
     "xp_h": 15.7,
-    "owned": 3.8,
+    "owned": 3.7,
     "prior": false,
     "value": 2.85
    }
@@ -1914,7 +1914,7 @@
     "p_start": 0.88,
     "xp_gw1": 5.89,
     "xp_h": 31.4,
-    "owned": 29.1,
+    "owned": 29.4,
     "prior": false,
     "value": 3.93
    },
@@ -1925,7 +1925,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.93,
     "xp_h": 25.8,
-    "owned": 9.3,
+    "owned": 9.1,
     "prior": false,
     "value": 4.3
    },
@@ -1936,7 +1936,7 @@
     "p_start": 0.94,
     "xp_gw1": 4.26,
     "xp_h": 25.6,
-    "owned": 19.5,
+    "owned": 19.1,
     "prior": false,
     "value": 4.26
    },
@@ -1958,7 +1958,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.21,
     "xp_h": 25.3,
-    "owned": 10.3,
+    "owned": 10.1,
     "prior": false,
     "value": 4.21
    },
@@ -1969,7 +1969,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.81,
     "xp_h": 25.0,
-    "owned": 18.3,
+    "owned": 18.5,
     "prior": false,
     "value": 3.85
    },
@@ -2046,7 +2046,7 @@
     "p_start": 0.97,
     "xp_gw1": 2.81,
     "xp_h": 20.6,
-    "owned": 4.9,
+    "owned": 4.8,
     "prior": false,
     "value": 3.75
    },
@@ -2057,7 +2057,7 @@
     "p_start": 0.85,
     "xp_gw1": 3.3,
     "xp_h": 20.6,
-    "owned": 10.7,
+    "owned": 10.5,
     "prior": false,
     "value": 3.75
    },
@@ -2081,7 +2081,7 @@
     "p_start": 0.95,
     "xp_gw1": 6.68,
     "xp_h": 38.3,
-    "owned": 49.5,
+    "owned": 49.8,
     "prior": false,
     "value": 3.19
    },
@@ -2103,7 +2103,7 @@
     "p_start": 0.89,
     "xp_gw1": 5.03,
     "xp_h": 28.7,
-    "owned": 32.4,
+    "owned": 33.3,
     "prior": false,
     "value": 3.59
    },
@@ -2114,7 +2114,7 @@
     "p_start": 0.94,
     "xp_gw1": 5.09,
     "xp_h": 27.7,
-    "owned": 19.5,
+    "owned": 19.3,
     "prior": false,
     "value": 3.69
    },
@@ -2136,7 +2136,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.54,
     "xp_h": 26.2,
-    "owned": 11.9,
+    "owned": 12.0,
     "prior": false,
     "value": 3.28
    },
@@ -2147,7 +2147,7 @@
     "p_start": 0.92,
     "xp_gw1": 4.16,
     "xp_h": 26.1,
-    "owned": 5.2,
+    "owned": 5.1,
     "prior": false,
     "value": 3.73
    },
@@ -2158,7 +2158,7 @@
     "p_start": 0.79,
     "xp_gw1": 4.11,
     "xp_h": 26.0,
-    "owned": 10.5,
+    "owned": 10.6,
     "prior": false,
     "value": 2.74
    },
@@ -2169,7 +2169,7 @@
     "p_start": 0.8,
     "xp_gw1": 4.84,
     "xp_h": 25.3,
-    "owned": 8.6,
+    "owned": 8.5,
     "prior": false,
     "value": 3.62
    },
@@ -2191,7 +2191,7 @@
     "p_start": 0.93,
     "xp_gw1": 3.79,
     "xp_h": 23.9,
-    "owned": 41.3,
+    "owned": 41.4,
     "prior": false,
     "value": 3.41
    },
@@ -2202,7 +2202,7 @@
     "p_start": 0.83,
     "xp_gw1": 3.74,
     "xp_h": 23.8,
-    "owned": 14.4,
+    "owned": 14.1,
     "prior": false,
     "value": 3.18
    },
@@ -2213,7 +2213,7 @@
     "p_start": 0.85,
     "xp_gw1": 3.96,
     "xp_h": 23.8,
-    "owned": 15.7,
+    "owned": 15.8,
     "prior": false,
     "value": 3.96
    },
@@ -2224,7 +2224,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.76,
     "xp_h": 23.4,
-    "owned": 26.3,
+    "owned": 26.1,
     "prior": false,
     "value": 3.12
    },
@@ -2235,7 +2235,7 @@
     "p_start": 0.77,
     "xp_gw1": 3.66,
     "xp_h": 23.2,
-    "owned": 6.0,
+    "owned": 5.8,
     "prior": false,
     "value": 3.57
    }
@@ -2248,7 +2248,7 @@
     "p_start": 0.89,
     "xp_gw1": 6.44,
     "xp_h": 36.8,
-    "owned": 69.9,
+    "owned": 69.5,
     "prior": false,
     "value": 2.37
    },
@@ -2259,7 +2259,7 @@
     "p_start": 0.93,
     "xp_gw1": 4.89,
     "xp_h": 27.9,
-    "owned": 17.8,
+    "owned": 17.9,
     "prior": false,
     "value": 3.49
    },
@@ -2270,7 +2270,7 @@
     "p_start": 0.83,
     "xp_gw1": 3.95,
     "xp_h": 24.8,
-    "owned": 61.1,
+    "owned": 61.7,
     "prior": false,
     "value": 3.3
    },
@@ -2281,7 +2281,7 @@
     "p_start": 0.87,
     "xp_gw1": 3.76,
     "xp_h": 24.1,
-    "owned": 12.0,
+    "owned": 11.7,
     "prior": false,
     "value": 3.01
    },
@@ -2303,7 +2303,7 @@
     "p_start": 0.78,
     "xp_gw1": 3.65,
     "xp_h": 22.0,
-    "owned": 28.2,
+    "owned": 28.6,
     "prior": false,
     "value": 3.66
    },
@@ -2314,7 +2314,7 @@
     "p_start": 0.76,
     "xp_gw1": 4.21,
     "xp_h": 21.4,
-    "owned": 10.4,
+    "owned": 10.2,
     "prior": false,
     "value": 2.86
    },
@@ -2336,7 +2336,7 @@
     "p_start": 0.61,
     "xp_gw1": 2.8,
     "xp_h": 17.7,
-    "owned": 2.2,
+    "owned": 2.1,
     "prior": false,
     "value": 2.94
    },
@@ -2391,7 +2391,7 @@
     "p_start": 0.62,
     "xp_gw1": 2.71,
     "xp_h": 15.4,
-    "owned": 0.0,
+    "owned": 0.1,
     "prior": true,
     "value": 2.57
    },
@@ -2402,7 +2402,7 @@
     "p_start": 0.58,
     "xp_gw1": 2.44,
     "xp_h": 15.2,
-    "owned": 2.7,
+    "owned": 2.8,
     "prior": false,
     "value": 2.53
    }
@@ -2415,7 +2415,7 @@
    "team": "CHE",
    "price": 7.0,
    "xp_h": 26.1,
-   "owned": 5.2
+   "owned": 5.1
   },
   {
    "name": "Thiaw",
@@ -2439,7 +2439,7 @@
    "team": "CRY",
    "price": 6.5,
    "xp_h": 23.2,
-   "owned": 6.0
+   "owned": 5.8
   },
   {
    "name": "O.Dango",
@@ -2479,7 +2479,7 @@
    "team": "LEE",
    "price": 6.5,
    "xp_h": 22.1,
-   "owned": 7.1
+   "owned": 7.0
   },
   {
    "name": "Gakpo",
@@ -2487,7 +2487,7 @@
    "team": "LIV",
    "price": 7.0,
    "xp_h": 22.1,
-   "owned": 3.7
+   "owned": 3.6
   },
   {
    "name": "Dewsbury-Hall",
@@ -2495,7 +2495,7 @@
    "team": "EVE",
    "price": 6.5,
    "xp_h": 21.7,
-   "owned": 3.5
+   "owned": 3.4
   },
   {
    "name": "Wieffer",
@@ -2515,15 +2515,15 @@
     "pos": "MID",
     "opp": "HUL",
     "home": false,
-    "owned": 49.5,
-    "eo": 79.2,
+    "owned": 49.8,
+    "eo": 79.7,
     "xp": 6.46,
     "p_haul": 0.178,
     "p_blank": 0.047,
     "p_double_digit": 0.178,
     "ceiling": 14,
-    "swing_up": 2.69,
-    "swing_down": -10.23
+    "swing_up": 2.63,
+    "swing_down": -10.29
    },
    {
     "id": 4,
@@ -2532,15 +2532,15 @@
     "pos": "DEF",
     "opp": "COV",
     "home": true,
-    "owned": 29.1,
-    "eo": 46.6,
+    "owned": 29.4,
+    "eo": 47.0,
     "xp": 6.41,
     "p_haul": 0.147,
     "p_blank": 0.119,
     "p_double_digit": 0.147,
     "ceiling": 14,
-    "swing_up": 6.85,
-    "swing_down": -5.97
+    "swing_up": 6.79,
+    "swing_down": -6.03
    },
    {
     "id": 427,
@@ -2549,15 +2549,15 @@
     "pos": "MID",
     "opp": "HUL",
     "home": false,
-    "owned": 32.4,
-    "eo": 51.8,
+    "owned": 33.3,
+    "eo": 53.3,
     "xp": 5.68,
     "p_haul": 0.129,
     "p_blank": 0.115,
     "p_double_digit": 0.129,
     "ceiling": 13,
-    "swing_up": 5.47,
-    "swing_down": -5.89
+    "swing_up": 5.31,
+    "swing_down": -6.05
    },
    {
     "id": 106,
@@ -2566,15 +2566,15 @@
     "pos": "FWD",
     "opp": "TOT",
     "home": true,
-    "owned": 17.8,
-    "eo": 28.5,
+    "owned": 17.9,
+    "eo": 28.6,
     "xp": 5.52,
     "p_haul": 0.158,
     "p_blank": 0.072,
     "p_double_digit": 0.158,
     "ceiling": 15,
-    "swing_up": 7.9,
-    "swing_down": -3.14
+    "swing_up": 7.88,
+    "swing_down": -3.16
    },
    {
     "id": 200,
@@ -2583,15 +2583,15 @@
     "pos": "DEF",
     "opp": "FUL",
     "home": false,
-    "owned": 10.3,
-    "eo": 16.5,
+    "owned": 10.1,
+    "eo": 16.2,
     "xp": 5.25,
     "p_haul": 0.075,
     "p_blank": 0.053,
     "p_double_digit": 0.075,
     "ceiling": 10,
-    "swing_up": 8.77,
-    "swing_down": -1.73
+    "swing_up": 8.8,
+    "swing_down": -1.7
    },
    {
     "id": 498,
@@ -2600,15 +2600,15 @@
     "pos": "DEF",
     "opp": "BRE",
     "home": false,
-    "owned": 9.3,
-    "eo": 14.9,
+    "owned": 9.1,
+    "eo": 14.6,
     "xp": 5.03,
     "p_haul": 0.044,
     "p_blank": 0.03,
     "p_double_digit": 0.044,
     "ceiling": 10,
-    "swing_up": 8.56,
-    "swing_down": -1.5
+    "swing_up": 8.6,
+    "swing_down": -1.46
    },
    {
     "id": 388,
@@ -2617,15 +2617,15 @@
     "pos": "DEF",
     "opp": "BOU",
     "home": true,
-    "owned": 19.5,
-    "eo": 31.2,
+    "owned": 19.1,
+    "eo": 30.6,
     "xp": 4.93,
     "p_haul": 0.064,
     "p_blank": 0.06,
     "p_double_digit": 0.064,
     "ceiling": 13,
-    "swing_up": 6.78,
-    "swing_down": -3.08
+    "swing_up": 6.85,
+    "swing_down": -3.01
    },
    {
     "id": 155,
@@ -2634,15 +2634,15 @@
     "pos": "MID",
     "opp": "FUL",
     "home": false,
-    "owned": 5.2,
-    "eo": 8.3,
+    "owned": 5.1,
+    "eo": 8.2,
     "xp": 4.86,
     "p_haul": 0.069,
     "p_blank": 0.084,
     "p_double_digit": 0.069,
     "ceiling": 11,
-    "swing_up": 8.91,
-    "swing_down": -0.81
+    "swing_up": 8.93,
+    "swing_down": -0.79
    }
   ],
   "safest": "B.Fernandes",
@@ -2672,7 +2672,7 @@
   "xp_gw1": 52.3,
   "xp_h": 344.72,
   "source": "official FPL API",
-  "fetched_at": "2026-08-19T16:02:55+00:00",
+  "fetched_at": "2026-08-20T08:18:57+00:00",
   "deadline": "2026-08-21T17:30:00Z",
   "stale": false
  }
