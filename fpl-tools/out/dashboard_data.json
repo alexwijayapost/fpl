@@ -2224,7 +2224,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.76,
     "xp_h": 23.4,
-    "owned": 26.1,
+    "owned": 26.0,
     "prior": false,
     "value": 3.12
    },
@@ -2235,7 +2235,7 @@
     "p_start": 0.77,
     "xp_gw1": 3.66,
     "xp_h": 23.2,
-    "owned": 5.8,
+    "owned": 5.7,
     "prior": false,
     "value": 3.57
    }
@@ -2439,7 +2439,7 @@
    "team": "CRY",
    "price": 6.5,
    "xp_h": 23.2,
-   "owned": 5.8
+   "owned": 5.7
   },
   {
    "name": "O.Dango",
@@ -2672,7 +2672,7 @@
   "xp_gw1": 52.3,
   "xp_h": 344.72,
   "source": "official FPL API",
-  "fetched_at": "2026-08-20T08:18:57+00:00",
+  "fetched_at": "2026-08-20T08:20:48+00:00",
   "deadline": "2026-08-21T17:30:00Z",
   "stale": false
  }
