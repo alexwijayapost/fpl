@@ -173,6 +173,32 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
     open(os.path.join(DOCS, 'index.html'), 'w').write(html)
     json.dump(data, open(os.path.join(OUT, 'dashboard_data.json'), 'w'),
               indent=1, default=str)
+    write_pool(proj, tot, gws, res)
+
+
+def write_pool(proj, tot, gws, res):
+    """A trimmed, same-origin copy of the candidate pool for the what-if
+    explorer. Only the players the optimiser would ever consider, rounded hard —
+    this gets fetched on a phone, so it needs to stay small."""
+    pool = tot[((tot.xp_h > 3.0) | (tot.price <= 4.5)) & (tot.status != 'u')]
+    keep = set(pool.id) | set(res.id)
+    p = proj[proj.id.isin(keep)].sort_values(['id', 'gw'])
+    players = []
+    for pid, g in p.groupby('id', sort=False):
+        f = g.iloc[0]
+        players.append(dict(
+            i=int(pid), n=f['name'], p=f.pos, t=f.team_name,
+            c=round(float(f.price), 1), o=float(f.selected_by),
+            st=f.status, pr=bool(f.prior),
+            ps=[round(float(x), 3) for x in g.p_start],
+            pb=[round(float(x), 3) for x in g.p_start_base],
+            pm=[round(float(x), 2) for x in g.per_match],
+            op=list(g.opp), hm=[bool(x) for x in g.home]))
+    json.dump(dict(gws=[int(x) for x in gws], players=players,
+                   squad=[int(x) for x in res.id]),
+              open(os.path.join(DOCS, 'pool.json'), 'w'), separators=(',', ':'))
+    print(f'  pool.json: {len(players)} players, '
+          f'{os.path.getsize(os.path.join(DOCS, "pool.json"))//1024} KB')
 
 
 if __name__ == '__main__':
