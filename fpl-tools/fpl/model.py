@@ -69,7 +69,7 @@ def team_strength(teams, prev_gw, prev_teams, cur_gw=None):
     return out
 
 
-def start_probability(cur, cur_gw=None):
+def start_probability(cur, cur_gw=None, gws_played=0):
     """P(start). The weakest link in any public model — and the thing to override
     by hand when press-conference team news lands."""
     # Start rate, blended across seasons for the same reason the scoring rates
@@ -134,6 +134,21 @@ def start_probability(cur, cur_gw=None):
     cur.loc[cur.status.isin(['i', 's', 'u', 'n']), 'avail'] = 0.0
     cur['p_start_base'] = cur.p_start.clip(0, 0.97)
     cur['p_start'] = (cur.p_start * cur.avail).clip(0, 0.97)
+
+    # ---- benched but fit ---------------------------------------------------
+    # The model's blind spot: a player dropped for tactical or transfer reasons
+    # carries no injury flag, so `status` stays 'a' and the blended start rate
+    # keeps quoting last season's nailed-on number for weeks. Early in the
+    # season that is exactly backwards — one benching is a large fraction of the
+    # evidence available. Flag the mismatch rather than silently trusting it.
+    if gws_played >= 1:
+        actual = (cur.starts / float(gws_played)).clip(0, 1)
+        cur['starts_actual'] = actual
+        cur['benched'] = ((actual < 0.5) & (cur.status == 'a')
+                          & (cur.p_start > 0.65) & (cur.minutes < 60 * gws_played))
+    else:
+        cur['starts_actual'] = np.nan
+        cur['benched'] = False
     return cur
 
 
@@ -251,7 +266,10 @@ def project(cur, ts, fixtures, gws):
                 per_match=per + 1.9, p_start_base=p.p_start_base,
                 xg=p.xg90 * mult, xa=p.xa90 * mult, bonus90=p.bonus90,
                 selected_by=p.selected_by_percent, status=p.status,
-                news=p.news, pen1=bool(p.pen1), prior=bool(p.no_history)))
+                news=p.news, pen1=bool(p.pen1), prior=bool(p.no_history),
+                benched=bool(getattr(p, 'benched', False)),
+                starts_actual=float(getattr(p, 'starts_actual', float('nan')) or 0),
+                minutes_season=int(p.minutes)))
 
     proj = pd.DataFrame(rows)
     tot = (proj.groupby(['id', 'name', 'pos', 'team_name', 'price', 'selected_by',
