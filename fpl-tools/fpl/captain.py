@@ -97,16 +97,19 @@ def vice_rank(proj_next, xi_ids, captain_id, top=5):
     # rank by insurance, but only let the shared-fixture tiebreak apply when the
     # options are genuinely close — it is a small risk, not a large one
     top_ins = max(o['insurance'] for o in opts)
-    opts.sort(key=lambda o: (-o['insurance'],
-                             o['same_match'] and o['insurance'] > top_ins - 0.05))
-    best = min(opts, key=lambda o: (o['same_match'] if
-                                    o['insurance'] > top_ins - 0.05 else False,
+    close = lambda o: o['insurance'] > top_ins - 0.05
+    # among genuinely close options, prefer one not sharing the captain's match
+    best = min(opts, key=lambda o: (o['same_match'] if close(o) else False,
                                     -o['insurance']))
+    # the pick must lead the list — everything downstream (the badge on the XI,
+    # the "pick" pill) reads position zero, and it has to be the same player
+    opts.sort(key=lambda o: (o is not best, -o['insurance']))
     warn = ('' if not best['same_match'] else
             ' He is in the same match as your captain, so a postponement would '
             'cost you both — worth a manual swap if that ever looks likely.')
     return dict(
-        options=opts, pick=best['name'], p_captain_absent=round(p_absent, 3),
+        options=opts, pick=best['name'], pick_id=best['id'],
+        p_captain_absent=round(p_absent, 3),
         insurance=best['insurance'],
         note=(f"Vice-captain: {best['name']}. Your captain is "
               f"{round(p_cap*100)}% to play, so the armband moves about "
