@@ -1,5 +1,10 @@
 {
   "entry_id": 5951977,
-  "leagues": { "classic": 1018282, "h2h": 1018283 },
-  "horizon": 6
+  "leagues": {
+    "classic": 1018282,
+    "h2h": 1018283
+  },
+  "horizon": 6,
+  "free_transfers": 1,
+  "_comment": "free_transfers: FPL's API does not expose how many free transfers you have left, so set it here each week if you bank one. 1 is correct in a normal week."
 }

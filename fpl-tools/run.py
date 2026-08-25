@@ -29,6 +29,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--fresh', action='store_true')
     ap.add_argument('--local', default=os.path.join(HERE, 'bootstrap-static.json'))
+    ap.add_argument('--gw', type=int, help='override the gameweek (testing)')
     args = ap.parse_args()
     for d in (OUT, DOCS):
         os.makedirs(d, exist_ok=True)
@@ -44,10 +45,23 @@ def main():
     cur = model.prepare(players, teams, prev_players, prev_teams, ts)
     cur = model.start_probability(cur, cur_gw)
 
-    unplayed = fixtures[~fixtures.finished.fillna(False)]
-    gw = int(unplayed.event.dropna().min())
+    # Which gameweek are we planning for? Trust FPL's own events list first.
+    # Inferring it from fixture 'finished' flags is what broke this before: when
+    # the fixtures fetch falls back to the stale preseason mirror, every match
+    # looks unplayed, the run thinks it is still pre-GW1, and it rebuilds the
+    # squad from scratch every day instead of advising on transfers.
+    gw = args.gw or prov.get('gw_next')
+    if args.gw:
+        print(f'  gameweek {gw} (forced via --gw)')
+    elif gw:
+        print(f'  gameweek {gw} from FPL events (current: {prov.get("gw_current")})')
+    else:
+        unplayed = fixtures[~fixtures.finished.fillna(False)]
+        gw = int(unplayed.event.dropna().min())
+        print(f'  WARNING: no events data, inferred gameweek {gw} from fixtures')
+    gw = int(gw)
     gws = [g for g in range(gw, gw + HORIZON) if g <= 38]
-    print(f'  gameweek {gw}, horizon {gws[0]}-{gws[-1]}')
+    print(f'  horizon {gws[0]}-{gws[-1]}')
 
     proj, tot = model.project(cur, ts, fixtures, gws)
     proj.to_csv(f'{OUT}/projections_gw.csv', index=False)
@@ -56,12 +70,19 @@ def main():
     # ---- who do we currently own?
     held = None
     if not args.fresh:
-        mine = sources.my_team(CFG.get('entry_id'), gw - 1)
+        mine = sources.my_team(CFG.get('entry_id'), gw - 1,
+                               CFG.get('free_transfers', 1))
         sq_file = os.path.join(HERE, 'my_squad.json')
         if not mine and os.path.exists(sq_file):
             j = json.load(open(sq_file))
             mine = j if j.get('player_ids') else None
         held = mine
+
+    # Past GW1 your squad is locked in, so a from-scratch fifteen is not
+    # something you can act on. If we could not read your team, say so loudly
+    # rather than quietly printing a different team every day.
+    orphaned = (gw > 1 and not args.fresh
+                and not (held and len(held.get('player_ids', [])) == 15))
 
     scenarios, scen_note, transfer = [], '', None
     if held and len(held.get('player_ids', [])) == 15:
@@ -115,13 +136,17 @@ def main():
         cap['note'] += (f" Best in the whole game this week is "
                         f"{cap_all['options'][0]['name']}, who you do not own.")
 
-    render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
-           scen_note, transfer, result)
+    xi_ids = list(res[res.start].id)
+    cap_id = int(res[res.captain].id.iloc[0]) if res.captain.any() else None
+    vc = captain.vice_rank(nxt, xi_ids, cap_id) if cap_id else None
+
+    render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, vc, scenarios,
+           scen_note, transfer, result, orphaned, held)
     print(f'\nwrote {DOCS}/index.html')
 
 
-def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
-           scen_note, transfer, result):
+def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, vc, scenarios,
+           scen_note, transfer, result, orphaned=False, held=None):
     comp = (proj[proj.id.isin(set(res.id))]
             .groupby('id')[['pts_goal', 'pts_ast', 'pts_cs', 'pts_dc',
                             'pts_bonus', 'pts_sv', 'pts_app']].sum())
@@ -133,6 +158,7 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
             price=float(r.price), p_start=float(r.p_start),
             xp_gw1=round(float(r.xp_next), 2), xp_h=round(float(r.xp_h), 1),
             start=bool(r.start), captain=bool(r.captain),
+            vice=bool(vc and r.id == vc['options'][0]['id']),
             owned=float(r.selected_by), prior=bool(r.prior),
             comp={k: round(float(v), 2) for k, v in comp.loc[r.id].items()},
             gws=[dict(gw=int(x.gw), opp=x.opp, home=bool(x.home),
@@ -155,7 +181,7 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
     ev = (prov.get('events') or [{}])[0]
     data = dict(
         squad=squad, ticker=model.ticker(ts, fixtures, gws), best=best,
-        differentials=differentials, captain=cap, scenarios=scenarios,
+        differentials=differentials, captain=cap, vice=vc, scenarios=scenarios,
         scenario_note=scen_note, transfer=transfer,
         meta=dict(gw=gw, gw_last=gws[-1], horizon=len(gws),
                   cost=round(float(res.price.sum()), 1),
@@ -165,7 +191,10 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
                   xp_h=result['raw'],
                   source=prov.get('source', 'unknown'),
                   fetched_at=prov.get('fetched_at'),
-                  deadline=ev.get('deadline_time'),
+                  deadline=prov.get('deadline') or ev.get('deadline_time'),
+                  orphaned=bool(orphaned),
+                  squad_from_gw=(held or {}).get('from_gw'),
+                  free_transfers=(held or {}).get('free_transfers'),
                   stale='mirror' in prov.get('source', '')))
 
     tpl = open(os.path.join(HERE, 'templates', 'dashboard.html')).read()
@@ -173,6 +202,12 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, scenarios,
     open(os.path.join(DOCS, 'index.html'), 'w').write(html)
     json.dump(data, open(os.path.join(OUT, 'dashboard_data.json'), 'w'),
               indent=1, default=str)
+    # out/ is committed by the workflow but data/ mostly is not, so drop a copy
+    # of the provenance here — when a run goes wrong, which source answered and
+    # which gameweek it thought it was are the first two things worth knowing.
+    json.dump(dict(prov, gw=gw, horizon=gws, orphaned=bool(orphaned),
+                   squad_from_gw=(held or {}).get('from_gw')),
+              open(os.path.join(OUT, 'provenance.json'), 'w'), indent=1, default=str)
     write_pool(proj, tot, gws, res)
 
 

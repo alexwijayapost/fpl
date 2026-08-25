@@ -1,6 +1,22 @@
 {
-  "_comment": "Only used as a fallback. When the FPL API is reachable the run pulls your real squad from entry_id in config.json, so you normally never touch this file.",
-  "player_ids": [],
-  "bank": 0.0,
-  "free_transfers": 1
+ "_comment": "Fallback when the FPL API is unreachable. The run normally reads your squad from entry_id in config.json.",
+ "player_ids": [
+  1,
+  200,
+  445,
+  4,
+  388,
+  237,
+  426,
+  155,
+  427,
+  13,
+  106,
+  497,
+  498,
+  346,
+  441
+ ],
+ "bank": 0.0,
+ "free_transfers": 1
 }
