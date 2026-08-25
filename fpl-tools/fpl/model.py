@@ -72,17 +72,43 @@ def team_strength(teams, prev_gw, prev_teams, cur_gw=None):
 def start_probability(cur, cur_gw=None):
     """P(start). The weakest link in any public model — and the thing to override
     by hand when press-conference team news lands."""
+    # Start rate, blended across seasons for the same reason the scoring rates
+    # are: two gameweeks of this season is not enough to tell a nailed starter
+    # from a rotation risk, but it is enough to start updating.
+    prev_start = (cur.prev_starts / 38.0).clip(0, 1) if 'prev_starts' in cur else None
+    if prev_start is not None:
+        prev_start = prev_start.where(cur.get('prev_minutes', 0) >= 400)
+
+    played = 0
+    this_start = None
     if cur_gw is not None and len(cur_gw):
         played = max(int(cur_gw.GW.max()), 1)
         starts = cur_gw.groupby('element').starts.sum()
-        mins = cur_gw.groupby('element').minutes.sum()
-        cur['hist_start'] = (cur.id.map(starts) / played).clip(0, 1)
-        cur.loc[cur.id.map(mins).fillna(0) < 180, 'hist_start'] = np.nan
-        cur['no_history'] = cur.id.map(mins).fillna(0) < 180
-    else:
+        this_start = (cur.id.map(starts) / played).clip(0, 1)
+    elif cur.minutes.max() > 0 and prev_start is None:
+        # no per-gameweek file yet: the bootstrap totals are last season's
         cur['hist_start'] = (cur.starts / 38.0).clip(0, 1)
         cur.loc[cur.minutes < 200, 'hist_start'] = np.nan
         cur['no_history'] = cur.minutes < 400
+        this_start = None
+
+    if 'hist_start' not in cur:
+        FULL_GWS = 8.0                       # gameweeks until this season rules
+        wg = min(played / FULL_GWS, 1.0)
+        if this_start is not None and prev_start is not None:
+            cur['hist_start'] = np.where(
+                this_start.notna() & prev_start.notna(),
+                wg * this_start.fillna(0) + (1 - wg) * prev_start.fillna(0),
+                np.where(prev_start.notna(), prev_start, this_start))
+        elif prev_start is not None:
+            cur['hist_start'] = prev_start
+        else:
+            cur['hist_start'] = this_start
+        cur['hist_start'] = pd.to_numeric(cur['hist_start'], errors='coerce')
+        # only a player with no minutes in EITHER season is a genuine unknown
+        cur['no_history'] = ((cur.get('prev_minutes', 0) < 400)
+                             & (cur.minutes < 180))
+        cur.loc[cur.no_history, 'hist_start'] = np.nan
 
     def rank_in_club(g):
         n = EXPECTED_STARTERS[g.name[1]]
@@ -130,17 +156,45 @@ def prepare(players, teams, prev_players, prev_teams, ts):
     cur['new_att'] = cur.team.map(att)
     cur['new_dfn'] = cur.team.map(dict(zip(ts.id, ts.dfn)))
 
-    m90 = cur.minutes.clip(lower=1) / 90.0
-    ok = cur.minutes >= 400
-    for src, dst in [('expected_goals', 'xg90'), ('expected_assists', 'xa90'),
-                     ('bonus', 'bonus90'), ('saves', 'saves90'),
-                     ('yellow_cards', 'yc90'), ('defensive_contribution', 'dc90')]:
-        cur[dst] = (cur[src] / m90).where(ok)
+    # Per-90 rates, blending last season with this one.
+    #
+    # This is the part that quietly breaks in August. Once GW1 is played the
+    # bootstrap's `minutes` resets to *this* season, so any rule of the form
+    # "needs 400 minutes" is false for every player alive and the whole league
+    # collapses onto price-band priors. Last season's rates have to carry the
+    # model until this season has accumulated enough minutes to speak for
+    # itself, and the handover has to be gradual.
+    RATES = [('expected_goals', 'xg90'), ('expected_assists', 'xa90'),
+             ('bonus', 'bonus90'), ('saves', 'saves90'),
+             ('yellow_cards', 'yc90'), ('defensive_contribution', 'dc90')]
+    FULL = 900.0        # minutes at which this season fully replaces last
+
+    prev = prev_players.set_index('code')
+    prev_m90 = prev.minutes.clip(lower=1) / 90.0
+    prev_ok = prev.minutes >= 400
+    prev_rate = {}
+    for src, dst in RATES:
+        if src in prev.columns:
+            prev_rate[dst] = (prev[src] / prev_m90).where(prev_ok)
+
+    cur_m90 = cur.minutes.clip(lower=1) / 90.0
+    w = (cur.minutes / FULL).clip(0, 1)          # weight on this season
+    for src, dst in RATES:
+        this = (cur[src] / cur_m90).where(cur.minutes >= 180)
+        last = cur.code.map(prev_rate.get(dst, pd.Series(dtype=float)))
+        # where only one side exists, use it whole; where both, blend by minutes
+        blended = np.where(this.notna() & last.notna(), w * this.fillna(0) + (1 - w) * last.fillna(0),
+                  np.where(this.notna(), this, last))
+        cur[dst] = pd.Series(blended, index=cur.index).astype(float)
+
     cur['pband'] = cur.groupby('pos').price.transform(
         lambda s: pd.qcut(s.rank(method='first'), 5, labels=False))
     for c in ('xg90', 'xa90', 'bonus90', 'saves90', 'yc90', 'dc90'):
         cur[c] = (cur[c].fillna(cur.groupby(['pos', 'pband'])[c].transform('median'))
                   .fillna(cur.groupby('pos')[c].transform('median')).fillna(0))
+    # who genuinely has no Premier League evidence, in either season
+    cur['prev_minutes'] = cur.code.map(prev.minutes).fillna(0)
+    cur['prev_starts'] = cur.code.map(prev.starts).fillna(0) if 'starts' in prev else 0
     cur['pen1'] = cur.penalties_order == 1
     # small, because last season's xG already embeds penalties for existing takers
     cur.loc[cur.pen1, 'xg90'] += 0.05
