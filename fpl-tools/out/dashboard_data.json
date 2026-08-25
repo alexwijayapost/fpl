@@ -11,6 +11,7 @@
    "xp_h": 13.3,
    "start": true,
    "captain": false,
+   "vice": true,
    "owned": 38.0,
    "prior": true,
    "comp": {
@@ -72,6 +73,7 @@
    "xp_h": 16.1,
    "start": true,
    "captain": true,
+   "vice": false,
    "owned": 29.4,
    "prior": true,
    "comp": {
@@ -133,6 +135,7 @@
    "xp_h": 10.7,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 17.6,
    "prior": true,
    "comp": {
@@ -194,6 +197,7 @@
    "xp_h": 8.8,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 17.1,
    "prior": true,
    "comp": {
@@ -255,6 +259,7 @@
    "xp_h": 9.4,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 5.0,
    "prior": true,
    "comp": {
@@ -306,67 +311,6 @@
    ]
   },
   {
-   "id": 200,
-   "name": "Lacroix",
-   "pos": "DEF",
-   "team": "CHE",
-   "price": 6.0,
-   "p_start": 0.783,
-   "xp_gw1": 1.99,
-   "xp_h": 11.2,
-   "start": true,
-   "captain": false,
-   "owned": 9.3,
-   "prior": true,
-   "comp": {
-    "pts_goal": 0.0,
-    "pts_ast": 0.0,
-    "pts_cs": 4.59,
-    "pts_dc": 0.0,
-    "pts_bonus": 0.0,
-    "pts_sv": 0.0,
-    "pts_app": 8.93
-   },
-   "gws": [
-    {
-     "gw": 2,
-     "opp": "BHA",
-     "home": true,
-     "xp": 1.99
-    },
-    {
-     "gw": 3,
-     "opp": "ARS",
-     "home": false,
-     "xp": 1.44
-    },
-    {
-     "gw": 4,
-     "opp": "HUL",
-     "home": true,
-     "xp": 2.41
-    },
-    {
-     "gw": 5,
-     "opp": "BRE",
-     "home": false,
-     "xp": 1.62
-    },
-    {
-     "gw": 6,
-     "opp": "BOU",
-     "home": true,
-     "xp": 1.83
-    },
-    {
-     "gw": 7,
-     "opp": "EVE",
-     "home": false,
-     "xp": 1.94
-    }
-   ]
-  },
-  {
    "id": 237,
    "name": "Ndiaye",
    "pos": "MID",
@@ -377,6 +321,7 @@
    "xp_h": 9.9,
    "start": false,
    "captain": false,
+   "vice": false,
    "owned": 16.1,
    "prior": true,
    "comp": {
@@ -438,6 +383,7 @@
    "xp_h": 7.8,
    "start": false,
    "captain": false,
+   "vice": false,
    "owned": 29.9,
    "prior": true,
    "comp": {
@@ -499,7 +445,8 @@
    "xp_h": 13.6,
    "start": true,
    "captain": false,
-   "owned": 18.3,
+   "vice": false,
+   "owned": 18.4,
    "prior": true,
    "comp": {
     "pts_goal": 0.0,
@@ -550,6 +497,68 @@
    ]
   },
   {
+   "id": 389,
+   "name": "Matheus N.",
+   "pos": "DEF",
+   "team": "MCI",
+   "price": 6.0,
+   "p_start": 0.737,
+   "xp_gw1": 1.94,
+   "xp_h": 13.0,
+   "start": true,
+   "captain": false,
+   "vice": false,
+   "owned": 1.6,
+   "prior": true,
+   "comp": {
+    "pts_goal": 0.0,
+    "pts_ast": 0.0,
+    "pts_cs": 6.06,
+    "pts_dc": 0.0,
+    "pts_bonus": 0.0,
+    "pts_sv": 0.0,
+    "pts_app": 8.4
+   },
+   "gws": [
+    {
+     "gw": 2,
+     "opp": "CRY",
+     "home": false,
+     "xp": 1.94
+    },
+    {
+     "gw": 3,
+     "opp": "COV",
+     "home": true,
+     "xp": 2.52
+    },
+    {
+     "gw": 4,
+     "opp": "MUN",
+     "home": false,
+     "xp": 1.67
+    },
+    {
+     "gw": 5,
+     "opp": "SUN",
+     "home": true,
+     "xp": 2.56
+    },
+    {
+     "gw": 6,
+     "opp": "LIV",
+     "home": false,
+     "xp": 1.76
+    },
+    {
+     "gw": 7,
+     "opp": "IPS",
+     "home": true,
+     "xp": 2.52
+    }
+   ]
+  },
+  {
    "id": 426,
    "name": "B.Fernandes",
    "pos": "MID",
@@ -560,6 +569,7 @@
    "xp_h": 11.7,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 49.9,
    "prior": true,
    "comp": {
@@ -621,6 +631,7 @@
    "xp_h": 10.2,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 37.1,
    "prior": true,
    "comp": {
@@ -682,6 +693,7 @@
    "xp_h": 1.9,
    "start": false,
    "captain": false,
+   "vice": false,
    "owned": 1.1,
    "prior": true,
    "comp": {
@@ -743,6 +755,7 @@
    "xp_h": 11.0,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 1.7,
    "prior": true,
    "comp": {
@@ -804,6 +817,7 @@
    "xp_h": 1.7,
    "start": false,
    "captain": false,
+   "vice": false,
    "owned": 19.0,
    "prior": true,
    "comp": {
@@ -865,6 +879,7 @@
    "xp_h": 12.0,
    "start": true,
    "captain": false,
+   "vice": false,
    "owned": 8.0,
    "prior": true,
    "comp": {
@@ -1802,7 +1817,7 @@
     "p_start": 0.65,
     "xp_gw1": 1.22,
     "xp_h": 9.4,
-    "owned": 8.5,
+    "owned": 8.6,
     "prior": true,
     "value": 1.7
    },
@@ -1936,7 +1951,7 @@
     "p_start": 0.77,
     "xp_gw1": 2.03,
     "xp_h": 13.6,
-    "owned": 18.3,
+    "owned": 18.4,
     "prior": true,
     "value": 2.26
    },
@@ -2103,7 +2118,7 @@
     "p_start": 0.79,
     "xp_gw1": 1.91,
     "xp_h": 11.4,
-    "owned": 12.0,
+    "owned": 12.1,
     "prior": true,
     "value": 1.2
    },
@@ -2191,7 +2206,7 @@
     "p_start": 0.77,
     "xp_gw1": 1.67,
     "xp_h": 9.9,
-    "owned": 25.2,
+    "owned": 25.3,
     "prior": true,
     "value": 1.32
    },
@@ -2248,7 +2263,7 @@
     "p_start": 0.71,
     "xp_gw1": 1.48,
     "xp_h": 9.0,
-    "owned": 68.7,
+    "owned": 68.6,
     "prior": true,
     "value": 0.58
    },
@@ -2532,15 +2547,15 @@
     "pos": "DEF",
     "opp": "CRY",
     "home": false,
-    "owned": 18.3,
-    "eo": 29.3,
+    "owned": 18.4,
+    "eo": 29.4,
     "xp": 2.49,
     "p_haul": 0.0,
     "p_blank": 0.782,
     "p_double_digit": 0.0,
     "ceiling": 6,
-    "swing_up": 3.52,
-    "swing_down": -1.46
+    "swing_up": 3.51,
+    "swing_down": -1.47
    },
    {
     "id": 1,
@@ -2560,23 +2575,6 @@
     "swing_down": -3.02
    },
    {
-    "id": 200,
-    "name": "Lacroix",
-    "team": "CHE",
-    "pos": "DEF",
-    "opp": "BHA",
-    "home": true,
-    "owned": 9.3,
-    "eo": 14.9,
-    "xp": 2.48,
-    "p_haul": 0.0,
-    "p_blank": 0.791,
-    "p_double_digit": 0.0,
-    "ceiling": 6,
-    "swing_up": 4.22,
-    "swing_down": -0.74
-   },
-   {
     "id": 498,
     "name": "Senesi",
     "team": "TOT",
@@ -2592,6 +2590,23 @@
     "ceiling": 6,
     "swing_up": 4.27,
     "swing_down": -0.63
+   },
+   {
+    "id": 389,
+    "name": "Matheus N.",
+    "team": "MCI",
+    "pos": "DEF",
+    "opp": "CRY",
+    "home": false,
+    "owned": 1.6,
+    "eo": 2.6,
+    "xp": 2.4,
+    "p_haul": 0.0,
+    "p_blank": 0.792,
+    "p_double_digit": 0.0,
+    "ceiling": 6,
+    "swing_up": 4.68,
+    "swing_down": -0.12
    },
    {
     "id": 445,
@@ -2649,31 +2664,105 @@
   "highest_ceiling": "B.Fernandes",
   "note": "Classic league says Gabriel; head-to-head says B.Fernandes \u2014 more likely to haul, and fewer of your rivals own him."
  },
+ "vice": {
+  "options": [
+   {
+    "id": 1,
+    "name": "Raya",
+    "team": "ARS",
+    "pos": "GK",
+    "opp": "AVL",
+    "home": false,
+    "xp": 2.14,
+    "p_start": 0.654,
+    "same_match": true,
+    "insurance": 0.44
+   },
+   {
+    "id": 426,
+    "name": "B.Fernandes",
+    "team": "MUN",
+    "pos": "MID",
+    "opp": "IPS",
+    "home": true,
+    "xp": 2.1,
+    "p_start": 0.794,
+    "same_match": false,
+    "insurance": 0.43
+   },
+   {
+    "id": 388,
+    "name": "Gu\u00e9hi",
+    "team": "MCI",
+    "pos": "DEF",
+    "opp": "CRY",
+    "home": false,
+    "xp": 2.03,
+    "p_start": 0.771,
+    "same_match": false,
+    "insurance": 0.42
+   },
+   {
+    "id": 498,
+    "name": "Senesi",
+    "team": "TOT",
+    "pos": "DEF",
+    "opp": "NEW",
+    "home": true,
+    "xp": 1.95,
+    "p_start": 0.783,
+    "same_match": false,
+    "insurance": 0.4
+   },
+   {
+    "id": 389,
+    "name": "Matheus N.",
+    "team": "MCI",
+    "pos": "DEF",
+    "opp": "CRY",
+    "home": false,
+    "xp": 1.94,
+    "p_start": 0.737,
+    "same_match": false,
+    "insurance": 0.4
+   }
+  ],
+  "pick": "B.Fernandes",
+  "p_captain_absent": 0.206,
+  "insurance": 0.43,
+  "note": "Vice-captain: B.Fernandes. Your captain is 79% to play, so the armband moves about 21% of the time \u2014 worth roughly 0.4 points a week. It is real but small, so take the most certain starter among your best players rather than chasing a ceiling here."
+ },
  "scenarios": [],
  "scenario_note": "",
  "transfer": {
-  "verdict": "Hold. No move clears the cost of making it.",
+  "verdict": "Make 1 transfer \u2014 worth +1.7 points over 6 gameweeks after hits.",
   "options": [
    {
     "label": "Hold \u2014 no transfer",
-    "raw": 145.05,
-    "net": 145.05,
-    "best": true
+    "raw": 148.18,
+    "net": 148.18,
+    "best": false
    },
    {
     "label": "1 transfer: Lacroix out",
-    "raw": 146.74,
-    "net": 142.74,
-    "best": false
+    "raw": 149.88,
+    "net": 149.88,
+    "best": true
    },
    {
     "label": "2 transfers: Enzo out, Lacroix out",
-    "raw": 148.59,
-    "net": 140.59,
+    "raw": 151.7,
+    "net": 147.7,
+    "best": false
+   },
+   {
+    "label": "3 transfers: Lacroix out, Mbeumo out, Thiaw out",
+    "raw": 153.12,
+    "net": 145.12,
     "best": false
    }
   ],
-  "detail": "Out: \u2014. In: \u2014. Hit cost applied: 0. A gain under about 2 points is inside the model's own error \u2014 when it is that close, holding the transfer is usually worth more than the points, because it keeps you flexible for real team news."
+  "detail": "Out: Lacroix. In: Matheus N.. Hit cost applied: 0. A gain under about 2 points is inside the model's own error \u2014 when it is that close, holding the transfer is usually worth more than the points, because it keeps you flexible for real team news."
  },
  "meta": {
   "gw": 2,
@@ -2681,11 +2770,14 @@
   "horizon": 6,
   "cost": 100.0,
   "bank": 0.0,
-  "xp_gw1": 21.2,
-  "xp_h": 145.05,
+  "xp_gw1": 21.1,
+  "xp_h": 149.88,
   "source": "official FPL API",
-  "fetched_at": "2026-08-25T09:09:24+00:00",
+  "fetched_at": "2026-08-25T10:08:48+00:00",
   "deadline": "2026-08-28T17:30:00Z",
+  "orphaned": false,
+  "squad_from_gw": 1,
+  "free_transfers": 1,
   "stale": false
  }
 }
