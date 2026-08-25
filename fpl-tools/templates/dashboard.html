@@ -133,6 +133,14 @@ summary{cursor:pointer;font-size:12px;color:var(--muted)}
   </div>
 </section>
 
+<section id="warn-block" hidden>
+  <h2>Check these before you confirm</h2>
+  <div class="card">
+    <table id="warns"></table>
+    <p class="note">These players are rated as near-certain starters but did not start last week, and carry no injury flag — so the cause is tactical, rotation, or a transfer saga, and the model cannot see any of those. Its start percentage for them is still quoting history. Check the team news before trusting the projection, and use the What if… panel below to re-solve with a start chance you actually believe.</p>
+  </div>
+</section>
+
 <h2 id="h-xi">Starting XI</h2>
 <div class="card"><table id="xi"></table></div>
 
@@ -298,6 +306,7 @@ function playerRows(rows, tbl, showOwn){
       `${p.captain?'<span class="cap">C</span>':''}`+
       `${p.vice?'<span class="cap vc">V</span>':''}`+
       `${p.prior?' <span class="pill" title="No Premier League minutes to model from — this projection is a price-based guess">guess</span>':''}`+
+      `${p.benched?' <span class="pill" title="Did not start last gameweek despite no injury flag">benched</span>':''}`+
       `<div class="mt" style="padding-left:36px">${p.team} · `+
       `${p.gws.slice(0,3).map(g=>g.opp+(g.home?' (H)':' (A)')).join(', ')}</div></td>`+
       `<td class="hide-s">${Math.round(p.p_start*100)}%</td>`+
@@ -381,6 +390,20 @@ $('#tksort').addEventListener('click',e=>{
       `<td>${Math.round(c.p_blank*100)}%</td>`));
   });
 })();
+
+/* ---- benched-but-fit warnings ---- */
+if (D.warnings && D.warnings.length) {
+  $('#warn-block').hidden = false;
+  const t=$('#warns'); t.append(el('thead'),el('tbody'));
+  t.querySelector('thead').innerHTML =
+    '<tr><th>Player</th><th>Last GW</th><th>Model says</th></tr>';
+  const b=t.querySelector('tbody');
+  D.warnings.forEach(w=>b.append(el('tr','',
+    `<td><span class="pos">${w.pos}</span><span class="nm">${w.name}</span> `+
+    `<span class="mt">${w.team}</span> <span class="pill">benched</span></td>`+
+    `<td>${w.minutes} min, no start</td>`+
+    `<td>${Math.round(w.p_start*100)}% to start</td>`)));
+}
 
 /* ---- vice-captain ---- */
 if (D.vice) {
