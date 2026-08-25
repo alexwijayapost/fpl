@@ -53,6 +53,7 @@ tr:last-child td{border-bottom:none}
   border:1px solid var(--axis);border-radius:4px;padding:1px 4px;text-align:center;margin-right:6px}
 .cap{display:inline-block;background:var(--s4);color:#0d0d0d;font-size:10px;font-weight:700;
   border-radius:4px;padding:1px 4px;margin-left:5px;vertical-align:1px}
+.cap.vc{background:var(--axis);color:var(--ink)}
 .bar{display:flex;height:9px;border-radius:4px;overflow:hidden;background:var(--grid);min-width:74px}
 .bar i{display:block;height:100%;box-shadow:0 0 0 1px var(--surface-1) inset}
 .legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:var(--ink-2);margin:10px 0 2px}
@@ -162,6 +163,13 @@ summary{cursor:pointer;font-size:12px;color:var(--muted)}
   <p class="note">Ceiling and blank chance come from a points distribution, not just the average. In your classic league a blank costs you rank against everyone at once, so the steady pick is usually right. In head-to-head you only need to beat one manager, which makes a high ceiling on a player your opponent doesn't own worth more than it looks.</p>
 </div>
 
+<h2 id="h-vc">Vice-captain</h2>
+<div class="card" id="vc-card">
+  <p class="verdict" id="vccall"></p>
+  <table id="vcs"></table>
+  <p class="note">The vice only scores if your captain plays <b>no minutes at all</b> — not if he plays badly. So this is insurance, priced at the chance your captain is absent times what the vice would score. Kickoff order doesn't matter: FPL applies the switch automatically once the gameweek ends, so a vice playing Friday still covers a captain who sits out on Sunday. The one thing worth avoiding is a vice in the <b>same match</b> as your captain — a postponement takes out both at once.</p>
+</div>
+
 <h2>The alternatives I tested</h2>
 <div class="card">
   <div class="scn" id="scn"></div>
@@ -251,6 +259,21 @@ prov.innerHTML = `Data source: <b>${M.source}</b>, pulled ${new Date(M.fetched_a
   (M.stale ? ' Injury flags and ownership on this run may be a day behind the live game — check anyone flagged on the FPL site before you confirm.' : '');
 if (M.stale) prov.classList.add('stale');
 
+// Past GW1 your squad is locked, so a squad built from scratch is not something
+// you can act on. Never present one as if it were advice.
+if (M.orphaned) {
+  const w = el('div','banner stale',
+    `<b>This is not your team.</b> Your squad is locked for gameweek ${M.gw}, but this run `+
+    `could not read it from FPL, so everything below is a from-scratch fifteen you cannot `+
+    `act on — and it will differ every time the page rebuilds. Check that <code>entry_id</code> `+
+    `in config.json is right, or fill in my_squad.json.`);
+  prov.after(w);
+} else if (M.squad_from_gw && M.squad_from_gw < M.gw - 1) {
+  prov.after(el('div','banner stale',
+    `Your squad was read from gameweek ${M.squad_from_gw}, not ${M.gw - 1} — any transfers `+
+    `you made since then are not reflected here.`));
+}
+
 const tiles = [
   ['£'+f1(M.cost)+'m','squad cost'],
   ['£'+f1(M.bank)+'m','in the bank'],
@@ -273,6 +296,7 @@ function playerRows(rows, tbl, showOwn){
     tr.innerHTML =
       `<td><span class="pos">${p.pos}</span><span class="nm">${p.name}</span>`+
       `${p.captain?'<span class="cap">C</span>':''}`+
+      `${p.vice?'<span class="cap vc">V</span>':''}`+
       `${p.prior?' <span class="pill" title="No Premier League minutes to model from — this projection is a price-based guess">guess</span>':''}`+
       `<div class="mt" style="padding-left:36px">${p.team} · `+
       `${p.gws.slice(0,3).map(g=>g.opp+(g.home?' (H)':' (A)')).join(', ')}</div></td>`+
@@ -357,6 +381,23 @@ $('#tksort').addEventListener('click',e=>{
       `<td>${Math.round(c.p_blank*100)}%</td>`));
   });
 })();
+
+/* ---- vice-captain ---- */
+if (D.vice) {
+  $('#vccall').textContent = D.vice.note;
+  const t=$('#vcs'); t.append(el('thead'),el('tbody'));
+  t.querySelector('thead').innerHTML =
+    '<tr><th>Player</th><th>Start%</th><th>xP</th><th>Insurance</th></tr>';
+  const b=t.querySelector('tbody');
+  D.vice.options.forEach((o,i)=>b.append(el('tr','',
+    `<td><span class="pos">${o.pos}</span><span class="nm">${o.name}</span> `+
+    `<span class="mt">${o.team} v ${o.opp} (${o.home?'H':'A'})</span>`+
+    `${i===0?' <span class="pill">pick</span>':''}</td>`+
+    `<td>${Math.round(o.p_start*100)}%</td><td>${o.xp.toFixed(1)}</td>`+
+    `<td>${o.insurance.toFixed(2)}</td>`)));
+} else {
+  $('#h-vc').remove(); $('#vc-card').remove();
+}
 
 /* ---- transfer call (only in transfer mode) ---- */
 if (D.transfer) {
@@ -484,7 +525,14 @@ if (!D.scenarios || !D.scenarios.length) {
       if (best<-1e8) return {weighted:-1e9, plain:-1e9};
       const cap=Math.max(gk, bd?d[0]:0, bm?m[0]:0, bf?f[0]:0);
       const bench=(cd[d.length]-cd[bd])+(cm[m.length]-cm[bm])+(cf[f.length]-cf[bf]);
-      const gwScore=best+cap;
+      // vice-captain insurance, same rule the nightly run uses: the second-best
+      // starter, scoring only when the captain plays nothing at all
+      const second=[gk, bd>1?d[1]:0, bm>1?m[1]:0, bf>1?f[1]:0, bd?d[0]:0, bm?m[0]:0, bf?f[0]:0]
+        .filter(x=>x!==cap).sort((a,b)=>b-a)[0]||0;
+      let pCap=1;
+      for (const id of ids){ if (Math.abs(X.get(id)[k]-cap)<1e-9){
+        pCap = ov.start.has(id)?ov.start.get(id):BY.get(id).ps[k]; break; } }
+      const gwScore=best+cap+(1-pCap)*second;
       plain+=gwScore;
       weighted+=Math.pow(DECAY,k)*(gwScore+BW*bench+BWG*(g[1]||0));
     }
