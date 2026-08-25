@@ -52,7 +52,15 @@ def load(data_dir, local_json=None):
         fx = _try(f'{API}/fixtures/')
         fixtures = (pd.DataFrame(json.loads(fx)) if fx else
                     pd.read_csv(io.BytesIO(_get(f'{MIRROR}/{SEASON}/fixtures.csv'))))
+        # FPL's own view of where the season is. This is authoritative and must
+        # be preferred over inferring the gameweek from fixture 'finished' flags
+        # — that inference silently reads a stale preseason file as "nothing has
+        # been played yet" and rebuilds the squad from scratch every run.
         prov['events'] = [e for e in b['events'] if e.get('is_next')][:1]
+        prov['gw_next'] = next((e['id'] for e in b['events'] if e.get('is_next')), None)
+        prov['gw_current'] = next((e['id'] for e in b['events'] if e.get('is_current')), None)
+        prov['deadline'] = next((e['deadline_time'] for e in b['events']
+                                 if e.get('is_next')), None)
     else:
         prov['source'] = 'vaastav GitHub mirror (may lag on injuries)'
         players = pd.read_csv(io.BytesIO(_get(f'{MIRROR}/{SEASON}/players_raw.csv')),
@@ -97,18 +105,31 @@ def snapshot(players, data_dir):
         os.path.join(d, f'{dt.date.today().isoformat()}.csv'), index=False)
 
 
-def my_team(entry_id, gw):
-    """Your current 15 from the FPL API. Only works once GW1 has kicked off."""
+def my_team(entry_id, gw, free_transfers=1):
+    """Your current 15 from the FPL API.
+
+    `gw` is the gameweek to read picks from — the last one that has started.
+    Walks backwards a few gameweeks so a single missing week (an API blip, or a
+    week you had no team) does not silently drop us back to season-start mode.
+    """
     if not entry_id or not gw or gw < 1:
         return None
-    raw = _try(f'{API}/entry/{entry_id}/event/{gw}/picks/')
-    if not raw:
-        return None
-    d = json.loads(raw)
-    e = _try(f'{API}/entry/{entry_id}/')
-    bank = json.loads(e)['last_deadline_bank'] / 10.0 if e else 0.0
-    return dict(player_ids=[p['element'] for p in d['picks']], bank=bank,
-                free_transfers=d.get('entry_history', {}).get('event_transfers', 1))
+    for g in range(gw, max(gw - 4, 0), -1):
+        raw = _try(f'{API}/entry/{entry_id}/event/{g}/picks/')
+        if not raw:
+            continue
+        d = json.loads(raw)
+        picks = [p['element'] for p in d.get('picks', [])]
+        if len(picks) != 15:
+            continue
+        e = _try(f'{API}/entry/{entry_id}/')
+        bank = json.loads(e)['last_deadline_bank'] / 10.0 if e else 0.0
+        # The API does not expose remaining free transfers, so this is a config
+        # value rather than a guess. entry_history.event_transfers is transfers
+        # *made* that week, which is a different thing entirely.
+        return dict(player_ids=picks, bank=bank, from_gw=g,
+                    free_transfers=free_transfers)
+    return None
 
 
 def league(kind, league_id):

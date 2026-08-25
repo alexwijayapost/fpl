@@ -18,6 +18,27 @@ HIT = 4.0
 SQUAD = [('GK', 2), ('DEF', 5), ('MID', 5), ('FWD', 3)]
 
 
+def vice(xi, cap, g, xp, pstart):
+    """Pick the vice-captain and price the insurance he provides.
+
+    The armband only moves if the captain plays *zero* minutes, so the vice is
+    worth P(captain doesn't play) x his own expected points — usually a fraction
+    of a point, occasionally decisive. Given the captain is fixed, that
+    probability is a constant, so the best vice is simply the highest-scoring
+    other starter.
+    """
+    others = [i for i in xi if i != cap]
+    if not others:
+        return dict(vice=None, insurance=0.0, xp=round(
+            sum(xp.get((i, g), 0) for i in xi) + xp.get((cap, g), 0), 2))
+    vc = max(others, key=lambda i: xp.get((i, g), 0))
+    p_cap_plays = pstart.get((cap, g), 1.0)
+    ins = (1 - p_cap_plays) * xp.get((vc, g), 0)
+    return dict(vice=int(vc), insurance=round(ins, 3),
+                xp=round(sum(xp.get((i, g), 0) for i in xi)
+                         + xp.get((cap, g), 0) + ins, 2))
+
+
 def _solve(proj, tot, gws, budget=BUDGET, force=(), ban=(), keep=None,
            max_out=None, min_start=None, eo_penalty=0.0, time_limit=300):
     pool = tot[((tot.xp_h > 3.0) | (tot.price <= 4.5)) & (tot.status != 'u')]
@@ -28,6 +49,7 @@ def _solve(proj, tot, gws, budget=BUDGET, force=(), ban=(), keep=None,
     pl = pool.set_index('id')
     ids = list(pl.index)
     xp = {(r.id, r.gw): r.xp for r in proj[proj.id.isin(ids)].itertuples()}
+    pstart = {(r.id, r.gw): r.p_start for r in proj[proj.id.isin(ids)].itertuples()}
     pos, price, club = pl.pos.to_dict(), pl.price.to_dict(), pl.team_name.to_dict()
     owned = pl.selected_by.to_dict()
 
@@ -84,12 +106,12 @@ def _solve(proj, tot, gws, budget=BUDGET, force=(), ban=(), keep=None,
     res['xp_h'] = [sum(xp.get((i, g), 0) for g in gws) for i in res.id]
     res['start'] = [st[(i, gws[0])].value() > 0.5 for i in res.id]
     res['captain'] = [cp[(i, gws[0])].value() > 0.5 for i in res.id]
-    lineups = {int(g): dict(
-        xi=[int(i) for i in ids if st[(i, g)].value() > 0.5],
-        captain=int(next(i for i in ids if cp[(i, g)].value() > 0.5)),
-        xp=round(sum(xp.get((i, g), 0) for i in ids if st[(i, g)].value() > 0.5)
-                 + sum(xp.get((i, g), 0) for i in ids if cp[(i, g)].value() > 0.5), 2))
-        for g in gws}
+    lineups = {}
+    for g in gws:
+        xi = [int(i) for i in ids if st[(i, g)].value() > 0.5]
+        cap = int(next(i for i in ids if cp[(i, g)].value() > 0.5))
+        lineups[int(g)] = dict(xi=xi, captain=cap,
+                               **vice(xi, cap, g, xp, pstart))
     raw = sum(l['xp'] for l in lineups.values())          # plain projected points
     weighted = sum(l['xp'] * (DECAY ** k) for k, l in enumerate(lineups.values()))
     return dict(squad=res, lineups=lineups, raw=round(raw, 2),

@@ -62,6 +62,60 @@ def summarise(row):
         ceiling=max(k for k, v in pmf.items() if v > 0.02))
 
 
+def vice_rank(proj_next, xi_ids, captain_id, top=5):
+    """Vice-captain options, ranked by the insurance they actually buy.
+
+    The vice only ever scores if the captain plays no minutes at all. So his
+    value is P(captain absent) x his own expected points — and P(captain absent)
+    is the same number whoever you pick, which makes this a straight ranking by
+    the vice's own expected points among the other ten starters.
+
+    Kickoff order does not matter: FPL applies the switch automatically once the
+    gameweek finishes, so a vice playing on Friday still covers a captain who
+    sits out on Sunday. What does matter is sharing a fixture with the captain —
+    a postponement would take out both at once — so same-match candidates are
+    flagged and broken against when two options are close.
+    """
+    xi = proj_next[proj_next.id.isin(xi_ids)]
+    cap_row = xi[xi.id == captain_id]
+    if cap_row.empty:
+        return None
+    p_cap = float(cap_row.p_start.iloc[0])
+    p_absent = 1 - p_cap
+    cap_team, cap_opp = cap_row.team_name.iloc[0], cap_row.opp.iloc[0]
+
+    opts = []
+    for _, r in xi[xi.id != captain_id].nlargest(top, 'xp').iterrows():
+        same = r['team_name'] in (cap_team, cap_opp)
+        opts.append(dict(
+            id=int(r['id']), name=r['name'], team=r['team_name'], pos=r['pos'],
+            opp=r['opp'], home=bool(r['home']), xp=round(float(r['xp']), 2),
+            p_start=round(float(r['p_start']), 3), same_match=bool(same),
+            insurance=round(p_absent * float(r['xp']), 2)))
+    if not opts:
+        return None
+    # rank by insurance, but only let the shared-fixture tiebreak apply when the
+    # options are genuinely close — it is a small risk, not a large one
+    top_ins = max(o['insurance'] for o in opts)
+    opts.sort(key=lambda o: (-o['insurance'],
+                             o['same_match'] and o['insurance'] > top_ins - 0.05))
+    best = min(opts, key=lambda o: (o['same_match'] if
+                                    o['insurance'] > top_ins - 0.05 else False,
+                                    -o['insurance']))
+    warn = ('' if not best['same_match'] else
+            ' He is in the same match as your captain, so a postponement would '
+            'cost you both — worth a manual swap if that ever looks likely.')
+    return dict(
+        options=opts, pick=best['name'], p_captain_absent=round(p_absent, 3),
+        insurance=best['insurance'],
+        note=(f"Vice-captain: {best['name']}. Your captain is "
+              f"{round(p_cap*100)}% to play, so the armband moves about "
+              f"{round(p_absent*100)}% of the time — worth roughly "
+              f"{best['insurance']:.1f} points a week. It is real but small, so "
+              f"take the most certain starter among your best players rather "
+              f"than chasing a ceiling here." + warn))
+
+
 def rank(proj_next, top=10, eo_scale=1.6):
     """Captain options for the next gameweek, both ways of reading them.
 
