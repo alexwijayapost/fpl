@@ -73,7 +73,7 @@
    "xp_h": 30.7,
    "start": true,
    "captain": false,
-   "vice": false,
+   "vice": true,
    "owned": 29.4,
    "prior": false,
    "comp": {
@@ -631,7 +631,7 @@
    "xp_h": 28.1,
    "start": true,
    "captain": false,
-   "vice": true,
+   "vice": false,
    "owned": 37.1,
    "prior": false,
    "comp": {
@@ -2667,18 +2667,6 @@
  "vice": {
   "options": [
    {
-    "id": 427,
-    "name": "Mbeumo",
-    "team": "MUN",
-    "pos": "MID",
-    "opp": "IPS",
-    "home": true,
-    "xp": 5.66,
-    "p_start": 0.885,
-    "same_match": true,
-    "insurance": 0.27
-   },
-   {
     "id": 4,
     "name": "Gabriel",
     "team": "ARS",
@@ -2689,6 +2677,18 @@
     "p_start": 0.881,
     "same_match": false,
     "insurance": 0.23
+   },
+   {
+    "id": 427,
+    "name": "Mbeumo",
+    "team": "MUN",
+    "pos": "MID",
+    "opp": "IPS",
+    "home": true,
+    "xp": 5.66,
+    "p_start": 0.885,
+    "same_match": true,
+    "insurance": 0.27
    },
    {
     "id": 106,
@@ -2728,6 +2728,7 @@
    }
   ],
   "pick": "Gabriel",
+  "pick_id": 4,
   "p_captain_absent": 0.047,
   "insurance": 0.23,
   "note": "Vice-captain: Gabriel. Your captain is 95% to play, so the armband moves about 5% of the time \u2014 worth roughly 0.2 points a week. It is real but small, so take the most certain starter among your best players rather than chasing a ceiling here."
@@ -2761,7 +2762,7 @@
   "xp_gw1": 51.8,
   "xp_h": 344.75,
   "source": "official FPL API",
-  "fetched_at": "2026-08-25T10:17:24+00:00",
+  "fetched_at": "2026-08-25T10:22:29+00:00",
   "deadline": "2026-08-28T17:30:00Z",
   "orphaned": false,
   "squad_from_gw": 1,
