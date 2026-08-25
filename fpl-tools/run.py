@@ -43,7 +43,8 @@ def main():
 
     ts = model.team_strength(teams, prev_gw, prev_teams, cur_gw)
     cur = model.prepare(players, teams, prev_players, prev_teams, ts)
-    cur = model.start_probability(cur, cur_gw)
+    played = int(prov.get('gw_current') or 0)
+    cur = model.start_probability(cur, cur_gw, gws_played=played)
 
     # Which gameweek are we planning for? Trust FPL's own events list first.
     # Inferring it from fixture 'finished' flags is what broke this before: when
@@ -160,6 +161,7 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, vc, scenarios,
             start=bool(r.start), captain=bool(r.captain),
             vice=bool(vc and r.id == vc['pick_id']),
             owned=float(r.selected_by), prior=bool(r.prior),
+            benched=bool(getattr(r, 'benched', False)),
             comp={k: round(float(v), 2) for k, v in comp.loc[r.id].items()},
             gws=[dict(gw=int(x.gw), opp=x.opp, home=bool(x.home),
                       xp=round(float(x.xp), 2)) for x in pf.itertuples()]))
@@ -168,6 +170,7 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, vc, scenarios,
                      p_start=round(float(r.p_start), 2),
                      xp_gw1=round(float(r.xp_next), 2), xp_h=round(float(r.xp_h), 1),
                      owned=float(r.selected_by), prior=bool(r.prior),
+            benched=bool(getattr(r, 'benched', False)),
                      value=round(float(r.value), 2))
                 for r in tot[(tot.pos == p) & (tot.status == 'a')]
                 .nlargest(15, 'xp_h').itertuples()]
@@ -178,10 +181,17 @@ def render(res, proj, tot, ts, fixtures, gws, gw, prov, cap, vc, scenarios,
                           owned=float(r.selected_by))
                      for r in dif.nlargest(12, 'xp_h').itertuples()]
 
+    warnings = [dict(name=r.name, team=r.team_name, pos=r.pos,
+                     p_start=round(float(r.p_start), 2),
+                     minutes=int(r.minutes_season),
+                     starts=round(float(r.starts_actual or 0), 2))
+                for r in res.itertuples() if bool(getattr(r, 'benched', False))]
+
     ev = (prov.get('events') or [{}])[0]
     data = dict(
         squad=squad, ticker=model.ticker(ts, fixtures, gws), best=best,
-        differentials=differentials, captain=cap, vice=vc, scenarios=scenarios,
+        differentials=differentials, captain=cap, vice=vc, warnings=warnings,
+        scenarios=scenarios,
         scenario_note=scen_note, transfer=transfer,
         meta=dict(gw=gw, gw_last=gws[-1], horizon=len(gws),
                   cost=round(float(res.price.sum()), 1),
