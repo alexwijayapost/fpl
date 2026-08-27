@@ -272,10 +272,14 @@ def project(cur, ts, fixtures, gws):
                 minutes_season=int(p.minutes)))
 
     proj = pd.DataFrame(rows)
+    # per-player columns must be carried through the aggregation or they simply
+    # vanish — the benched flag was computed correctly and then silently dropped
+    # here, which is why nothing was ever warned about
     tot = (proj.groupby(['id', 'name', 'pos', 'team_name', 'price', 'selected_by',
-                         'status', 'pen1', 'prior'])
+                         'status', 'pen1', 'prior', 'benched', 'minutes_season'])
            .agg(xp_h=('xp', 'sum'), xp_next=('xp', lambda s: s.iloc[0]),
-                p_start=('p_start', 'mean'), games=('gw', 'count')).reset_index())
+                p_start=('p_start', 'mean'), games=('gw', 'count'),
+                starts_actual=('starts_actual', 'first')).reset_index())
     tot['value'] = tot.xp_h / tot.price
     return proj, tot
 
