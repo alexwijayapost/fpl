@@ -79,22 +79,35 @@ def start_probability(cur, cur_gw=None, gws_played=0):
     if prev_start is not None:
         prev_start = prev_start.where(cur.get('prev_minutes', 0) >= 400)
 
+    # This season's start rate comes from the BOOTSTRAP, not the per-gameweek
+    # mirror file. The mirror lags by days and is sometimes missing entirely;
+    # gating on it meant that whenever it was absent the model quietly ignored
+    # this season altogether and quoted last season's roles verbatim.
     played = 0
     this_start = None
-    if cur_gw is not None and len(cur_gw):
+    if gws_played >= 1:
+        played = int(gws_played)
+        this_start = (cur.starts / float(played)).clip(0, 1)
+    elif cur_gw is not None and len(cur_gw):
         played = max(int(cur_gw.GW.max()), 1)
         starts = cur_gw.groupby('element').starts.sum()
         this_start = (cur.id.map(starts) / played).clip(0, 1)
-    elif cur.minutes.max() > 0 and prev_start is None:
-        # no per-gameweek file yet: the bootstrap totals are last season's
+    elif prev_start is None and cur.minutes.max() > 0:
+        # pre-season: the bootstrap totals still hold last season's numbers
         cur['hist_start'] = (cur.starts / 38.0).clip(0, 1)
         cur.loc[cur.minutes < 200, 'hist_start'] = np.nan
         cur['no_history'] = cur.minutes < 400
-        this_start = None
 
     if 'hist_start' not in cur:
-        FULL_GWS = 8.0                       # gameweeks until this season rules
-        wg = min(played / FULL_GWS, 1.0)
+        # A player's ROLE changes discretely and is directly observable — a man
+        # dropped for a transfer saga, or promoted to nailed-on, tells you almost
+        # everything in one or two teamsheets. Talent (the per-90 rates) is the
+        # opposite: stable, and noisy in small samples. So role must update fast
+        # and output slow. A linear ramp over 8 gameweeks was far too slow for
+        # role: after two weeks it still weighted last season 3:1, which kept a
+        # benched player rated as nailed and a promoted starter rated as a
+        # rotation risk. Shrinkage updates fast early and settles later.
+        wg = played / (played + 2.0)         # 1 GW .33 | 2 .50 | 4 .67 | 8 .80
         if this_start is not None and prev_start is not None:
             cur['hist_start'] = np.where(
                 this_start.notna() & prev_start.notna(),
@@ -122,8 +135,12 @@ def start_probability(cur, cur_gw=None, gws_played=0):
     # is the better signal there: a 4.5 forward is priced as a non-starter.
     role_abs = cur.groupby('pos').price.transform(lambda s: s.rank(pct=True)) ** 0.8
     cur['role'] = 0.5 * role_club + 0.5 * role_abs
+    # Price is a prior for who starts, and priors should yield to evidence. Once
+    # a player has actually started every week, his price tag should stop
+    # dragging him down — so the weight on `role` decays as gameweeks accumulate.
+    alpha = 0.45 * (2.0 / (2.0 + played))    # 0 GWs .45 | 2 .23 | 6 .11
     cur['p_start'] = np.where(cur.hist_start.notna(),
-                              0.55 * cur.hist_start.fillna(0) + 0.45 * cur.role,
+                              (1 - alpha) * cur.hist_start.fillna(0) + alpha * cur.role,
                               cur.role)
     # nothing to learn from -> the number is a guess, so discount it rather than
     # letting the optimiser spend real money on it
@@ -145,7 +162,7 @@ def start_probability(cur, cur_gw=None, gws_played=0):
         actual = (cur.starts / float(gws_played)).clip(0, 1)
         cur['starts_actual'] = actual
         cur['benched'] = ((actual < 0.5) & (cur.status == 'a')
-                          & (cur.p_start > 0.65) & (cur.minutes < 60 * gws_played))
+                          & (cur.p_start > 0.50) & (cur.minutes < 60 * gws_played))
     else:
         cur['starts_actual'] = np.nan
         cur['benched'] = False
