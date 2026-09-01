@@ -2812,7 +2812,7 @@
  "scenarios": [],
  "scenario_note": "",
  "transfer": {
-  "verdict": "Make 2 transfers \u2014 worth +13.1 points over 6 gameweeks after hits.",
+  "verdict": "Make 2 transfers \u2014 worth +17.1 points over 6 gameweeks after hits.",
   "options": [
    {
     "label": "Hold \u2014 no transfer",
@@ -2829,17 +2829,23 @@
    {
     "label": "2 transfers: Raya out, Enzo out",
     "raw": 376.2,
-    "net": 372.2,
+    "net": 376.2,
     "best": true
    },
    {
     "label": "3 transfers: Raya out, Enzo out, Senesi out",
     "raw": 379.76,
-    "net": 371.76,
+    "net": 375.76,
+    "best": false
+   },
+   {
+    "label": "4 transfers: Raya out, Enzo out, Obi out, Senesi out",
+    "raw": 380.67,
+    "net": 372.67,
     "best": false
    }
   ],
-  "detail": "Out: Raya, Enzo. In: Gibbs-White, Tzolakis. Hit cost applied: 4. A gain under about 2 points is inside the model's own error \u2014 when it is that close, holding the transfer is usually worth more than the points, because it keeps you flexible for real team news."
+  "detail": "Out: Raya, Enzo. In: Gibbs-White, Tzolakis. Hit cost applied: 0. A gain under about 2 points is inside the model's own error \u2014 when it is that close, holding the transfer is usually worth more than the points, because it keeps you flexible for real team news."
  },
  "meta": {
   "gw": 3,
@@ -2850,11 +2856,11 @@
   "xp_gw1": 55.5,
   "xp_h": 376.2,
   "source": "official FPL API",
-  "fetched_at": "2026-09-01T08:21:56+00:00",
+  "fetched_at": "2026-09-01T08:25:06+00:00",
   "deadline": "2026-09-04T17:30:00Z",
   "orphaned": false,
   "squad_from_gw": 2,
-  "free_transfers": 1,
+  "free_transfers": 2,
   "stale": false
  }
 }
