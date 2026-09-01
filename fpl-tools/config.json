@@ -5,7 +5,7 @@
     "h2h": 1018283
   },
   "horizon": 6,
-  "free_transfers": 1,
+  "free_transfers": 2,
   "_comment": "free_transfers: FPL's API does not expose how many you have left, so set it here. min_start: never select a player below this chance of starting \u2014 kills bench fodder. Set to 0 to allow cheap non-playing enablers again.",
   "min_start": 0.55
 }
