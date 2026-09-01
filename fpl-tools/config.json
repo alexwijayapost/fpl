@@ -6,5 +6,6 @@
   },
   "horizon": 6,
   "free_transfers": 1,
-  "_comment": "free_transfers: FPL's API does not expose how many free transfers you have left, so set it here each week if you bank one. 1 is correct in a normal week."
+  "_comment": "free_transfers: FPL's API does not expose how many you have left, so set it here. min_start: never select a player below this chance of starting \u2014 kills bench fodder. Set to 0 to allow cheap non-playing enablers again.",
+  "min_start": 0.55
 }

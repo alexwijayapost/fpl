@@ -89,7 +89,8 @@ def main():
     if held and len(held.get('player_ids', [])) == 15:
         print(f"transfer mode: bank £{held['bank']}m, {held['free_transfers']} free")
         t = optimise.transfers(proj, tot, gws, held['player_ids'],
-                               held['bank'], held.get('free_transfers', 1))
+                               held['bank'], held.get('free_transfers', 1),
+                               min_start=CFG.get('min_start', 0.0))
         best, hold = t['best'], t['hold']
         names = dict(zip(tot.id, tot.name))
         opts = [dict(label=('Hold — no transfer' if r['transfers'] == 0 else
@@ -114,8 +115,9 @@ def main():
         result = best
     else:
         print('season-start mode')
-        result = optimise.build(proj, tot, gws)
-        alts = [('Best available', optimise.build(proj, tot, gws)),
+        MS = CFG.get('min_start', 0.0)
+        result = optimise.build(proj, tot, gws, min_start=MS)
+        alts = [('Best available', optimise.build(proj, tot, gws, min_start=MS)),
                 ('Every player a plausible starter',
                  optimise.build(proj, tot, gws, min_start=0.55))]
         base = alts[0][1]['raw']
