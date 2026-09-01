@@ -124,13 +124,14 @@ def build(proj, tot, gws, **kw):
     return _solve(proj, tot, gws, **kw)
 
 
-def transfers(proj, tot, gws, held, bank, free, max_hits=2):
+def transfers(proj, tot, gws, held, bank, free, max_hits=2, min_start=0.0):
     """Rank 0..(free+max_hits) transfers by expected points net of the -4 hits."""
     held = set(held)
     budget = round(float(tot[tot.id.isin(held)].price.sum()) + bank, 1)
     runs = []
     for n in range(0, free + max_hits + 1):
-        r = _solve(proj, tot, gws, budget=budget, keep=held, max_out=n)
+        r = _solve(proj, tot, gws, budget=budget, keep=held, max_out=n,
+                   min_start=min_start)
         if not r:
             continue
         made = len(r['out'])
