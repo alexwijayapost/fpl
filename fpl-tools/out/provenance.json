@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-01T08:25:06+00:00",
+ "fetched_at": "2026-09-02T07:02:24+00:00",
  "source": "official FPL API",
  "events": [
   {
@@ -17,8 +17,8 @@
    "is_previous": false,
    "is_current": false,
    "is_next": true,
-   "cup_leagues_created": false,
-   "h2h_ko_matches_created": false,
+   "cup_leagues_created": true,
+   "h2h_ko_matches_created": true,
    "can_enter": true,
    "can_manage": true,
    "released": true,
