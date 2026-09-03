@@ -264,7 +264,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 13.6,
+   "owned": 13.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -327,7 +327,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 26.5,
+   "owned": 26.4,
    "prior": false,
    "benched": false,
    "comp": {
@@ -516,7 +516,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 29.7,
+   "owned": 29.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1789,7 +1789,7 @@
     "p_start": 0.94,
     "xp_gw1": 4.04,
     "xp_h": 25.5,
-    "owned": 5.0,
+    "owned": 5.1,
     "prior": false,
     "benched": false,
     "value": 5.09
@@ -1813,7 +1813,7 @@
     "p_start": 0.94,
     "xp_gw1": 3.82,
     "xp_h": 20.4,
-    "owned": 7.2,
+    "owned": 7.3,
     "prior": false,
     "benched": false,
     "value": 4.08
@@ -1861,7 +1861,7 @@
     "p_start": 0.88,
     "xp_gw1": 3.2,
     "xp_h": 19.5,
-    "owned": 14.0,
+    "owned": 13.9,
     "prior": false,
     "benched": false,
     "value": 3.89
@@ -2115,7 +2115,7 @@
     "p_start": 0.84,
     "xp_gw1": 3.59,
     "xp_h": 22.6,
-    "owned": 2.2,
+    "owned": 2.3,
     "prior": false,
     "benched": false,
     "value": 5.02
@@ -2153,7 +2153,7 @@
     "p_start": 0.92,
     "xp_gw1": 5.28,
     "xp_h": 32.7,
-    "owned": 29.7,
+    "owned": 29.6,
     "prior": false,
     "benched": false,
     "value": 4.09
@@ -2225,7 +2225,7 @@
     "p_start": 0.87,
     "xp_gw1": 4.94,
     "xp_h": 27.2,
-    "owned": 5.3,
+    "owned": 5.2,
     "prior": false,
     "benched": false,
     "value": 4.24
@@ -2237,7 +2237,7 @@
     "p_start": 0.81,
     "xp_gw1": 5.02,
     "xp_h": 26.2,
-    "owned": 13.6,
+    "owned": 13.5,
     "prior": false,
     "benched": false,
     "value": 4.37
@@ -2297,7 +2297,7 @@
     "p_start": 0.88,
     "xp_gw1": 3.88,
     "xp_h": 23.9,
-    "owned": 2.8,
+    "owned": 2.9,
     "prior": false,
     "benched": false,
     "value": 3.98
@@ -2323,7 +2323,7 @@
     "p_start": 0.93,
     "xp_gw1": 7.59,
     "xp_h": 39.1,
-    "owned": 70.9,
+    "owned": 71.0,
     "prior": false,
     "benched": false,
     "value": 2.52
@@ -2359,7 +2359,7 @@
     "p_start": 0.87,
     "xp_gw1": 3.86,
     "xp_h": 24.2,
-    "owned": 26.5,
+    "owned": 26.4,
     "prior": false,
     "benched": false,
     "value": 4.04
@@ -2467,7 +2467,7 @@
     "p_start": 0.61,
     "xp_gw1": 2.58,
     "xp_h": 15.2,
-    "owned": 11.7,
+    "owned": 11.9,
     "prior": false,
     "benched": false,
     "value": 2.5
@@ -2491,7 +2491,7 @@
     "p_start": 0.57,
     "xp_gw1": 2.6,
     "xp_h": 14.7,
-    "owned": 0.8,
+    "owned": 0.9,
     "prior": true,
     "benched": false,
     "value": 2.26
@@ -2513,7 +2513,7 @@
    "team": "MCI",
    "price": 6.4,
    "xp_h": 27.2,
-   "owned": 5.3
+   "owned": 5.2
   },
   {
    "name": "Trafford",
@@ -2521,7 +2521,7 @@
    "team": "LEE",
    "price": 5.0,
    "xp_h": 25.5,
-   "owned": 5.0
+   "owned": 5.1
   },
   {
    "name": "Tavernier",
@@ -2577,7 +2577,7 @@
    "team": "LEE",
    "price": 6.0,
    "xp_h": 23.9,
-   "owned": 2.8
+   "owned": 2.9
   },
   {
    "name": "E.Le F\u00e9e",
@@ -2639,15 +2639,15 @@
     "pos": "MID",
     "opp": "EVE",
     "home": false,
-    "owned": 29.7,
-    "eo": 47.5,
+    "owned": 29.6,
+    "eo": 47.4,
     "xp": 5.92,
     "p_haul": 0.136,
     "p_blank": 0.078,
     "p_double_digit": 0.136,
     "ceiling": 13,
-    "swing_up": 6.21,
-    "swing_down": -5.63
+    "swing_up": 6.23,
+    "swing_down": -5.61
    },
    {
     "id": 4,
@@ -2724,15 +2724,15 @@
     "pos": "MID",
     "opp": "COV",
     "home": true,
-    "owned": 13.6,
-    "eo": 21.8,
+    "owned": 13.5,
+    "eo": 21.6,
     "xp": 5.33,
     "p_haul": 0.126,
     "p_blank": 0.187,
     "p_double_digit": 0.126,
     "ceiling": 13,
-    "swing_up": 8.34,
-    "swing_down": -2.32
+    "swing_up": 8.36,
+    "swing_down": -2.3
    }
   ],
   "safest": "B.Fernandes",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 56.6,
   "xp_h": 378.27,
   "source": "official FPL API",
-  "fetched_at": "2026-09-03T07:03:24+00:00",
+  "fetched_at": "2026-09-03T09:02:17+00:00",
   "deadline": "2026-09-04T17:30:00Z",
   "orphaned": false,
   "squad_from_gw": 2,
