@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-09-04T09:02:47+00:00",
+ "fetched_at": "2026-09-05T07:01:43+00:00",
  "source": "official FPL API",
  "events": [
   {
-   "id": 3,
-   "name": "Gameweek 3",
-   "deadline_time": "2026-09-04T17:30:00Z",
+   "id": 4,
+   "name": "Gameweek 4",
+   "deadline_time": "2026-09-12T12:30:00Z",
    "release_time": null,
    "average_entry_score": 0,
    "finished": false,
    "data_checked": false,
    "highest_scoring_entry": null,
-   "deadline_time_epoch": 1788543000,
+   "deadline_time_epoch": 1789216200,
    "deadline_time_game_offset": 0,
    "highest_score": null,
    "is_previous": false,
    "is_current": false,
    "is_next": true,
-   "cup_leagues_created": true,
-   "h2h_ko_matches_created": true,
+   "cup_leagues_created": false,
+   "h2h_ko_matches_created": false,
    "can_enter": true,
    "can_manage": true,
    "released": true,
@@ -39,18 +39,18 @@
    "most_vice_captained": null
   }
  ],
- "gw_next": 3,
- "gw_current": 2,
- "deadline": "2026-09-04T17:30:00Z",
- "gw": 3,
+ "gw_next": 4,
+ "gw_current": 3,
+ "deadline": "2026-09-12T12:30:00Z",
+ "gw": 4,
  "horizon": [
-  3,
   4,
   5,
   6,
   7,
-  8
+  8,
+  9
  ],
  "orphaned": false,
- "squad_from_gw": 2
+ "squad_from_gw": 3
 }
