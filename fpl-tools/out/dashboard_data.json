@@ -6,60 +6,60 @@
    "pos": "DEF",
    "team": "ARS",
    "price": 5.8,
-   "p_start": 0.854,
-   "xp_gw1": 3.83,
-   "xp_h": 26.2,
-   "start": false,
+   "p_start": 0.7479999999999999,
+   "xp_gw1": 4.0,
+   "xp_h": 23.0,
+   "start": true,
    "captain": false,
    "vice": false,
-   "owned": 50.2,
+   "owned": 50.7,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 5.65,
-    "pts_ast": 1.38,
-    "pts_cs": 9.08,
-    "pts_dc": 0.24,
-    "pts_bonus": 2.07,
+    "pts_goal": 5.01,
+    "pts_ast": 1.22,
+    "pts_cs": 7.94,
+    "pts_dc": 0.21,
+    "pts_bonus": 1.81,
     "pts_sv": 0.0,
-    "pts_app": 9.74
+    "pts_app": 8.53
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "BHA",
-     "home": false,
-     "xp": 3.83
-    },
     {
      "gw": 6,
      "opp": "LEE",
      "home": true,
-     "xp": 4.56
+     "xp": 4.0
     },
     {
      "gw": 7,
      "opp": "NFO",
      "home": false,
-     "xp": 4.18
+     "xp": 3.66
     },
     {
      "gw": 8,
      "opp": "EVE",
      "home": true,
-     "xp": 4.69
+     "xp": 4.11
     },
     {
      "gw": 9,
      "opp": "LIV",
      "home": false,
-     "xp": 3.75
+     "xp": 3.29
     },
     {
      "gw": 10,
      "opp": "HUL",
      "home": true,
-     "xp": 5.18
+     "xp": 4.53
+    },
+    {
+     "gw": 11,
+     "opp": "NEW",
+     "home": false,
+     "xp": 3.41
     }
    ]
   },
@@ -69,60 +69,186 @@
    "pos": "MID",
    "team": "ARS",
    "price": 9.5,
-   "p_start": 0.9010000000000001,
-   "xp_gw1": 5.43,
-   "xp_h": 37.0,
+   "p_start": 0.789,
+   "xp_gw1": 5.66,
+   "xp_h": 32.6,
    "start": true,
-   "captain": false,
+   "captain": true,
    "vice": false,
-   "owned": 12.8,
+   "owned": 13.1,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 15.18,
-    "pts_ast": 3.86,
-    "pts_cs": 2.4,
-    "pts_dc": 0.91,
-    "pts_bonus": 4.64,
+    "pts_goal": 13.44,
+    "pts_ast": 3.42,
+    "pts_cs": 2.09,
+    "pts_dc": 0.79,
+    "pts_bonus": 4.06,
     "pts_sv": 0.0,
-    "pts_app": 10.28
+    "pts_app": 8.99
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "BHA",
-     "home": false,
-     "xp": 5.43
-    },
     {
      "gw": 6,
      "opp": "LEE",
      "home": true,
-     "xp": 6.47
+     "xp": 5.66
     },
     {
      "gw": 7,
      "opp": "NFO",
      "home": false,
-     "xp": 5.78
+     "xp": 5.06
     },
     {
      "gw": 8,
      "opp": "EVE",
      "home": true,
-     "xp": 6.44
+     "xp": 5.63
     },
     {
      "gw": 9,
      "opp": "LIV",
      "home": false,
-     "xp": 5.5
+     "xp": 4.82
     },
     {
      "gw": 10,
      "opp": "HUL",
      "home": true,
-     "xp": 7.37
+     "xp": 6.45
+    },
+    {
+     "gw": 11,
+     "opp": "NEW",
+     "home": false,
+     "xp": 4.94
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "name": "Tavernier",
+   "pos": "MID",
+   "team": "BOU",
+   "price": 6.1,
+   "p_start": 0.814,
+   "xp_gw1": 4.25,
+   "xp_h": 27.6,
+   "start": true,
+   "captain": false,
+   "vice": false,
+   "owned": 6.5,
+   "prior": false,
+   "benched": false,
+   "comp": {
+    "pts_goal": 9.06,
+    "pts_ast": 2.68,
+    "pts_cs": 1.24,
+    "pts_dc": 1.61,
+    "pts_bonus": 5.28,
+    "pts_sv": 0.0,
+    "pts_app": 9.28
+   },
+   "gws": [
+    {
+     "gw": 6,
+     "opp": "CHE",
+     "home": false,
+     "xp": 4.25
+    },
+    {
+     "gw": 7,
+     "opp": "SUN",
+     "home": true,
+     "xp": 4.75
+    },
+    {
+     "gw": 8,
+     "opp": "MUN",
+     "home": false,
+     "xp": 4.14
+    },
+    {
+     "gw": 9,
+     "opp": "LEE",
+     "home": true,
+     "xp": 4.8
+    },
+    {
+     "gw": 10,
+     "opp": "IPS",
+     "home": false,
+     "xp": 4.86
+    },
+    {
+     "gw": 11,
+     "opp": "NFO",
+     "home": true,
+     "xp": 4.78
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "name": "Schade",
+   "pos": "MID",
+   "team": "BRE",
+   "price": 6.1,
+   "p_start": 0.9499999999999998,
+   "xp_gw1": 4.33,
+   "xp_h": 27.6,
+   "start": true,
+   "captain": false,
+   "vice": false,
+   "owned": 7.9,
+   "prior": false,
+   "benched": false,
+   "comp": {
+    "pts_goal": 10.41,
+    "pts_ast": 1.17,
+    "pts_cs": 1.51,
+    "pts_dc": 0.4,
+    "pts_bonus": 3.89,
+    "pts_sv": 0.0,
+    "pts_app": 10.83
+   },
+   "gws": [
+    {
+     "gw": 6,
+     "opp": "AVL",
+     "home": false,
+     "xp": 4.33
+    },
+    {
+     "gw": 7,
+     "opp": "LIV",
+     "home": true,
+     "xp": 4.6
+    },
+    {
+     "gw": 8,
+     "opp": "HUL",
+     "home": false,
+     "xp": 4.9
+    },
+    {
+     "gw": 9,
+     "opp": "NFO",
+     "home": true,
+     "xp": 4.83
+    },
+    {
+     "gw": 10,
+     "opp": "BHA",
+     "home": false,
+     "xp": 4.16
+    },
+    {
+     "gw": 11,
+     "opp": "EVE",
+     "home": true,
+     "xp": 4.83
     }
    ]
   },
@@ -133,122 +259,185 @@
    "team": "BRE",
    "price": 7.8,
    "p_start": 0.9700000000000001,
-   "xp_gw1": 4.85,
-   "xp_h": 28.1,
+   "xp_gw1": 4.26,
+   "xp_h": 27.6,
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 9.1,
+   "owned": 8.9,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 15.27,
-    "pts_ast": 0.79,
+    "pts_goal": 15.73,
+    "pts_ast": 0.75,
     "pts_cs": 0.0,
-    "pts_dc": 0.08,
-    "pts_bonus": 2.14,
+    "pts_dc": 0.05,
+    "pts_bonus": 1.79,
     "pts_sv": 0.0,
     "pts_app": 11.06
    },
    "gws": [
     {
-     "gw": 5,
-     "opp": "CHE",
-     "home": true,
-     "xp": 4.85
-    },
-    {
      "gw": 6,
      "opp": "AVL",
      "home": false,
-     "xp": 4.35
+     "xp": 4.26
     },
     {
      "gw": 7,
      "opp": "LIV",
      "home": true,
-     "xp": 4.72
+     "xp": 4.63
     },
     {
      "gw": 8,
      "opp": "HUL",
      "home": false,
-     "xp": 5.06
+     "xp": 4.99
     },
     {
      "gw": 9,
      "opp": "NFO",
      "home": true,
-     "xp": 4.93
+     "xp": 4.85
     },
     {
      "gw": 10,
      "opp": "BHA",
      "home": false,
-     "xp": 4.16
+     "xp": 4.06
+    },
+    {
+     "gw": 11,
+     "opp": "EVE",
+     "home": true,
+     "xp": 4.85
     }
    ]
   },
   {
-   "id": 200,
-   "name": "Lacroix",
-   "pos": "DEF",
-   "team": "CHE",
-   "price": 6.0,
-   "p_start": 0.8329999999999999,
-   "xp_gw1": 3.24,
-   "xp_h": 21.7,
+   "id": 250,
+   "name": "Leno",
+   "pos": "GK",
+   "team": "FUL",
+   "price": 4.5,
+   "p_start": 0.828,
+   "xp_gw1": 3.08,
+   "xp_h": 18.1,
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 7.1,
+   "owned": 3.1,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 1.85,
-    "pts_ast": 0.68,
-    "pts_cs": 5.16,
-    "pts_dc": 6.6,
-    "pts_bonus": 1.12,
-    "pts_sv": 0.0,
-    "pts_app": 9.5
+    "pts_goal": 0.0,
+    "pts_ast": 0.01,
+    "pts_cs": 5.34,
+    "pts_dc": 0.0,
+    "pts_bonus": 1.62,
+    "pts_sv": 4.2,
+    "pts_app": 9.43
    },
    "gws": [
     {
-     "gw": 5,
-     "opp": "BRE",
-     "home": false,
-     "xp": 3.24
-    },
-    {
      "gw": 6,
-     "opp": "BOU",
-     "home": true,
-     "xp": 3.56
+     "opp": "IPS",
+     "home": false,
+     "xp": 3.08
     },
     {
      "gw": 7,
-     "opp": "EVE",
-     "home": false,
-     "xp": 3.59
+     "opp": "HUL",
+     "home": true,
+     "xp": 3.38
     },
     {
      "gw": 8,
-     "opp": "TOT",
-     "home": true,
-     "xp": 4.06
+     "opp": "COV",
+     "home": false,
+     "xp": 3.08
     },
     {
      "gw": 9,
-     "opp": "MUN",
-     "home": true,
-     "xp": 3.46
+     "opp": "AVL",
+     "home": false,
+     "xp": 2.88
     },
     {
      "gw": 10,
-     "opp": "SUN",
+     "opp": "NEW",
+     "home": true,
+     "xp": 3.12
+    },
+    {
+     "gw": 11,
+     "opp": "MCI",
      "home": false,
-     "xp": 3.81
+     "xp": 2.61
+    }
+   ]
+  },
+  {
+   "id": 305,
+   "name": "Davis",
+   "pos": "DEF",
+   "team": "IPS",
+   "price": 4.0,
+   "p_start": 0.767,
+   "xp_gw1": 3.37,
+   "xp_h": 18.3,
+   "start": false,
+   "captain": false,
+   "vice": false,
+   "owned": 6.8,
+   "prior": false,
+   "benched": false,
+   "comp": {
+    "pts_goal": 6.7,
+    "pts_ast": 1.26,
+    "pts_cs": 3.28,
+    "pts_dc": 0.22,
+    "pts_bonus": 1.15,
+    "pts_sv": 0.0,
+    "pts_app": 8.74
+   },
+   "gws": [
+    {
+     "gw": 6,
+     "opp": "FUL",
+     "home": true,
+     "xp": 3.37
+    },
+    {
+     "gw": 7,
+     "opp": "MCI",
+     "home": false,
+     "xp": 2.08
+    },
+    {
+     "gw": 8,
+     "opp": "NFO",
+     "home": true,
+     "xp": 3.44
+    },
+    {
+     "gw": 9,
+     "opp": "HUL",
+     "home": false,
+     "xp": 3.4
+    },
+    {
+     "gw": 10,
+     "opp": "BOU",
+     "home": true,
+     "xp": 3.08
+    },
+    {
+     "gw": 11,
+     "opp": "TOT",
+     "home": false,
+     "xp": 2.97
     }
    ]
   },
@@ -258,123 +447,60 @@
    "pos": "FWD",
    "team": "IPS",
    "price": 5.5,
-   "p_start": 0.955,
-   "xp_gw1": 5.68,
-   "xp_h": 35.2,
+   "p_start": 0.787,
+   "xp_gw1": 4.91,
+   "xp_h": 29.0,
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 3.0,
+   "owned": 3.3,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 10.7,
-    "pts_ast": 0.6,
+    "pts_goal": 8.81,
+    "pts_ast": 0.49,
     "pts_cs": 0.0,
     "pts_dc": 0.0,
-    "pts_bonus": 13.05,
+    "pts_bonus": 10.76,
     "pts_sv": 0.0,
-    "pts_app": 10.88
+    "pts_app": 8.97
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "EVE",
-     "home": false,
-     "xp": 5.68
-    },
     {
      "gw": 6,
      "opp": "FUL",
      "home": true,
-     "xp": 5.95
+     "xp": 4.91
     },
     {
      "gw": 7,
      "opp": "MCI",
      "home": false,
-     "xp": 5.36
+     "xp": 4.42
     },
     {
      "gw": 8,
      "opp": "NFO",
      "home": true,
-     "xp": 6.04
+     "xp": 4.98
     },
     {
      "gw": 9,
      "opp": "HUL",
      "home": false,
-     "xp": 6.13
+     "xp": 5.06
     },
     {
      "gw": 10,
      "opp": "BOU",
      "home": true,
-     "xp": 6.07
-    }
-   ]
-  },
-  {
-   "id": 346,
-   "name": "Calvert-Lewin",
-   "pos": "FWD",
-   "team": "LEE",
-   "price": 6.0,
-   "p_start": 0.911,
-   "xp_gw1": 4.73,
-   "xp_h": 26.2,
-   "start": false,
-   "captain": false,
-   "vice": false,
-   "owned": 24.6,
-   "prior": false,
-   "benched": false,
-   "comp": {
-    "pts_goal": 12.87,
-    "pts_ast": 0.47,
-    "pts_cs": 0.0,
-    "pts_dc": 0.0,
-    "pts_bonus": 4.48,
-    "pts_sv": 0.0,
-    "pts_app": 10.38
-   },
-   "gws": [
-    {
-     "gw": 5,
-     "opp": "CRY",
-     "home": true,
-     "xp": 4.73
+     "xp": 5.0
     },
     {
-     "gw": 6,
-     "opp": "ARS",
-     "home": false,
-     "xp": 3.46
-    },
-    {
-     "gw": 7,
-     "opp": "MUN",
-     "home": true,
-     "xp": 4.58
-    },
-    {
-     "gw": 8,
-     "opp": "SUN",
-     "home": false,
-     "xp": 4.27
-    },
-    {
-     "gw": 9,
-     "opp": "BOU",
-     "home": false,
-     "xp": 4.38
-    },
-    {
-     "gw": 10,
+     "gw": 11,
      "opp": "TOT",
-     "home": true,
-     "xp": 4.79
+     "home": false,
+     "xp": 4.67
     }
    ]
   },
@@ -384,249 +510,123 @@
    "pos": "DEF",
    "team": "MCI",
    "price": 6.0,
-   "p_start": 0.9700000000000001,
-   "xp_gw1": 5.53,
-   "xp_h": 29.8,
+   "p_start": 0.852,
+   "xp_gw1": 3.7,
+   "xp_h": 25.9,
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 18.5,
+   "owned": 18.6,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 5.75,
-    "pts_ast": 1.43,
-    "pts_cs": 8.01,
-    "pts_dc": 2.3,
-    "pts_bonus": 3.72,
+    "pts_goal": 5.04,
+    "pts_ast": 1.25,
+    "pts_cs": 6.84,
+    "pts_dc": 2.02,
+    "pts_bonus": 3.27,
     "pts_sv": 0.0,
-    "pts_app": 11.06
+    "pts_app": 9.71
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "SUN",
-     "home": true,
-     "xp": 5.53
-    },
     {
      "gw": 6,
      "opp": "LIV",
      "home": false,
-     "xp": 4.22
+     "xp": 3.7
     },
     {
      "gw": 7,
      "opp": "IPS",
      "home": true,
-     "xp": 5.87
+     "xp": 5.15
     },
     {
      "gw": 8,
      "opp": "AVL",
      "home": false,
-     "xp": 4.55
+     "xp": 4.0
     },
     {
      "gw": 9,
      "opp": "BHA",
      "home": true,
-     "xp": 4.89
+     "xp": 4.29
     },
     {
      "gw": 10,
      "opp": "NFO",
      "home": false,
-     "xp": 4.73
+     "xp": 4.15
+    },
+    {
+     "gw": 11,
+     "opp": "FUL",
+     "home": true,
+     "xp": 4.6
     }
    ]
   },
   {
-   "id": 426,
-   "name": "B.Fernandes",
-   "pos": "MID",
-   "team": "MUN",
-   "price": 12.0,
-   "p_start": 0.9700000000000001,
-   "xp_gw1": 6.04,
-   "xp_h": 38.7,
+   "id": 411,
+   "name": "Haaland",
+   "pos": "FWD",
+   "team": "MCI",
+   "price": 15.6,
+   "p_start": 0.835,
+   "xp_gw1": 5.64,
+   "xp_h": 37.0,
    "start": true,
    "captain": false,
    "vice": true,
-   "owned": 40.7,
+   "owned": 73.3,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 13.9,
-    "pts_ast": 5.87,
-    "pts_cs": 1.59,
-    "pts_dc": 0.83,
-    "pts_bonus": 5.95,
+    "pts_goal": 17.66,
+    "pts_ast": 1.56,
+    "pts_cs": 0.0,
+    "pts_dc": 0.0,
+    "pts_bonus": 8.45,
     "pts_sv": 0.0,
-    "pts_app": 11.06
+    "pts_app": 9.52
    },
    "gws": [
     {
-     "gw": 5,
-     "opp": "FUL",
-     "home": false,
-     "xp": 6.04
-    },
-    {
      "gw": 6,
-     "opp": "TOT",
-     "home": true,
-     "xp": 6.85
+     "opp": "LIV",
+     "home": false,
+     "xp": 5.64
     },
     {
      "gw": 7,
-     "opp": "LEE",
-     "home": false,
-     "xp": 6.2
+     "opp": "IPS",
+     "home": true,
+     "xp": 7.38
     },
     {
      "gw": 8,
-     "opp": "BOU",
-     "home": true,
-     "xp": 6.84
+     "opp": "AVL",
+     "home": false,
+     "xp": 5.76
     },
     {
      "gw": 9,
-     "opp": "CHE",
-     "home": false,
-     "xp": 6.0
+     "opp": "BHA",
+     "home": true,
+     "xp": 6.07
     },
     {
      "gw": 10,
-     "opp": "AVL",
-     "home": true,
-     "xp": 6.74
-    }
-   ]
-  },
-  {
-   "id": 427,
-   "name": "Mbeumo",
-   "pos": "MID",
-   "team": "MUN",
-   "price": 7.9,
-   "p_start": 0.943,
-   "xp_gw1": 5.11,
-   "xp_h": 32.9,
-   "start": true,
-   "captain": false,
-   "vice": false,
-   "owned": 22.1,
-   "prior": false,
-   "benched": false,
-   "comp": {
-    "pts_goal": 15.24,
-    "pts_ast": 2.74,
-    "pts_cs": 1.54,
-    "pts_dc": 0.07,
-    "pts_bonus": 3.57,
-    "pts_sv": 0.0,
-    "pts_app": 10.75
-   },
-   "gws": [
+     "opp": "NFO",
+     "home": false,
+     "xp": 5.85
+    },
     {
-     "gw": 5,
+     "gw": 11,
      "opp": "FUL",
-     "home": false,
-     "xp": 5.11
-    },
-    {
-     "gw": 6,
-     "opp": "TOT",
      "home": true,
-     "xp": 5.86
-    },
-    {
-     "gw": 7,
-     "opp": "LEE",
-     "home": false,
-     "xp": 5.25
-    },
-    {
-     "gw": 8,
-     "opp": "BOU",
-     "home": true,
-     "xp": 5.84
-    },
-    {
-     "gw": 9,
-     "opp": "CHE",
-     "home": false,
-     "xp": 5.07
-    },
-    {
-     "gw": 10,
-     "opp": "AVL",
-     "home": true,
-     "xp": 5.75
-    }
-   ]
-  },
-  {
-   "id": 445,
-   "name": "Thiaw",
-   "pos": "DEF",
-   "team": "NEW",
-   "price": 5.0,
-   "p_start": 0.9460000000000001,
-   "xp_gw1": 4.52,
-   "xp_h": 23.7,
-   "start": true,
-   "captain": false,
-   "vice": false,
-   "owned": 2.2,
-   "prior": false,
-   "benched": false,
-   "comp": {
-    "pts_goal": 3.3,
-    "pts_ast": 0.46,
-    "pts_cs": 6.63,
-    "pts_dc": 3.97,
-    "pts_bonus": 1.24,
-    "pts_sv": 0.0,
-    "pts_app": 10.78
-   },
-   "gws": [
-    {
-     "gw": 5,
-     "opp": "HUL",
-     "home": true,
-     "xp": 4.52
-    },
-    {
-     "gw": 6,
-     "opp": "COV",
-     "home": false,
-     "xp": 4.03
-    },
-    {
-     "gw": 7,
-     "opp": "AVL",
-     "home": true,
-     "xp": 3.97
-    },
-    {
-     "gw": 8,
-     "opp": "CRY",
-     "home": false,
-     "xp": 3.44
-    },
-    {
-     "gw": 9,
-     "opp": "EVE",
-     "home": true,
-     "xp": 4.14
-    },
-    {
-     "gw": 10,
-     "opp": "FUL",
-     "home": false,
-     "xp": 3.62
+     "xp": 6.31
     }
    ]
   },
@@ -636,186 +636,123 @@
    "pos": "MID",
    "team": "NFO",
    "price": 8.0,
-   "p_start": 0.9700000000000001,
-   "xp_gw1": 6.44,
-   "xp_h": 31.9,
+   "p_start": 0.854,
+   "xp_gw1": 4.46,
+   "xp_h": 26.9,
    "start": true,
-   "captain": true,
+   "captain": false,
    "vice": false,
-   "owned": 14.7,
+   "owned": 16.0,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 11.52,
-    "pts_ast": 2.68,
-    "pts_cs": 1.38,
+    "pts_goal": 9.33,
+    "pts_ast": 2.17,
+    "pts_cs": 1.05,
     "pts_dc": 0.06,
-    "pts_bonus": 5.32,
+    "pts_bonus": 4.68,
     "pts_sv": 0.0,
-    "pts_app": 11.06
+    "pts_app": 9.74
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "COV",
-     "home": true,
-     "xp": 6.44
-    },
     {
      "gw": 6,
      "opp": "CRY",
      "home": false,
-     "xp": 5.06
+     "xp": 4.46
     },
     {
      "gw": 7,
      "opp": "ARS",
      "home": true,
-     "xp": 4.51
+     "xp": 3.97
     },
     {
      "gw": 8,
      "opp": "IPS",
      "home": false,
-     "xp": 5.79
+     "xp": 5.09
     },
     {
      "gw": 9,
      "opp": "BRE",
      "home": false,
-     "xp": 5.06
+     "xp": 4.46
     },
     {
      "gw": 10,
      "opp": "MCI",
      "home": true,
-     "xp": 5.05
+     "xp": 4.45
+    },
+    {
+     "gw": 11,
+     "opp": "BOU",
+     "home": false,
+     "xp": 4.5
     }
    ]
   },
   {
-   "id": 497,
-   "name": "Dubravka",
-   "pos": "GK",
-   "team": "TOT",
-   "price": 4.0,
-   "p_start": 0.283,
-   "xp_gw1": 1.14,
-   "xp_h": 6.4,
+   "id": 542,
+   "name": "E.Le F\u00e9e",
+   "pos": "MID",
+   "team": "SUN",
+   "price": 5.7,
+   "p_start": 0.828,
+   "xp_gw1": 3.97,
+   "xp_h": 24.2,
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 17.6,
+   "owned": 3.5,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 0.0,
-    "pts_ast": 0.01,
-    "pts_cs": 1.65,
-    "pts_dc": 0.0,
-    "pts_bonus": 0.34,
-    "pts_sv": 2.11,
-    "pts_app": 3.23
-   },
-   "gws": [
-    {
-     "gw": 5,
-     "opp": "AVL",
-     "home": true,
-     "xp": 1.14
-    },
-    {
-     "gw": 6,
-     "opp": "MUN",
-     "home": false,
-     "xp": 0.98
-    },
-    {
-     "gw": 7,
-     "opp": "COV",
-     "home": true,
-     "xp": 1.19
-    },
-    {
-     "gw": 8,
-     "opp": "CHE",
-     "home": false,
-     "xp": 0.98
-    },
-    {
-     "gw": 9,
-     "opp": "CRY",
-     "home": true,
-     "xp": 1.13
-    },
-    {
-     "gw": 10,
-     "opp": "LEE",
-     "home": false,
-     "xp": 1.02
-    }
-   ]
-  },
-  {
-   "id": 565,
-   "name": "M.Sangar\u00e9",
-   "pos": "MID",
-   "team": "BRE",
-   "price": 5.7,
-   "p_start": 0.96,
-   "xp_gw1": 5.33,
-   "xp_h": 31.7,
-   "start": true,
-   "captain": false,
-   "vice": false,
-   "owned": 11.5,
-   "prior": false,
-   "benched": false,
-   "comp": {
-    "pts_goal": 3.99,
-    "pts_ast": 3.8,
-    "pts_cs": 1.44,
-    "pts_dc": 8.02,
-    "pts_bonus": 5.19,
+    "pts_goal": 7.94,
+    "pts_ast": 3.04,
+    "pts_cs": 1.24,
+    "pts_dc": 0.98,
+    "pts_bonus": 2.0,
     "pts_sv": 0.0,
-    "pts_app": 10.95
+    "pts_app": 9.44
    },
    "gws": [
     {
-     "gw": 5,
-     "opp": "CHE",
-     "home": true,
-     "xp": 5.33
-    },
-    {
      "gw": 6,
-     "opp": "AVL",
-     "home": false,
-     "xp": 5.09
+     "opp": "BHA",
+     "home": true,
+     "xp": 3.97
     },
     {
      "gw": 7,
-     "opp": "LIV",
-     "home": true,
-     "xp": 5.28
+     "opp": "BOU",
+     "home": false,
+     "xp": 3.79
     },
     {
      "gw": 8,
-     "opp": "HUL",
-     "home": false,
-     "xp": 5.5
+     "opp": "LEE",
+     "home": true,
+     "xp": 4.24
     },
     {
      "gw": 9,
-     "opp": "NFO",
-     "home": true,
-     "xp": 5.46
+     "opp": "COV",
+     "home": false,
+     "xp": 4.3
     },
     {
      "gw": 10,
-     "opp": "BHA",
+     "opp": "CHE",
+     "home": true,
+     "xp": 4.1
+    },
+    {
+     "gw": 11,
+     "opp": "AVL",
      "home": false,
-     "xp": 4.97
+     "xp": 3.77
     }
    ]
   },
@@ -825,60 +762,60 @@
    "pos": "DEF",
    "team": "BOU",
    "price": 5.0,
-   "p_start": 0.963,
-   "xp_gw1": 4.81,
-   "xp_h": 29.1,
-   "start": true,
+   "p_start": 0.794,
+   "xp_gw1": 3.39,
+   "xp_h": 24.4,
+   "start": false,
    "captain": false,
    "vice": false,
    "owned": 0.4,
    "prior": false,
    "benched": false,
    "comp": {
-    "pts_goal": 8.87,
-    "pts_ast": 1.41,
-    "pts_cs": 5.55,
-    "pts_dc": 6.62,
+    "pts_goal": 7.41,
+    "pts_ast": 1.18,
+    "pts_cs": 4.83,
+    "pts_dc": 5.46,
     "pts_bonus": 0.0,
     "pts_sv": 0.0,
-    "pts_app": 10.98
+    "pts_app": 9.05
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "LIV",
-     "home": true,
-     "xp": 4.81
-    },
     {
      "gw": 6,
      "opp": "CHE",
      "home": false,
-     "xp": 4.11
+     "xp": 3.39
     },
     {
      "gw": 7,
      "opp": "SUN",
      "home": true,
-     "xp": 5.6
+     "xp": 4.62
     },
     {
      "gw": 8,
      "opp": "MUN",
      "home": false,
-     "xp": 3.99
+     "xp": 3.29
     },
     {
      "gw": 9,
      "opp": "LEE",
      "home": true,
-     "xp": 5.23
+     "xp": 4.31
     },
     {
      "gw": 10,
      "opp": "IPS",
      "home": false,
-     "xp": 5.33
+     "xp": 4.4
+    },
+    {
+     "gw": 11,
+     "opp": "NFO",
+     "home": true,
+     "xp": 4.44
     }
    ]
   },
@@ -888,60 +825,123 @@
    "pos": "GK",
    "team": "HUL",
    "price": 4.6,
-   "p_start": 0.9540000000000001,
-   "xp_gw1": 4.13,
-   "xp_h": 26.3,
+   "p_start": 0.787,
+   "xp_gw1": 3.83,
+   "xp_h": 22.0,
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 11.2,
+   "owned": 11.5,
    "prior": false,
    "benched": false,
    "comp": {
     "pts_goal": 0.0,
     "pts_ast": 0.0,
-    "pts_cs": 3.99,
+    "pts_cs": 3.47,
     "pts_dc": 0.0,
-    "pts_bonus": 8.59,
-    "pts_sv": 6.66,
-    "pts_app": 10.88
+    "pts_bonus": 7.08,
+    "pts_sv": 5.48,
+    "pts_app": 8.97
    },
    "gws": [
-    {
-     "gw": 5,
-     "opp": "NEW",
-     "home": false,
-     "xp": 4.13
-    },
     {
      "gw": 6,
      "opp": "EVE",
      "home": true,
-     "xp": 4.65
+     "xp": 3.83
     },
     {
      "gw": 7,
      "opp": "FUL",
      "home": false,
-     "xp": 4.26
+     "xp": 3.51
     },
     {
      "gw": 8,
      "opp": "BRE",
      "home": true,
-     "xp": 4.48
+     "xp": 3.69
     },
     {
      "gw": 9,
      "opp": "IPS",
      "home": true,
-     "xp": 4.76
+     "xp": 3.93
     },
     {
      "gw": 10,
      "opp": "ARS",
      "home": false,
-     "xp": 4.03
+     "xp": 3.32
+    },
+    {
+     "gw": 11,
+     "opp": "BHA",
+     "home": true,
+     "xp": 3.72
+    }
+   ]
+  },
+  {
+   "id": 588,
+   "name": "Khalaili",
+   "pos": "DEF",
+   "team": "CRY",
+   "price": 5.0,
+   "p_start": 0.637,
+   "xp_gw1": 4.06,
+   "xp_h": 22.4,
+   "start": true,
+   "captain": false,
+   "vice": false,
+   "owned": 0.3,
+   "prior": false,
+   "benched": false,
+   "comp": {
+    "pts_goal": 7.11,
+    "pts_ast": 1.15,
+    "pts_cs": 4.09,
+    "pts_dc": 5.68,
+    "pts_bonus": 0.0,
+    "pts_sv": 0.0,
+    "pts_app": 7.26
+   },
+   "gws": [
+    {
+     "gw": 6,
+     "opp": "NFO",
+     "home": true,
+     "xp": 4.06
+    },
+    {
+     "gw": 7,
+     "opp": "BHA",
+     "home": false,
+     "xp": 3.23
+    },
+    {
+     "gw": 8,
+     "opp": "NEW",
+     "home": true,
+     "xp": 3.82
+    },
+    {
+     "gw": 9,
+     "opp": "TOT",
+     "home": false,
+     "xp": 3.62
+    },
+    {
+     "gw": 10,
+     "opp": "LIV",
+     "home": true,
+     "xp": 3.67
+    },
+    {
+     "gw": 11,
+     "opp": "COV",
+     "home": false,
+     "xp": 4.04
     }
    ]
   }
@@ -950,12 +950,6 @@
   "ARS": {
    "fixtures": [
     {
-     "gw": 5,
-     "opp": "BHA",
-     "home": false,
-     "fdr": 3.79
-    },
-    {
      "gw": 6,
      "opp": "LEE",
      "home": true,
@@ -984,592 +978,592 @@
      "opp": "HUL",
      "home": true,
      "fdr": 1.0
-    }
-   ],
-   "avg": 2.69
-  },
-  "AVL": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "TOT",
-     "home": false,
-     "fdr": 2.75
     },
     {
-     "gw": 6,
-     "opp": "BRE",
-     "home": true,
-     "fdr": 2.79
-    },
-    {
-     "gw": 7,
+     "gw": 11,
      "opp": "NEW",
      "home": false,
      "fdr": 3.54
-    },
-    {
-     "gw": 8,
-     "opp": "MCI",
-     "home": true,
-     "fdr": 4.02
-    },
-    {
-     "gw": 9,
-     "opp": "FUL",
-     "home": true,
-     "fdr": 2.31
-    },
-    {
-     "gw": 10,
-     "opp": "MUN",
-     "home": false,
-     "fdr": 4.23
-    }
-   ],
-   "avg": 3.27
-  },
-  "BHA": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "ARS",
-     "home": true,
-     "fdr": 4.42
-    },
-    {
-     "gw": 6,
-     "opp": "SUN",
-     "home": false,
-     "fdr": 2.58
-    },
-    {
-     "gw": 7,
-     "opp": "CRY",
-     "home": true,
-     "fdr": 2.55
-    },
-    {
-     "gw": 8,
-     "opp": "LIV",
-     "home": false,
-     "fdr": 3.93
-    },
-    {
-     "gw": 9,
-     "opp": "MCI",
-     "home": false,
-     "fdr": 5.0
-    },
-    {
-     "gw": 10,
-     "opp": "BRE",
-     "home": true,
-     "fdr": 2.79
-    }
-   ],
-   "avg": 3.54
-  },
-  "BOU": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "LIV",
-     "home": true,
-     "fdr": 3.08
-    },
-    {
-     "gw": 6,
-     "opp": "CHE",
-     "home": false,
-     "fdr": 3.95
-    },
-    {
-     "gw": 7,
-     "opp": "SUN",
-     "home": true,
-     "fdr": 1.88
-    },
-    {
-     "gw": 8,
-     "opp": "MUN",
-     "home": false,
-     "fdr": 4.23
-    },
-    {
-     "gw": 9,
-     "opp": "LEE",
-     "home": true,
-     "fdr": 2.38
-    },
-    {
-     "gw": 10,
-     "opp": "IPS",
-     "home": false,
-     "fdr": 1.59
-    }
-   ],
-   "avg": 2.85
-  },
-  "BRE": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "CHE",
-     "home": true,
-     "fdr": 3.09
-    },
-    {
-     "gw": 6,
-     "opp": "AVL",
-     "home": false,
-     "fdr": 3.24
-    },
-    {
-     "gw": 7,
-     "opp": "LIV",
-     "home": true,
-     "fdr": 3.08
-    },
-    {
-     "gw": 8,
-     "opp": "HUL",
-     "home": false,
-     "fdr": 1.59
-    },
-    {
-     "gw": 9,
-     "opp": "NFO",
-     "home": true,
-     "fdr": 2.16
-    },
-    {
-     "gw": 10,
-     "opp": "BHA",
-     "home": false,
-     "fdr": 3.79
-    }
-   ],
-   "avg": 2.82
-  },
-  "CHE": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "BRE",
-     "home": false,
-     "fdr": 3.61
-    },
-    {
-     "gw": 6,
-     "opp": "BOU",
-     "home": true,
-     "fdr": 2.89
-    },
-    {
-     "gw": 7,
-     "opp": "EVE",
-     "home": false,
-     "fdr": 2.87
-    },
-    {
-     "gw": 8,
-     "opp": "TOT",
-     "home": true,
-     "fdr": 2.03
-    },
-    {
-     "gw": 9,
-     "opp": "MUN",
-     "home": true,
-     "fdr": 3.34
-    },
-    {
-     "gw": 10,
-     "opp": "SUN",
-     "home": false,
-     "fdr": 2.58
-    }
-   ],
-   "avg": 2.89
-  },
-  "COV": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "NFO",
-     "home": false,
-     "fdr": 2.9
-    },
-    {
-     "gw": 6,
-     "opp": "NEW",
-     "home": true,
-     "fdr": 2.73
-    },
-    {
-     "gw": 7,
-     "opp": "TOT",
-     "home": false,
-     "fdr": 2.75
-    },
-    {
-     "gw": 8,
-     "opp": "FUL",
-     "home": true,
-     "fdr": 2.31
-    },
-    {
-     "gw": 9,
-     "opp": "SUN",
-     "home": true,
-     "fdr": 1.88
-    },
-    {
-     "gw": 10,
-     "opp": "EVE",
-     "home": false,
-     "fdr": 2.87
-    }
-   ],
-   "avg": 2.57
-  },
-  "CRY": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "LEE",
-     "home": false,
-     "fdr": 3.14
-    },
-    {
-     "gw": 6,
-     "opp": "NFO",
-     "home": true,
-     "fdr": 2.16
-    },
-    {
-     "gw": 7,
-     "opp": "BHA",
-     "home": false,
-     "fdr": 3.79
-    },
-    {
-     "gw": 8,
-     "opp": "NEW",
-     "home": true,
-     "fdr": 2.73
-    },
-    {
-     "gw": 9,
-     "opp": "TOT",
-     "home": false,
-     "fdr": 2.75
-    },
-    {
-     "gw": 10,
-     "opp": "LIV",
-     "home": true,
-     "fdr": 3.08
-    }
-   ],
-   "avg": 2.94
-  },
-  "EVE": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "IPS",
-     "home": true,
-     "fdr": 1.0
-    },
-    {
-     "gw": 6,
-     "opp": "HUL",
-     "home": false,
-     "fdr": 1.59
-    },
-    {
-     "gw": 7,
-     "opp": "CHE",
-     "home": true,
-     "fdr": 3.09
-    },
-    {
-     "gw": 8,
-     "opp": "ARS",
-     "home": false,
-     "fdr": 5.0
-    },
-    {
-     "gw": 9,
-     "opp": "NEW",
-     "home": false,
-     "fdr": 3.54
-    },
-    {
-     "gw": 10,
-     "opp": "COV",
-     "home": true,
-     "fdr": 1.0
-    }
-   ],
-   "avg": 2.54
-  },
-  "FUL": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "MUN",
-     "home": true,
-     "fdr": 3.34
-    },
-    {
-     "gw": 6,
-     "opp": "IPS",
-     "home": false,
-     "fdr": 1.59
-    },
-    {
-     "gw": 7,
-     "opp": "HUL",
-     "home": true,
-     "fdr": 1.0
-    },
-    {
-     "gw": 8,
-     "opp": "COV",
-     "home": false,
-     "fdr": 1.59
-    },
-    {
-     "gw": 9,
-     "opp": "AVL",
-     "home": false,
-     "fdr": 3.24
-    },
-    {
-     "gw": 10,
-     "opp": "NEW",
-     "home": true,
-     "fdr": 2.73
-    }
-   ],
-   "avg": 2.25
-  },
-  "HUL": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "NEW",
-     "home": false,
-     "fdr": 3.54
-    },
-    {
-     "gw": 6,
-     "opp": "EVE",
-     "home": true,
-     "fdr": 2.13
-    },
-    {
-     "gw": 7,
-     "opp": "FUL",
-     "home": false,
-     "fdr": 3.07
-    },
-    {
-     "gw": 8,
-     "opp": "BRE",
-     "home": true,
-     "fdr": 2.79
-    },
-    {
-     "gw": 9,
-     "opp": "IPS",
-     "home": true,
-     "fdr": 1.0
-    },
-    {
-     "gw": 10,
-     "opp": "ARS",
-     "home": false,
-     "fdr": 5.0
-    }
-   ],
-   "avg": 2.92
-  },
-  "IPS": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "EVE",
-     "home": false,
-     "fdr": 2.87
-    },
-    {
-     "gw": 6,
-     "opp": "FUL",
-     "home": true,
-     "fdr": 2.31
-    },
-    {
-     "gw": 7,
-     "opp": "MCI",
-     "home": false,
-     "fdr": 5.0
-    },
-    {
-     "gw": 8,
-     "opp": "NFO",
-     "home": true,
-     "fdr": 2.16
-    },
-    {
-     "gw": 9,
-     "opp": "HUL",
-     "home": false,
-     "fdr": 1.59
-    },
-    {
-     "gw": 10,
-     "opp": "BOU",
-     "home": true,
-     "fdr": 2.89
-    }
-   ],
-   "avg": 2.8
-  },
-  "LEE": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "CRY",
-     "home": true,
-     "fdr": 2.55
-    },
-    {
-     "gw": 6,
-     "opp": "ARS",
-     "home": false,
-     "fdr": 5.0
-    },
-    {
-     "gw": 7,
-     "opp": "MUN",
-     "home": true,
-     "fdr": 3.34
-    },
-    {
-     "gw": 8,
-     "opp": "SUN",
-     "home": false,
-     "fdr": 2.58
-    },
-    {
-     "gw": 9,
-     "opp": "BOU",
-     "home": false,
-     "fdr": 3.72
-    },
-    {
-     "gw": 10,
-     "opp": "TOT",
-     "home": true,
-     "fdr": 2.03
-    }
-   ],
-   "avg": 3.2
-  },
-  "LIV": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "BOU",
-     "home": false,
-     "fdr": 3.72
-    },
-    {
-     "gw": 6,
-     "opp": "MCI",
-     "home": true,
-     "fdr": 4.02
-    },
-    {
-     "gw": 7,
-     "opp": "BRE",
-     "home": false,
-     "fdr": 3.61
-    },
-    {
-     "gw": 8,
-     "opp": "BHA",
-     "home": true,
-     "fdr": 2.95
-    },
-    {
-     "gw": 9,
-     "opp": "ARS",
-     "home": true,
-     "fdr": 4.42
-    },
-    {
-     "gw": 10,
-     "opp": "CRY",
-     "home": false,
-     "fdr": 3.34
-    }
-   ],
-   "avg": 3.68
-  },
-  "MCI": {
-   "fixtures": [
-    {
-     "gw": 5,
-     "opp": "SUN",
-     "home": true,
-     "fdr": 1.88
-    },
-    {
-     "gw": 6,
-     "opp": "LIV",
-     "home": false,
-     "fdr": 3.93
-    },
-    {
-     "gw": 7,
-     "opp": "IPS",
-     "home": true,
-     "fdr": 1.0
-    },
-    {
-     "gw": 8,
-     "opp": "AVL",
-     "home": false,
-     "fdr": 3.24
-    },
-    {
-     "gw": 9,
-     "opp": "BHA",
-     "home": true,
-     "fdr": 2.95
-    },
-    {
-     "gw": 10,
-     "opp": "NFO",
-     "home": false,
-     "fdr": 2.9
     }
    ],
    "avg": 2.65
   },
-  "MUN": {
+  "AVL": {
    "fixtures": [
     {
-     "gw": 5,
+     "gw": 6,
+     "opp": "BRE",
+     "home": true,
+     "fdr": 2.79
+    },
+    {
+     "gw": 7,
+     "opp": "NEW",
+     "home": false,
+     "fdr": 3.54
+    },
+    {
+     "gw": 8,
+     "opp": "MCI",
+     "home": true,
+     "fdr": 4.02
+    },
+    {
+     "gw": 9,
+     "opp": "FUL",
+     "home": true,
+     "fdr": 2.31
+    },
+    {
+     "gw": 10,
+     "opp": "MUN",
+     "home": false,
+     "fdr": 4.23
+    },
+    {
+     "gw": 11,
+     "opp": "SUN",
+     "home": true,
+     "fdr": 1.88
+    }
+   ],
+   "avg": 3.13
+  },
+  "BHA": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "SUN",
+     "home": false,
+     "fdr": 2.58
+    },
+    {
+     "gw": 7,
+     "opp": "CRY",
+     "home": true,
+     "fdr": 2.55
+    },
+    {
+     "gw": 8,
+     "opp": "LIV",
+     "home": false,
+     "fdr": 3.93
+    },
+    {
+     "gw": 9,
+     "opp": "MCI",
+     "home": false,
+     "fdr": 5.0
+    },
+    {
+     "gw": 10,
+     "opp": "BRE",
+     "home": true,
+     "fdr": 2.79
+    },
+    {
+     "gw": 11,
+     "opp": "HUL",
+     "home": false,
+     "fdr": 1.59
+    }
+   ],
+   "avg": 3.07
+  },
+  "BOU": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "CHE",
+     "home": false,
+     "fdr": 3.95
+    },
+    {
+     "gw": 7,
+     "opp": "SUN",
+     "home": true,
+     "fdr": 1.88
+    },
+    {
+     "gw": 8,
+     "opp": "MUN",
+     "home": false,
+     "fdr": 4.23
+    },
+    {
+     "gw": 9,
+     "opp": "LEE",
+     "home": true,
+     "fdr": 2.38
+    },
+    {
+     "gw": 10,
+     "opp": "IPS",
+     "home": false,
+     "fdr": 1.59
+    },
+    {
+     "gw": 11,
+     "opp": "NFO",
+     "home": true,
+     "fdr": 2.16
+    }
+   ],
+   "avg": 2.7
+  },
+  "BRE": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "AVL",
+     "home": false,
+     "fdr": 3.24
+    },
+    {
+     "gw": 7,
+     "opp": "LIV",
+     "home": true,
+     "fdr": 3.08
+    },
+    {
+     "gw": 8,
+     "opp": "HUL",
+     "home": false,
+     "fdr": 1.59
+    },
+    {
+     "gw": 9,
+     "opp": "NFO",
+     "home": true,
+     "fdr": 2.16
+    },
+    {
+     "gw": 10,
+     "opp": "BHA",
+     "home": false,
+     "fdr": 3.79
+    },
+    {
+     "gw": 11,
+     "opp": "EVE",
+     "home": true,
+     "fdr": 2.13
+    }
+   ],
+   "avg": 2.66
+  },
+  "CHE": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "BOU",
+     "home": true,
+     "fdr": 2.89
+    },
+    {
+     "gw": 7,
+     "opp": "EVE",
+     "home": false,
+     "fdr": 2.87
+    },
+    {
+     "gw": 8,
+     "opp": "TOT",
+     "home": true,
+     "fdr": 2.03
+    },
+    {
+     "gw": 9,
+     "opp": "MUN",
+     "home": true,
+     "fdr": 3.34
+    },
+    {
+     "gw": 10,
+     "opp": "SUN",
+     "home": false,
+     "fdr": 2.58
+    },
+    {
+     "gw": 11,
+     "opp": "LEE",
+     "home": true,
+     "fdr": 2.38
+    }
+   ],
+   "avg": 2.68
+  },
+  "COV": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "NEW",
+     "home": true,
+     "fdr": 2.73
+    },
+    {
+     "gw": 7,
+     "opp": "TOT",
+     "home": false,
+     "fdr": 2.75
+    },
+    {
+     "gw": 8,
+     "opp": "FUL",
+     "home": true,
+     "fdr": 2.31
+    },
+    {
+     "gw": 9,
+     "opp": "SUN",
+     "home": true,
+     "fdr": 1.88
+    },
+    {
+     "gw": 10,
+     "opp": "EVE",
+     "home": false,
+     "fdr": 2.87
+    },
+    {
+     "gw": 11,
+     "opp": "CRY",
+     "home": true,
+     "fdr": 2.55
+    }
+   ],
+   "avg": 2.52
+  },
+  "CRY": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "NFO",
+     "home": true,
+     "fdr": 2.16
+    },
+    {
+     "gw": 7,
+     "opp": "BHA",
+     "home": false,
+     "fdr": 3.79
+    },
+    {
+     "gw": 8,
+     "opp": "NEW",
+     "home": true,
+     "fdr": 2.73
+    },
+    {
+     "gw": 9,
+     "opp": "TOT",
+     "home": false,
+     "fdr": 2.75
+    },
+    {
+     "gw": 10,
+     "opp": "LIV",
+     "home": true,
+     "fdr": 3.08
+    },
+    {
+     "gw": 11,
+     "opp": "COV",
+     "home": false,
+     "fdr": 1.59
+    }
+   ],
+   "avg": 2.68
+  },
+  "EVE": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "HUL",
+     "home": false,
+     "fdr": 1.59
+    },
+    {
+     "gw": 7,
+     "opp": "CHE",
+     "home": true,
+     "fdr": 3.09
+    },
+    {
+     "gw": 8,
+     "opp": "ARS",
+     "home": false,
+     "fdr": 5.0
+    },
+    {
+     "gw": 9,
+     "opp": "NEW",
+     "home": false,
+     "fdr": 3.54
+    },
+    {
+     "gw": 10,
+     "opp": "COV",
+     "home": true,
+     "fdr": 1.0
+    },
+    {
+     "gw": 11,
+     "opp": "BRE",
+     "home": false,
+     "fdr": 3.61
+    }
+   ],
+   "avg": 2.97
+  },
+  "FUL": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "IPS",
+     "home": false,
+     "fdr": 1.59
+    },
+    {
+     "gw": 7,
+     "opp": "HUL",
+     "home": true,
+     "fdr": 1.0
+    },
+    {
+     "gw": 8,
+     "opp": "COV",
+     "home": false,
+     "fdr": 1.59
+    },
+    {
+     "gw": 9,
+     "opp": "AVL",
+     "home": false,
+     "fdr": 3.24
+    },
+    {
+     "gw": 10,
+     "opp": "NEW",
+     "home": true,
+     "fdr": 2.73
+    },
+    {
+     "gw": 11,
+     "opp": "MCI",
+     "home": false,
+     "fdr": 5.0
+    }
+   ],
+   "avg": 2.52
+  },
+  "HUL": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "EVE",
+     "home": true,
+     "fdr": 2.13
+    },
+    {
+     "gw": 7,
      "opp": "FUL",
      "home": false,
      "fdr": 3.07
     },
+    {
+     "gw": 8,
+     "opp": "BRE",
+     "home": true,
+     "fdr": 2.79
+    },
+    {
+     "gw": 9,
+     "opp": "IPS",
+     "home": true,
+     "fdr": 1.0
+    },
+    {
+     "gw": 10,
+     "opp": "ARS",
+     "home": false,
+     "fdr": 5.0
+    },
+    {
+     "gw": 11,
+     "opp": "BHA",
+     "home": true,
+     "fdr": 2.95
+    }
+   ],
+   "avg": 2.82
+  },
+  "IPS": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "FUL",
+     "home": true,
+     "fdr": 2.31
+    },
+    {
+     "gw": 7,
+     "opp": "MCI",
+     "home": false,
+     "fdr": 5.0
+    },
+    {
+     "gw": 8,
+     "opp": "NFO",
+     "home": true,
+     "fdr": 2.16
+    },
+    {
+     "gw": 9,
+     "opp": "HUL",
+     "home": false,
+     "fdr": 1.59
+    },
+    {
+     "gw": 10,
+     "opp": "BOU",
+     "home": true,
+     "fdr": 2.89
+    },
+    {
+     "gw": 11,
+     "opp": "TOT",
+     "home": false,
+     "fdr": 2.75
+    }
+   ],
+   "avg": 2.78
+  },
+  "LEE": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "ARS",
+     "home": false,
+     "fdr": 5.0
+    },
+    {
+     "gw": 7,
+     "opp": "MUN",
+     "home": true,
+     "fdr": 3.34
+    },
+    {
+     "gw": 8,
+     "opp": "SUN",
+     "home": false,
+     "fdr": 2.58
+    },
+    {
+     "gw": 9,
+     "opp": "BOU",
+     "home": false,
+     "fdr": 3.72
+    },
+    {
+     "gw": 10,
+     "opp": "TOT",
+     "home": true,
+     "fdr": 2.03
+    },
+    {
+     "gw": 11,
+     "opp": "CHE",
+     "home": false,
+     "fdr": 3.95
+    }
+   ],
+   "avg": 3.44
+  },
+  "LIV": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "MCI",
+     "home": true,
+     "fdr": 4.02
+    },
+    {
+     "gw": 7,
+     "opp": "BRE",
+     "home": false,
+     "fdr": 3.61
+    },
+    {
+     "gw": 8,
+     "opp": "BHA",
+     "home": true,
+     "fdr": 2.95
+    },
+    {
+     "gw": 9,
+     "opp": "ARS",
+     "home": true,
+     "fdr": 4.42
+    },
+    {
+     "gw": 10,
+     "opp": "CRY",
+     "home": false,
+     "fdr": 3.34
+    },
+    {
+     "gw": 11,
+     "opp": "MUN",
+     "home": true,
+     "fdr": 3.34
+    }
+   ],
+   "avg": 3.61
+  },
+  "MCI": {
+   "fixtures": [
+    {
+     "gw": 6,
+     "opp": "LIV",
+     "home": false,
+     "fdr": 3.93
+    },
+    {
+     "gw": 7,
+     "opp": "IPS",
+     "home": true,
+     "fdr": 1.0
+    },
+    {
+     "gw": 8,
+     "opp": "AVL",
+     "home": false,
+     "fdr": 3.24
+    },
+    {
+     "gw": 9,
+     "opp": "BHA",
+     "home": true,
+     "fdr": 2.95
+    },
+    {
+     "gw": 10,
+     "opp": "NFO",
+     "home": false,
+     "fdr": 2.9
+    },
+    {
+     "gw": 11,
+     "opp": "FUL",
+     "home": true,
+     "fdr": 2.31
+    }
+   ],
+   "avg": 2.72
+  },
+  "MUN": {
+   "fixtures": [
     {
      "gw": 6,
      "opp": "TOT",
@@ -1599,18 +1593,18 @@
      "opp": "AVL",
      "home": true,
      "fdr": 2.46
+    },
+    {
+     "gw": 11,
+     "opp": "LIV",
+     "home": false,
+     "fdr": 3.93
     }
    ],
-   "avg": 2.92
+   "avg": 3.07
   },
   "NEW": {
    "fixtures": [
-    {
-     "gw": 5,
-     "opp": "HUL",
-     "home": true,
-     "fdr": 1.0
-    },
     {
      "gw": 6,
      "opp": "COV",
@@ -1640,18 +1634,18 @@
      "opp": "FUL",
      "home": false,
      "fdr": 3.07
+    },
+    {
+     "gw": 11,
+     "opp": "ARS",
+     "home": true,
+     "fdr": 4.42
     }
    ],
-   "avg": 2.27
+   "avg": 2.83
   },
   "NFO": {
    "fixtures": [
-    {
-     "gw": 5,
-     "opp": "COV",
-     "home": true,
-     "fdr": 1.0
-    },
     {
      "gw": 6,
      "opp": "CRY",
@@ -1681,18 +1675,18 @@
      "opp": "MCI",
      "home": true,
      "fdr": 4.02
+    },
+    {
+     "gw": 11,
+     "opp": "BOU",
+     "home": false,
+     "fdr": 3.72
     }
    ],
-   "avg": 3.0
+   "avg": 3.45
   },
   "SUN": {
    "fixtures": [
-    {
-     "gw": 5,
-     "opp": "MCI",
-     "home": false,
-     "fdr": 5.0
-    },
     {
      "gw": 6,
      "opp": "BHA",
@@ -1722,18 +1716,18 @@
      "opp": "CHE",
      "home": true,
      "fdr": 3.09
+    },
+    {
+     "gw": 11,
+     "opp": "AVL",
+     "home": false,
+     "fdr": 3.24
     }
    ],
-   "avg": 3.12
+   "avg": 2.83
   },
   "TOT": {
    "fixtures": [
-    {
-     "gw": 5,
-     "opp": "AVL",
-     "home": true,
-     "fdr": 2.46
-    },
     {
      "gw": 6,
      "opp": "MUN",
@@ -1763,55 +1757,49 @@
      "opp": "LEE",
      "home": false,
      "fdr": 3.14
+    },
+    {
+     "gw": 11,
+     "opp": "IPS",
+     "home": true,
+     "fdr": 1.0
     }
    ],
-   "avg": 2.89
+   "avg": 2.65
   }
  },
  "best": {
   "GK": [
    {
-    "name": "Tzolakis",
-    "team": "HUL",
-    "price": 4.6,
-    "p_start": 0.95,
-    "xp_gw1": 4.13,
-    "xp_h": 26.3,
-    "owned": 11.2,
-    "prior": false,
-    "benched": false,
-    "value": 5.72
-   },
-   {
     "name": "Raya",
     "team": "ARS",
     "price": 6.0,
-    "p_start": 0.96,
-    "xp_gw1": 4.03,
-    "xp_h": 25.9,
-    "owned": 41.0,
+    "p_start": 0.85,
+    "xp_gw1": 3.88,
+    "xp_h": 22.6,
+    "owned": 41.5,
     "prior": false,
     "benched": false,
-    "value": 4.31
+    "value": 3.77
    },
    {
-    "name": "Trafford",
-    "team": "LEE",
-    "price": 5.0,
-    "p_start": 0.96,
-    "xp_gw1": 4.14,
-    "xp_h": 23.7,
-    "owned": 5.5,
+    "name": "Tzolakis",
+    "team": "HUL",
+    "price": 4.6,
+    "p_start": 0.79,
+    "xp_gw1": 3.83,
+    "xp_h": 22.0,
+    "owned": 11.5,
     "prior": false,
     "benched": false,
-    "value": 4.75
+    "value": 4.78
    },
    {
     "name": "Kelleher",
     "team": "BRE",
     "price": 5.0,
     "p_start": 0.96,
-    "xp_gw1": 3.59,
+    "xp_gw1": 3.34,
     "xp_h": 21.3,
     "owned": 6.1,
     "prior": false,
@@ -1819,136 +1807,148 @@
     "value": 4.26
    },
    {
+    "name": "Trafford",
+    "team": "LEE",
+    "price": 5.0,
+    "p_start": 0.8,
+    "xp_gw1": 3.0,
+    "xp_h": 19.2,
+    "owned": 5.4,
+    "prior": false,
+    "benched": false,
+    "value": 3.83
+   },
+   {
+    "name": "Martinez",
+    "team": "CHE",
+    "price": 5.0,
+    "p_start": 0.81,
+    "xp_gw1": 3.16,
+    "xp_h": 19.0,
+    "owned": 4.9,
+    "prior": false,
+    "benched": false,
+    "value": 3.81
+   },
+   {
     "name": "Leno",
     "team": "FUL",
     "price": 4.5,
-    "p_start": 0.94,
-    "xp_gw1": 3.43,
-    "xp_h": 21.1,
+    "p_start": 0.83,
+    "xp_gw1": 3.08,
+    "xp_h": 18.1,
     "owned": 3.1,
-    "prior": false,
-    "benched": false,
-    "value": 4.7
-   },
-   {
-    "name": "Horn\u00ed\u010dek",
-    "team": "NEW",
-    "price": 5.0,
-    "p_start": 0.96,
-    "xp_gw1": 3.76,
-    "xp_h": 21.0,
-    "owned": 1.5,
-    "prior": false,
-    "benched": false,
-    "value": 4.19
-   },
-   {
-    "name": "Donnarumma",
-    "team": "MCI",
-    "price": 5.5,
-    "p_start": 0.94,
-    "xp_gw1": 3.81,
-    "xp_h": 20.6,
-    "owned": 7.8,
-    "prior": false,
-    "benched": false,
-    "value": 3.75
-   },
-   {
-    "name": "Suzuki",
-    "team": "AVL",
-    "price": 5.0,
-    "p_start": 0.75,
-    "xp_gw1": 3.41,
-    "xp_h": 20.5,
-    "owned": 1.8,
-    "prior": false,
-    "benched": false,
-    "value": 4.09
-   },
-   {
-    "name": "Pickford",
-    "team": "EVE",
-    "price": 5.5,
-    "p_start": 0.97,
-    "xp_gw1": 3.75,
-    "xp_h": 20.2,
-    "owned": 9.1,
-    "prior": false,
-    "benched": false,
-    "value": 3.66
-   },
-   {
-    "name": "Verbruggen",
-    "team": "BHA",
-    "price": 4.5,
-    "p_start": 0.94,
-    "xp_gw1": 3.38,
-    "xp_h": 20.1,
-    "owned": 21.5,
-    "prior": false,
-    "benched": false,
-    "value": 4.46
-   },
-   {
-    "name": "Lammens",
-    "team": "MUN",
-    "price": 4.9,
-    "p_start": 0.91,
-    "xp_gw1": 3.22,
-    "xp_h": 19.7,
-    "owned": 10.5,
     "prior": false,
     "benched": false,
     "value": 4.03
    },
    {
+    "name": "Donnarumma",
+    "team": "MCI",
+    "price": 5.5,
+    "p_start": 0.82,
+    "xp_gw1": 2.67,
+    "xp_h": 17.9,
+    "owned": 7.8,
+    "prior": false,
+    "benched": false,
+    "value": 3.25
+   },
+   {
+    "name": "Verbruggen",
+    "team": "BHA",
+    "price": 4.5,
+    "p_start": 0.83,
+    "xp_gw1": 3.09,
+    "xp_h": 17.7,
+    "owned": 21.7,
+    "prior": false,
+    "benched": false,
+    "value": 3.94
+   },
+   {
+    "name": "Suzuki",
+    "team": "AVL",
+    "price": 5.0,
+    "p_start": 0.62,
+    "xp_gw1": 2.92,
+    "xp_h": 17.2,
+    "owned": 1.8,
+    "prior": false,
+    "benched": false,
+    "value": 3.44
+   },
+   {
+    "name": "Lammens",
+    "team": "MUN",
+    "price": 4.9,
+    "p_start": 0.8,
+    "xp_gw1": 3.19,
+    "xp_h": 17.1,
+    "owned": 10.3,
+    "prior": false,
+    "benched": false,
+    "value": 3.49
+   },
+   {
+    "name": "Horn\u00ed\u010dek",
+    "team": "NEW",
+    "price": 5.0,
+    "p_start": 0.8,
+    "xp_gw1": 2.81,
+    "xp_h": 17.1,
+    "owned": 1.5,
+    "prior": false,
+    "benched": false,
+    "value": 3.41
+   },
+   {
+    "name": "Pickford",
+    "team": "EVE",
+    "price": 5.5,
+    "p_start": 0.85,
+    "xp_gw1": 2.97,
+    "xp_h": 17.0,
+    "owned": 9.0,
+    "prior": false,
+    "benched": false,
+    "value": 3.1
+   },
+   {
     "name": "A.Becker",
     "team": "LIV",
     "price": 5.5,
-    "p_start": 0.88,
-    "xp_gw1": 2.98,
-    "xp_h": 19.1,
+    "p_start": 0.77,
+    "xp_gw1": 2.82,
+    "xp_h": 17.0,
     "owned": 3.9,
     "prior": false,
     "benched": false,
-    "value": 3.47
+    "value": 3.09
    },
    {
     "name": "Roefs",
     "team": "SUN",
     "price": 4.9,
-    "p_start": 0.94,
-    "xp_gw1": 2.7,
-    "xp_h": 18.6,
+    "p_start": 0.82,
+    "xp_gw1": 2.89,
+    "xp_h": 16.6,
     "owned": 2.6,
     "prior": false,
     "benched": false,
-    "value": 3.8
+    "value": 3.39
    },
    {
     "name": "Petrovi\u0107",
     "team": "BOU",
     "price": 4.5,
-    "p_start": 0.94,
-    "xp_gw1": 3.13,
-    "xp_h": 18.5,
-    "owned": 3.1,
+    "p_start": 0.83,
+    "xp_gw1": 2.39,
+    "xp_h": 16.5,
+    "owned": 3.0,
     "prior": false,
     "benched": false,
-    "value": 4.12
-   },
-   {
-    "name": "Sels",
-    "team": "NFO",
-    "price": 5.0,
-    "p_start": 0.91,
-    "xp_gw1": 3.45,
-    "xp_h": 18.2,
-    "owned": 1.7,
-    "prior": false,
-    "benched": false,
-    "value": 3.64
+    "value": 3.66
    }
   ],
   "DEF": [
@@ -1956,181 +1956,181 @@
     "name": "Gabriel",
     "team": "ARS",
     "price": 8.0,
-    "p_start": 0.94,
-    "xp_gw1": 4.7,
-    "xp_h": 31.1,
-    "owned": 23.2,
+    "p_start": 0.82,
+    "xp_gw1": 4.69,
+    "xp_h": 27.3,
+    "owned": 23.1,
     "prior": false,
     "benched": false,
-    "value": 3.89
+    "value": 3.41
    },
    {
     "name": "Gu\u00e9hi",
     "team": "MCI",
     "price": 6.0,
-    "p_start": 0.97,
-    "xp_gw1": 5.53,
-    "xp_h": 29.8,
-    "owned": 18.5,
-    "prior": false,
-    "benched": false,
-    "value": 4.96
-   },
-   {
-    "name": "Silva",
-    "team": "BOU",
-    "price": 5.0,
-    "p_start": 0.96,
-    "xp_gw1": 4.81,
-    "xp_h": 29.1,
-    "owned": 0.4,
-    "prior": false,
-    "benched": false,
-    "value": 5.82
-   },
-   {
-    "name": "Khalaili",
-    "team": "CRY",
-    "price": 5.0,
-    "p_start": 0.77,
-    "xp_gw1": 4.18,
-    "xp_h": 26.4,
-    "owned": 0.3,
-    "prior": false,
-    "benched": false,
-    "value": 5.29
-   },
-   {
-    "name": "Tarkowski",
-    "team": "EVE",
-    "price": 6.1,
-    "p_start": 0.97,
-    "xp_gw1": 5.07,
-    "xp_h": 26.3,
-    "owned": 14.1,
+    "p_start": 0.85,
+    "xp_gw1": 3.7,
+    "xp_h": 25.9,
+    "owned": 18.6,
     "prior": false,
     "benched": false,
     "value": 4.31
    },
    {
+    "name": "Silva",
+    "team": "BOU",
+    "price": 5.0,
+    "p_start": 0.79,
+    "xp_gw1": 3.39,
+    "xp_h": 24.4,
+    "owned": 0.4,
+    "prior": false,
+    "benched": false,
+    "value": 4.89
+   },
+   {
+    "name": "Lacroix",
+    "team": "CHE",
+    "price": 5.9,
+    "p_start": 0.85,
+    "xp_gw1": 3.69,
+    "xp_h": 23.1,
+    "owned": 7.0,
+    "prior": false,
+    "benched": false,
+    "value": 3.91
+   },
+   {
     "name": "Calafiori",
     "team": "ARS",
     "price": 5.8,
-    "p_start": 0.85,
-    "xp_gw1": 3.83,
-    "xp_h": 26.2,
-    "owned": 50.2,
-    "prior": false,
-    "benched": false,
-    "value": 4.52
-   },
-   {
-    "name": "Vuskovic",
-    "team": "BHA",
-    "price": 5.0,
-    "p_start": 0.97,
-    "xp_gw1": 4.02,
-    "xp_h": 25.8,
-    "owned": 3.1,
-    "prior": false,
-    "benched": false,
-    "value": 5.15
-   },
-   {
-    "name": "Thomas",
-    "team": "COV",
-    "price": 4.0,
-    "p_start": 0.94,
-    "xp_gw1": 3.93,
-    "xp_h": 25.1,
-    "owned": 8.7,
-    "prior": false,
-    "benched": false,
-    "value": 6.28
-   },
-   {
-    "name": "Thiaw",
-    "team": "NEW",
-    "price": 5.0,
-    "p_start": 0.95,
-    "xp_gw1": 4.52,
-    "xp_h": 23.7,
-    "owned": 2.2,
-    "prior": false,
-    "benched": false,
-    "value": 4.75
-   },
-   {
-    "name": "Muharemovi\u0107",
-    "team": "LEE",
-    "price": 5.0,
-    "p_start": 0.97,
-    "xp_gw1": 4.19,
-    "xp_h": 23.6,
-    "owned": 4.3,
-    "prior": false,
-    "benched": false,
-    "value": 4.72
-   },
-   {
-    "name": "De Cuyper",
-    "team": "BHA",
-    "price": 4.9,
-    "p_start": 0.81,
-    "xp_gw1": 3.51,
-    "xp_h": 23.5,
-    "owned": 24.3,
-    "prior": false,
-    "benched": false,
-    "value": 4.8
-   },
-   {
-    "name": "Gvardiol",
-    "team": "MCI",
-    "price": 5.7,
-    "p_start": 0.81,
-    "xp_gw1": 4.23,
-    "xp_h": 22.6,
-    "owned": 25.0,
+    "p_start": 0.75,
+    "xp_gw1": 4.0,
+    "xp_h": 23.0,
+    "owned": 50.7,
     "prior": false,
     "benched": false,
     "value": 3.97
    },
    {
-    "name": "Botman",
-    "team": "NEW",
+    "name": "Khalaili",
+    "team": "CRY",
     "price": 5.0,
-    "p_start": 0.85,
-    "xp_gw1": 4.18,
+    "p_start": 0.64,
+    "xp_gw1": 4.06,
+    "xp_h": 22.4,
+    "owned": 0.3,
+    "prior": false,
+    "benched": false,
+    "value": 4.49
+   },
+   {
+    "name": "Tarkowski",
+    "team": "EVE",
+    "price": 6.1,
+    "p_start": 0.87,
+    "xp_gw1": 4.11,
+    "xp_h": 22.4,
+    "owned": 14.1,
+    "prior": false,
+    "benched": false,
+    "value": 3.68
+   },
+   {
+    "name": "Vuskovic",
+    "team": "BHA",
+    "price": 5.0,
+    "p_start": 0.81,
+    "xp_gw1": 3.97,
     "xp_h": 22.3,
-    "owned": 0.7,
+    "owned": 3.2,
     "prior": false,
     "benched": false,
     "value": 4.46
    },
    {
-    "name": "Richards",
-    "team": "CRY",
-    "price": 5.0,
-    "p_start": 0.93,
-    "xp_gw1": 3.51,
-    "xp_h": 22.3,
-    "owned": 0.6,
+    "name": "De Cuyper",
+    "team": "BHA",
+    "price": 4.9,
+    "p_start": 0.71,
+    "xp_gw1": 3.76,
+    "xp_h": 21.6,
+    "owned": 25.1,
     "prior": false,
     "benched": false,
-    "value": 4.46
+    "value": 4.42
+   },
+   {
+    "name": "Thomas",
+    "team": "COV",
+    "price": 4.0,
+    "p_start": 0.77,
+    "xp_gw1": 3.38,
+    "xp_h": 20.9,
+    "owned": 8.6,
+    "prior": false,
+    "benched": false,
+    "value": 5.23
    },
    {
     "name": "Truffert",
     "team": "BOU",
     "price": 5.5,
-    "p_start": 0.97,
-    "xp_gw1": 3.66,
-    "xp_h": 22.2,
+    "p_start": 0.87,
+    "xp_gw1": 2.81,
+    "xp_h": 20.3,
     "owned": 3.1,
     "prior": false,
     "benched": false,
-    "value": 4.04
+    "value": 3.7
+   },
+   {
+    "name": "Richards",
+    "team": "CRY",
+    "price": 5.0,
+    "p_start": 0.82,
+    "xp_gw1": 3.61,
+    "xp_h": 20.0,
+    "owned": 0.6,
+    "prior": false,
+    "benched": false,
+    "value": 3.99
+   },
+   {
+    "name": "Thiaw",
+    "team": "NEW",
+    "price": 5.0,
+    "p_start": 0.83,
+    "xp_gw1": 3.53,
+    "xp_h": 19.7,
+    "owned": 2.2,
+    "prior": false,
+    "benched": false,
+    "value": 3.94
+   },
+   {
+    "name": "Gvardiol",
+    "team": "MCI",
+    "price": 5.7,
+    "p_start": 0.71,
+    "xp_gw1": 2.8,
+    "xp_h": 19.6,
+    "owned": 25.9,
+    "prior": false,
+    "benched": false,
+    "value": 3.44
+   },
+   {
+    "name": "Virgil",
+    "team": "LIV",
+    "price": 6.5,
+    "p_start": 0.87,
+    "xp_gw1": 3.11,
+    "xp_h": 19.5,
+    "owned": 16.4,
+    "prior": false,
+    "benched": false,
+    "value": 3.0
    }
   ],
   "MID": [
@@ -2138,82 +2138,46 @@
     "name": "B.Fernandes",
     "team": "MUN",
     "price": 12.0,
-    "p_start": 0.97,
+    "p_start": 0.85,
     "xp_gw1": 6.04,
-    "xp_h": 38.7,
-    "owned": 40.7,
+    "xp_h": 33.9,
+    "owned": 39.9,
     "prior": false,
     "benched": false,
-    "value": 3.22
+    "value": 2.83
    },
    {
     "name": "Saka",
     "team": "ARS",
     "price": 9.5,
-    "p_start": 0.9,
-    "xp_gw1": 5.43,
-    "xp_h": 37.0,
-    "owned": 12.8,
+    "p_start": 0.79,
+    "xp_gw1": 5.66,
+    "xp_h": 32.6,
+    "owned": 13.1,
     "prior": false,
     "benched": false,
-    "value": 3.89
+    "value": 3.43
    },
    {
     "name": "Mbeumo",
     "team": "MUN",
     "price": 7.9,
-    "p_start": 0.94,
-    "xp_gw1": 5.11,
-    "xp_h": 32.9,
-    "owned": 22.1,
+    "p_start": 0.82,
+    "xp_gw1": 5.13,
+    "xp_h": 28.6,
+    "owned": 21.5,
     "prior": false,
     "benched": false,
-    "value": 4.16
-   },
-   {
-    "name": "Gibbs-White",
-    "team": "NFO",
-    "price": 8.0,
-    "p_start": 0.97,
-    "xp_gw1": 6.44,
-    "xp_h": 31.9,
-    "owned": 14.7,
-    "prior": false,
-    "benched": false,
-    "value": 3.99
-   },
-   {
-    "name": "M.Sangar\u00e9",
-    "team": "BRE",
-    "price": 5.7,
-    "p_start": 0.96,
-    "xp_gw1": 5.33,
-    "xp_h": 31.7,
-    "owned": 11.5,
-    "prior": false,
-    "benched": false,
-    "value": 5.55
-   },
-   {
-    "name": "Tavernier",
-    "team": "BOU",
-    "price": 6.1,
-    "p_start": 0.93,
-    "xp_gw1": 5.21,
-    "xp_h": 31.2,
-    "owned": 6.1,
-    "prior": false,
-    "benched": false,
-    "value": 5.12
+    "value": 3.63
    },
    {
     "name": "Palmer",
     "team": "CHE",
     "price": 9.7,
-    "p_start": 0.89,
-    "xp_gw1": 4.46,
+    "p_start": 0.91,
+    "xp_gw1": 4.94,
     "xp_h": 28.5,
-    "owned": 26.8,
+    "owned": 27.0,
     "prior": false,
     "benched": false,
     "value": 2.94
@@ -2223,96 +2187,132 @@
     "team": "CHE",
     "price": 7.7,
     "p_start": 0.97,
-    "xp_gw1": 4.32,
-    "xp_h": 27.5,
-    "owned": 39.1,
+    "xp_gw1": 4.92,
+    "xp_h": 28.4,
+    "owned": 40.0,
     "prior": false,
     "benched": false,
-    "value": 3.57
-   },
-   {
-    "name": "E.Le F\u00e9e",
-    "team": "SUN",
-    "price": 5.8,
-    "p_start": 0.95,
-    "xp_gw1": 3.91,
-    "xp_h": 27.2,
-    "owned": 3.7,
-    "prior": false,
-    "benched": false,
-    "value": 4.7
+    "value": 3.69
    },
    {
     "name": "Schade",
     "team": "BRE",
     "price": 6.1,
-    "p_start": 0.94,
-    "xp_gw1": 4.58,
-    "xp_h": 26.9,
-    "owned": 7.0,
+    "p_start": 0.95,
+    "xp_gw1": 4.33,
+    "xp_h": 27.6,
+    "owned": 7.9,
     "prior": false,
     "benched": false,
-    "value": 4.41
+    "value": 4.53
+   },
+   {
+    "name": "Tavernier",
+    "team": "BOU",
+    "price": 6.1,
+    "p_start": 0.81,
+    "xp_gw1": 4.25,
+    "xp_h": 27.6,
+    "owned": 6.5,
+    "prior": false,
+    "benched": false,
+    "value": 4.52
+   },
+   {
+    "name": "Gibbs-White",
+    "team": "NFO",
+    "price": 8.0,
+    "p_start": 0.85,
+    "xp_gw1": 4.46,
+    "xp_h": 26.9,
+    "owned": 16.0,
+    "prior": false,
+    "benched": false,
+    "value": 3.37
+   },
+   {
+    "name": "M.Sangar\u00e9",
+    "team": "BRE",
+    "price": 5.6,
+    "p_start": 0.79,
+    "xp_gw1": 3.88,
+    "xp_h": 24.2,
+    "owned": 11.0,
+    "prior": false,
+    "benched": false,
+    "value": 4.33
+   },
+   {
+    "name": "E.Le F\u00e9e",
+    "team": "SUN",
+    "price": 5.7,
+    "p_start": 0.83,
+    "xp_gw1": 3.97,
+    "xp_h": 24.2,
+    "owned": 3.5,
+    "prior": false,
+    "benched": false,
+    "value": 4.24
    },
    {
     "name": "Scott",
     "team": "BOU",
     "price": 6.1,
-    "p_start": 0.94,
-    "xp_gw1": 4.45,
-    "xp_h": 26.7,
+    "p_start": 0.82,
+    "xp_gw1": 3.74,
+    "xp_h": 23.6,
     "owned": 5.8,
     "prior": false,
     "benched": false,
-    "value": 4.38
-   },
-   {
-    "name": "Anderson",
-    "team": "MCI",
-    "price": 6.3,
-    "p_start": 0.92,
-    "xp_gw1": 4.52,
-    "xp_h": 26.3,
-    "owned": 4.2,
-    "prior": false,
-    "benched": false,
-    "value": 4.17
+    "value": 3.86
    },
    {
     "name": "Szoboszlai",
     "team": "LIV",
     "price": 7.0,
-    "p_start": 0.96,
-    "xp_gw1": 4.41,
-    "xp_h": 26.1,
-    "owned": 35.0,
+    "p_start": 0.84,
+    "xp_gw1": 3.83,
+    "xp_h": 23.1,
+    "owned": 34.5,
     "prior": false,
     "benched": false,
-    "value": 3.73
+    "value": 3.29
+   },
+   {
+    "name": "Anderson",
+    "team": "MCI",
+    "price": 6.3,
+    "p_start": 0.8,
+    "xp_gw1": 3.61,
+    "xp_h": 23.0,
+    "owned": 4.2,
+    "prior": false,
+    "benched": false,
+    "value": 3.65
    },
    {
     "name": "Rice",
     "team": "ARS",
     "price": 7.4,
-    "p_start": 0.97,
-    "xp_gw1": 4.02,
-    "xp_h": 25.8,
-    "owned": 12.5,
+    "p_start": 0.85,
+    "xp_gw1": 3.86,
+    "xp_h": 22.6,
+    "owned": 12.4,
     "prior": false,
     "benched": false,
-    "value": 3.48
+    "value": 3.06
    },
    {
     "name": "Stach",
     "team": "LEE",
     "price": 6.0,
-    "p_start": 0.91,
-    "xp_gw1": 4.39,
-    "xp_h": 25.2,
-    "owned": 2.7,
+    "p_start": 0.8,
+    "xp_gw1": 3.24,
+    "xp_h": 21.8,
+    "owned": 2.6,
     "prior": false,
     "benched": false,
-    "value": 4.2
+    "value": 3.63
    }
   ],
   "FWD": [
@@ -2320,181 +2320,181 @@
     "name": "Haaland",
     "team": "MCI",
     "price": 15.6,
-    "p_start": 0.95,
-    "xp_gw1": 7.23,
-    "xp_h": 42.3,
-    "owned": 73.0,
+    "p_start": 0.83,
+    "xp_gw1": 5.64,
+    "xp_h": 37.0,
+    "owned": 73.3,
     "prior": false,
     "benched": false,
-    "value": 2.71
+    "value": 2.37
    },
    {
     "name": "Emersonn",
     "team": "IPS",
     "price": 5.5,
-    "p_start": 0.95,
-    "xp_gw1": 5.68,
-    "xp_h": 35.2,
-    "owned": 3.0,
+    "p_start": 0.79,
+    "xp_gw1": 4.91,
+    "xp_h": 29.0,
+    "owned": 3.3,
     "prior": false,
     "benched": false,
-    "value": 6.41
+    "value": 5.28
    },
    {
     "name": "Thiago",
     "team": "BRE",
     "price": 7.8,
     "p_start": 0.97,
-    "xp_gw1": 4.85,
-    "xp_h": 28.1,
-    "owned": 9.1,
+    "xp_gw1": 4.26,
+    "xp_h": 27.6,
+    "owned": 8.9,
     "prior": false,
     "benched": false,
-    "value": 3.6
+    "value": 3.54
    },
    {
     "name": "Calvert-Lewin",
     "team": "LEE",
     "price": 6.0,
-    "p_start": 0.91,
-    "xp_gw1": 4.73,
-    "xp_h": 26.2,
-    "owned": 24.6,
+    "p_start": 0.8,
+    "xp_gw1": 3.03,
+    "xp_h": 22.6,
+    "owned": 25.7,
     "prior": false,
     "benched": false,
-    "value": 4.37
+    "value": 3.76
    },
    {
     "name": "Barry",
     "team": "EVE",
     "price": 5.6,
-    "p_start": 0.83,
-    "xp_gw1": 4.83,
-    "xp_h": 24.9,
-    "owned": 7.2,
+    "p_start": 0.73,
+    "xp_gw1": 3.78,
+    "xp_h": 20.9,
+    "owned": 7.9,
     "prior": false,
     "benched": false,
-    "value": 4.45
+    "value": 3.73
    },
    {
     "name": "Gonzalo",
     "team": "FUL",
     "price": 6.0,
-    "p_start": 0.97,
-    "xp_gw1": 3.76,
-    "xp_h": 23.8,
-    "owned": 3.6,
+    "p_start": 0.8,
+    "xp_gw1": 3.34,
+    "xp_h": 19.2,
+    "owned": 3.7,
     "prior": false,
     "benched": false,
-    "value": 3.96
+    "value": 3.2
    },
    {
     "name": "Isak",
     "team": "LIV",
     "price": 9.1,
-    "p_start": 0.76,
-    "xp_gw1": 3.51,
-    "xp_h": 20.6,
-    "owned": 21.8,
+    "p_start": 0.66,
+    "xp_gw1": 3.02,
+    "xp_h": 18.1,
+    "owned": 21.9,
     "prior": false,
     "benched": false,
-    "value": 2.26
+    "value": 1.99
    },
    {
     "name": "Havertz",
     "team": "ARS",
     "price": 7.6,
-    "p_start": 0.75,
-    "xp_gw1": 2.83,
-    "xp_h": 18.9,
-    "owned": 8.2,
+    "p_start": 0.65,
+    "xp_gw1": 2.88,
+    "xp_h": 16.7,
+    "owned": 8.5,
     "prior": false,
     "benched": false,
-    "value": 2.49
+    "value": 2.19
    },
    {
     "name": "Evanilson",
     "team": "BOU",
     "price": 6.0,
-    "p_start": 0.93,
-    "xp_gw1": 3.12,
-    "xp_h": 18.6,
-    "owned": 3.2,
-    "prior": false,
-    "benched": false,
-    "value": 3.11
-   },
-   {
-    "name": "Wissa",
-    "team": "NEW",
-    "price": 6.2,
-    "p_start": 0.72,
-    "xp_gw1": 3.33,
-    "xp_h": 17.0,
-    "owned": 18.6,
+    "p_start": 0.81,
+    "xp_gw1": 2.57,
+    "xp_h": 16.4,
+    "owned": 3.3,
     "prior": false,
     "benched": false,
     "value": 2.74
    },
    {
-    "name": "Kostoulas",
-    "team": "BHA",
-    "price": 5.5,
-    "p_start": 0.72,
-    "xp_gw1": 2.48,
-    "xp_h": 16.4,
-    "owned": 0.9,
-    "prior": false,
-    "benched": false,
-    "value": 2.99
-   },
-   {
     "name": "Fernandez-Pardo",
     "team": "NEW",
     "price": 6.0,
-    "p_start": 0.54,
-    "xp_gw1": 3.08,
-    "xp_h": 16.0,
+    "p_start": 0.55,
+    "xp_gw1": 2.78,
+    "xp_h": 15.1,
     "owned": 0.1,
     "prior": true,
     "benched": true,
-    "value": 2.67
-   },
-   {
-    "name": "Brobbey",
-    "team": "SUN",
-    "price": 5.8,
-    "p_start": 0.84,
-    "xp_gw1": 2.35,
-    "xp_h": 15.5,
-    "owned": 5.7,
-    "prior": false,
-    "benched": false,
-    "value": 2.68
+    "value": 2.52
    },
    {
     "name": "David",
     "team": "BHA",
-    "price": 6.0,
-    "p_start": 0.64,
-    "xp_gw1": 2.18,
-    "xp_h": 14.5,
+    "price": 5.9,
+    "p_start": 0.62,
+    "xp_gw1": 2.3,
+    "xp_h": 14.3,
     "owned": 0.2,
     "prior": true,
     "benched": true,
     "value": 2.42
    },
    {
+    "name": "Kostoulas",
+    "team": "BHA",
+    "price": 5.5,
+    "p_start": 0.6,
+    "xp_gw1": 2.26,
+    "xp_h": 14.0,
+    "owned": 1.0,
+    "prior": false,
+    "benched": false,
+    "value": 2.55
+   },
+   {
+    "name": "Wissa",
+    "team": "NEW",
+    "price": 6.2,
+    "p_start": 0.63,
+    "xp_gw1": 2.58,
+    "xp_h": 13.9,
+    "owned": 19.3,
+    "prior": false,
+    "benched": false,
+    "value": 2.24
+   },
+   {
+    "name": "Brobbey",
+    "team": "SUN",
+    "price": 5.7,
+    "p_start": 0.74,
+    "xp_gw1": 2.25,
+    "xp_h": 13.7,
+    "owned": 5.4,
+    "prior": false,
+    "benched": false,
+    "value": 2.4
+   },
+   {
     "name": "Rodr\u00edguez",
     "team": "BOU",
     "price": 6.0,
-    "p_start": 0.54,
-    "xp_gw1": 2.29,
-    "xp_h": 13.7,
+    "p_start": 0.55,
+    "xp_gw1": 2.11,
+    "xp_h": 13.6,
     "owned": 0.1,
     "prior": true,
     "benched": true,
-    "value": 2.28
+    "value": 2.26
    }
   ]
  },
@@ -2504,63 +2504,63 @@
    "pos": "FWD",
    "team": "IPS",
    "price": 5.5,
-   "xp_h": 35.2,
-   "owned": 3.0
-  },
-  {
-   "name": "Tavernier",
-   "pos": "MID",
-   "team": "BOU",
-   "price": 6.1,
-   "xp_h": 31.2,
-   "owned": 6.1
-  },
-  {
-   "name": "Silva",
-   "pos": "DEF",
-   "team": "BOU",
-   "price": 5.0,
-   "xp_h": 29.1,
-   "owned": 0.4
-  },
-  {
-   "name": "E.Le F\u00e9e",
-   "pos": "MID",
-   "team": "SUN",
-   "price": 5.8,
-   "xp_h": 27.2,
-   "owned": 3.7
+   "xp_h": 29.0,
+   "owned": 3.3
   },
   {
    "name": "Schade",
    "pos": "MID",
    "team": "BRE",
    "price": 6.1,
-   "xp_h": 26.9,
-   "owned": 7.0
+   "xp_h": 27.6,
+   "owned": 7.9
+  },
+  {
+   "name": "Tavernier",
+   "pos": "MID",
+   "team": "BOU",
+   "price": 6.1,
+   "xp_h": 27.6,
+   "owned": 6.5
+  },
+  {
+   "name": "Silva",
+   "pos": "DEF",
+   "team": "BOU",
+   "price": 5.0,
+   "xp_h": 24.4,
+   "owned": 0.4
+  },
+  {
+   "name": "E.Le F\u00e9e",
+   "pos": "MID",
+   "team": "SUN",
+   "price": 5.7,
+   "xp_h": 24.2,
+   "owned": 3.5
   },
   {
    "name": "Scott",
    "pos": "MID",
    "team": "BOU",
    "price": 6.1,
-   "xp_h": 26.7,
+   "xp_h": 23.6,
    "owned": 5.8
   },
   {
-   "name": "Khalaili",
+   "name": "Lacroix",
    "pos": "DEF",
-   "team": "CRY",
-   "price": 5.0,
-   "xp_h": 26.4,
-   "owned": 0.3
+   "team": "CHE",
+   "price": 5.9,
+   "xp_h": 23.1,
+   "owned": 7.0
   },
   {
    "name": "Anderson",
    "pos": "MID",
    "team": "MCI",
    "price": 6.3,
-   "xp_h": 26.3,
+   "xp_h": 23.0,
    "owned": 4.2
   },
   {
@@ -2568,298 +2568,298 @@
    "pos": "DEF",
    "team": "BHA",
    "price": 5.0,
-   "xp_h": 25.8,
-   "owned": 3.1
+   "xp_h": 22.3,
+   "owned": 3.2
   },
   {
    "name": "Stach",
    "pos": "MID",
    "team": "LEE",
    "price": 6.0,
-   "xp_h": 25.2,
-   "owned": 2.7
+   "xp_h": 21.8,
+   "owned": 2.6
+  },
+  {
+   "name": "Kelleher",
+   "pos": "GK",
+   "team": "BRE",
+   "price": 5.0,
+   "xp_h": 21.3,
+   "owned": 6.1
   },
   {
    "name": "Barry",
    "pos": "FWD",
    "team": "EVE",
    "price": 5.6,
-   "xp_h": 24.9,
-   "owned": 7.2
-  },
-  {
-   "name": "Gonzalo",
-   "pos": "FWD",
-   "team": "FUL",
-   "price": 6.0,
-   "xp_h": 23.8,
-   "owned": 3.6
+   "xp_h": 20.9,
+   "owned": 7.9
   }
  ],
  "captain": {
   "options": [
    {
+    "id": 411,
+    "name": "Haaland",
+    "team": "MCI",
+    "pos": "FWD",
+    "opp": "LIV",
+    "home": false,
+    "owned": 73.3,
+    "eo": 100.0,
+    "xp": 6.07,
+    "p_haul": 0.166,
+    "p_blank": 0.165,
+    "p_double_digit": 0.166,
+    "ceiling": 16,
+    "swing_up": 0.0,
+    "swing_down": -12.14
+   },
+   {
+    "id": 12,
+    "name": "Saka",
+    "team": "ARS",
+    "pos": "MID",
+    "opp": "LEE",
+    "home": true,
+    "owned": 13.1,
+    "eo": 21.0,
+    "xp": 5.84,
+    "p_haul": 0.165,
+    "p_blank": 0.211,
+    "p_double_digit": 0.165,
+    "ceiling": 14,
+    "swing_up": 9.23,
+    "swing_down": -2.45
+   },
+   {
+    "id": 316,
+    "name": "Emersonn",
+    "team": "IPS",
+    "pos": "FWD",
+    "opp": "FUL",
+    "home": true,
+    "owned": 3.3,
+    "eo": 5.3,
+    "xp": 4.84,
+    "p_haul": 0.077,
+    "p_blank": 0.213,
+    "p_double_digit": 0.077,
+    "ceiling": 12,
+    "swing_up": 9.17,
+    "swing_down": -0.51
+   },
+   {
+    "id": 94,
+    "name": "Schade",
+    "team": "BRE",
+    "pos": "MID",
+    "opp": "AVL",
+    "home": false,
+    "owned": 7.9,
+    "eo": 12.6,
+    "xp": 4.77,
+    "p_haul": 0.052,
+    "p_blank": 0.05,
+    "p_double_digit": 0.052,
+    "ceiling": 13,
+    "swing_up": 8.33,
+    "swing_down": -1.21
+   },
+   {
     "id": 480,
     "name": "Gibbs-White",
     "team": "NFO",
     "pos": "MID",
-    "opp": "COV",
-    "home": true,
-    "owned": 14.7,
-    "eo": 23.5,
-    "xp": 6.63,
-    "p_haul": 0.172,
-    "p_blank": 0.03,
-    "p_double_digit": 0.172,
-    "ceiling": 14,
-    "swing_up": 10.14,
-    "swing_down": -3.12
-   },
-   {
-    "id": 426,
-    "name": "B.Fernandes",
-    "team": "MUN",
-    "pos": "MID",
-    "opp": "FUL",
+    "opp": "CRY",
     "home": false,
-    "owned": 40.7,
-    "eo": 65.1,
-    "xp": 6.08,
-    "p_haul": 0.141,
-    "p_blank": 0.03,
-    "p_double_digit": 0.141,
+    "owned": 16.0,
+    "eo": 25.6,
+    "xp": 4.67,
+    "p_haul": 0.072,
+    "p_blank": 0.146,
+    "p_double_digit": 0.072,
     "ceiling": 13,
-    "swing_up": 4.24,
-    "swing_down": -7.92
+    "swing_up": 6.95,
+    "swing_down": -2.39
    },
    {
-    "id": 388,
-    "name": "Gu\u00e9hi",
-    "team": "MCI",
-    "pos": "DEF",
-    "opp": "SUN",
-    "home": true,
-    "owned": 18.5,
-    "eo": 29.6,
-    "xp": 5.9,
-    "p_haul": 0.112,
-    "p_blank": 0.03,
-    "p_double_digit": 0.112,
-    "ceiling": 13,
-    "swing_up": 8.31,
-    "swing_down": -3.49
-   },
-   {
-    "id": 427,
-    "name": "Mbeumo",
-    "team": "MUN",
-    "pos": "MID",
-    "opp": "FUL",
-    "home": false,
-    "owned": 22.1,
-    "eo": 35.4,
-    "xp": 5.74,
-    "p_haul": 0.116,
-    "p_blank": 0.057,
-    "p_double_digit": 0.116,
-    "ceiling": 13,
-    "swing_up": 7.42,
-    "swing_down": -4.06
-   },
-   {
-    "id": 12,
-    "name": "Saka",
-    "team": "ARS",
+    "id": 542,
+    "name": "E.Le F\u00e9e",
+    "team": "SUN",
     "pos": "MID",
     "opp": "BHA",
-    "home": false,
-    "owned": 12.8,
-    "eo": 20.5,
-    "xp": 5.57,
-    "p_haul": 0.113,
-    "p_blank": 0.099,
-    "p_double_digit": 0.113,
-    "ceiling": 13,
-    "swing_up": 8.86,
-    "swing_down": -2.28
+    "home": true,
+    "owned": 3.5,
+    "eo": 5.6,
+    "xp": 4.52,
+    "p_haul": 0.068,
+    "p_blank": 0.172,
+    "p_double_digit": 0.068,
+    "ceiling": 11,
+    "swing_up": 8.53,
+    "swing_down": -0.51
    },
    {
-    "id": 316,
-    "name": "Emersonn",
-    "team": "IPS",
-    "pos": "FWD",
-    "opp": "EVE",
-    "home": false,
-    "owned": 3.0,
-    "eo": 4.8,
-    "xp": 5.53,
-    "p_haul": 0.073,
-    "p_blank": 0.045,
-    "p_double_digit": 0.073,
-    "ceiling": 12,
-    "swing_up": 10.53,
-    "swing_down": -0.53
-   },
-   {
-    "id": 566,
-    "name": "Silva",
-    "team": "BOU",
+    "id": 588,
+    "name": "Khalaili",
+    "team": "CRY",
     "pos": "DEF",
-    "opp": "LIV",
+    "opp": "NFO",
     "home": true,
-    "owned": 0.4,
-    "eo": 0.6,
-    "xp": 5.5,
-    "p_haul": 0.096,
-    "p_blank": 0.037,
-    "p_double_digit": 0.096,
+    "owned": 0.3,
+    "eo": 0.5,
+    "xp": 4.36,
+    "p_haul": 0.105,
+    "p_blank": 0.363,
+    "p_double_digit": 0.105,
     "ceiling": 13,
-    "swing_up": 10.93,
-    "swing_down": -0.07
+    "swing_up": 8.68,
+    "swing_down": -0.04
    },
    {
-    "id": 565,
-    "name": "M.Sangar\u00e9",
+    "id": 106,
+    "name": "Thiago",
     "team": "BRE",
-    "pos": "MID",
-    "opp": "CHE",
-    "home": true,
-    "owned": 11.5,
-    "eo": 18.4,
-    "xp": 5.45,
-    "p_haul": 0.076,
-    "p_blank": 0.04,
-    "p_double_digit": 0.076,
+    "pos": "FWD",
+    "opp": "AVL",
+    "home": false,
+    "owned": 8.9,
+    "eo": 14.2,
+    "xp": 4.35,
+    "p_haul": 0.115,
+    "p_blank": 0.548,
+    "p_double_digit": 0.115,
     "ceiling": 10,
-    "swing_up": 8.89,
-    "swing_down": -2.01
+    "swing_up": 7.46,
+    "swing_down": -1.24
    }
   ],
-  "safest": "Gibbs-White",
-  "highest_ceiling": "Gibbs-White",
-  "note": "Same pick either way. Best in the whole game this week is Haaland, who you do not own."
+  "safest": "Haaland",
+  "highest_ceiling": "Saka",
+  "note": "Classic league says Haaland; head-to-head says Saka \u2014 more likely to haul, and fewer of your rivals own him. Best in the whole game this week is B.Fernandes, who you do not own."
  },
  "vice": {
   "options": [
    {
-    "id": 426,
-    "name": "B.Fernandes",
-    "team": "MUN",
-    "pos": "MID",
-    "opp": "FUL",
+    "id": 411,
+    "name": "Haaland",
+    "team": "MCI",
+    "pos": "FWD",
+    "opp": "LIV",
     "home": false,
-    "xp": 6.04,
-    "p_start": 0.97,
+    "xp": 5.64,
+    "p_start": 0.835,
     "same_match": false,
-    "insurance": 0.18
+    "insurance": 1.19
    },
    {
     "id": 316,
     "name": "Emersonn",
     "team": "IPS",
     "pos": "FWD",
-    "opp": "EVE",
-    "home": false,
-    "xp": 5.68,
-    "p_start": 0.955,
-    "same_match": false,
-    "insurance": 0.17
-   },
-   {
-    "id": 388,
-    "name": "Gu\u00e9hi",
-    "team": "MCI",
-    "pos": "DEF",
-    "opp": "SUN",
+    "opp": "FUL",
     "home": true,
-    "xp": 5.53,
-    "p_start": 0.97,
+    "xp": 4.91,
+    "p_start": 0.787,
     "same_match": false,
-    "insurance": 0.17
+    "insurance": 1.04
    },
    {
-    "id": 12,
-    "name": "Saka",
-    "team": "ARS",
+    "id": 480,
+    "name": "Gibbs-White",
+    "team": "NFO",
     "pos": "MID",
-    "opp": "BHA",
+    "opp": "CRY",
     "home": false,
-    "xp": 5.43,
-    "p_start": 0.901,
+    "xp": 4.46,
+    "p_start": 0.854,
     "same_match": false,
-    "insurance": 0.16
+    "insurance": 0.94
    },
    {
-    "id": 565,
-    "name": "M.Sangar\u00e9",
+    "id": 94,
+    "name": "Schade",
     "team": "BRE",
     "pos": "MID",
-    "opp": "CHE",
-    "home": true,
-    "xp": 5.33,
-    "p_start": 0.96,
+    "opp": "AVL",
+    "home": false,
+    "xp": 4.33,
+    "p_start": 0.95,
     "same_match": false,
-    "insurance": 0.16
+    "insurance": 0.91
+   },
+   {
+    "id": 106,
+    "name": "Thiago",
+    "team": "BRE",
+    "pos": "FWD",
+    "opp": "AVL",
+    "home": false,
+    "xp": 4.26,
+    "p_start": 0.97,
+    "same_match": false,
+    "insurance": 0.9
    }
   ],
-  "pick": "B.Fernandes",
-  "pick_id": 426,
-  "p_captain_absent": 0.03,
-  "insurance": 0.18,
-  "note": "Vice-captain: B.Fernandes. Your captain is 97% to play, so the armband moves about 3% of the time \u2014 worth roughly 0.2 points a week. It is real but small, so take the most certain starter among your best players rather than chasing a ceiling here."
+  "pick": "Haaland",
+  "pick_id": 411,
+  "p_captain_absent": 0.211,
+  "insurance": 1.19,
+  "note": "Vice-captain: Haaland. Your captain is 79% to play, so the armband moves about 21% of the time \u2014 worth roughly 1.2 points a week. It is real but small, so take the most certain starter among your best players rather than chasing a ceiling here."
  },
  "warnings": [],
  "scenarios": [],
  "scenario_note": "",
  "transfer": {
-  "verdict": "Make 4 transfers \u2014 worth +29.4 points over 6 gameweeks after hits.",
+  "verdict": "Make 2 transfers \u2014 worth +7.8 points over 6 gameweeks after hits.",
   "options": [
    {
     "label": "Hold \u2014 no transfer",
-    "raw": 352.76,
-    "net": 352.76,
+    "raw": 341.7,
+    "net": 341.7,
     "best": false
    },
    {
-    "label": "1 transfer: Isak out",
-    "raw": 366.07,
-    "net": 366.07,
+    "label": "1 transfer: Calvert-Lewin out",
+    "raw": 346.61,
+    "net": 346.61,
     "best": false
    },
    {
-    "label": "2 transfers: Ndiaye out, Isak out",
-    "raw": 379.97,
-    "net": 379.97,
-    "best": false
-   },
-   {
-    "label": "3 transfers: Rice out, Isak out, Mendy out",
-    "raw": 384.58,
-    "net": 380.58,
-    "best": false
-   },
-   {
-    "label": "4 transfers: Rice out, Ndiaye out, Isak out, Mendy out",
-    "raw": 390.13,
-    "net": 382.13,
+    "label": "2 transfers: Calvert-Lewin out, M.Sangar\u00e9 out",
+    "raw": 349.52,
+    "net": 349.52,
     "best": true
+   },
+   {
+    "label": "3 transfers: Calvert-Lewin out, Gibbs-White out, M.Sangar\u00e9 out",
+    "raw": 351.22,
+    "net": 347.22,
+    "best": false
+   },
+   {
+    "label": "4 transfers: Thiago out, Gibbs-White out, E.Le F\u00e9e out, M.Sangar\u00e9 out",
+    "raw": 351.91,
+    "net": 343.91,
+    "best": false
    }
   ],
-  "detail": "Out: Rice, Ndiaye, Isak, Mendy. In: Saka, Emersonn, M.Sangar\u00e9, Silva. Hit cost applied: 8. A gain under about 2 points is inside the model's own error \u2014 when it is that close, holding the transfer is usually worth more than the points, because it keeps you flexible for real team news."
+  "detail": "Out: Calvert-Lewin, M.Sangar\u00e9. In: Schade, Emersonn. Hit cost applied: 0. A gain under about 2 points is inside the model's own error \u2014 when it is that close, holding the transfer is usually worth more than the points, because it keeps you flexible for real team news."
  },
  "meta": {
-  "gw": 5,
-  "gw_last": 10,
+  "gw": 6,
+  "gw_last": 11,
   "horizon": 6,
-  "cost": 98.8,
+  "cost": 99.2,
   "bank": 0.0,
-  "xp_gw1": 57.9,
-  "xp_h": 390.13,
+  "xp_gw1": 49.1,
+  "xp_h": 349.52,
   "source": "official FPL API",
-  "fetched_at": "2026-09-18T09:02:11+00:00",
-  "deadline": "2026-09-18T17:30:00Z",
+  "fetched_at": "2026-09-19T07:01:43+00:00",
+  "deadline": "2026-10-10T10:00:00Z",
   "orphaned": false,
-  "squad_from_gw": 4,
+  "squad_from_gw": 5,
   "free_transfers": 2,
   "stale": false
  }
