@@ -75,7 +75,7 @@
    "start": true,
    "captain": true,
    "vice": false,
-   "owned": 13.4,
+   "owned": 13.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -145,7 +145,7 @@
     "pts_goal": 9.72,
     "pts_ast": 3.06,
     "pts_cs": 1.43,
-    "pts_dc": 1.78,
+    "pts_dc": 1.77,
     "pts_bonus": 5.88,
     "pts_sv": 0.0,
     "pts_app": 10.7
@@ -327,7 +327,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 3.4,
+   "owned": 3.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -390,7 +390,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 25.2,
+   "owned": 25.0,
    "prior": false,
    "benched": false,
    "comp": {
@@ -453,7 +453,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 18.4,
+   "owned": 18.3,
    "prior": false,
    "benched": false,
    "comp": {
@@ -579,7 +579,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 20.9,
+   "owned": 20.8,
    "prior": false,
    "benched": false,
    "comp": {
@@ -831,7 +831,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 12.1,
+   "owned": 12.3,
    "prior": false,
    "benched": false,
    "comp": {
@@ -923,7 +923,7 @@
      "gw": 8,
      "opp": "NEW",
      "home": true,
-     "xp": 4.25
+     "xp": 4.26
     },
     {
      "gw": 9,
@@ -1777,7 +1777,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.24,
     "xp_h": 26.8,
-    "owned": 5.4,
+    "owned": 5.5,
     "prior": false,
     "benched": false,
     "value": 5.36
@@ -1789,7 +1789,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.44,
     "xp_h": 25.9,
-    "owned": 42.1,
+    "owned": 42.2,
     "prior": false,
     "benched": false,
     "value": 4.24
@@ -1801,7 +1801,7 @@
     "p_start": 0.96,
     "xp_gw1": 4.17,
     "xp_h": 23.8,
-    "owned": 12.1,
+    "owned": 12.3,
     "prior": false,
     "benched": false,
     "value": 5.18
@@ -1825,7 +1825,7 @@
     "p_start": 0.96,
     "xp_gw1": 3.34,
     "xp_h": 21.3,
-    "owned": 6.2,
+    "owned": 6.1,
     "prior": false,
     "benched": false,
     "value": 4.26
@@ -1849,7 +1849,7 @@
     "p_start": 0.95,
     "xp_gw1": 3.14,
     "xp_h": 21.0,
-    "owned": 7.7,
+    "owned": 7.6,
     "prior": false,
     "benched": false,
     "value": 3.81
@@ -1885,7 +1885,7 @@
     "p_start": 0.93,
     "xp_gw1": 3.75,
     "xp_h": 20.3,
-    "owned": 10.1,
+    "owned": 10.0,
     "prior": false,
     "benched": false,
     "value": 4.13
@@ -1959,7 +1959,7 @@
     "p_start": 0.95,
     "xp_gw1": 5.28,
     "xp_h": 30.7,
-    "owned": 22.9,
+    "owned": 22.8,
     "prior": false,
     "benched": false,
     "value": 3.84
@@ -1971,7 +1971,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.07,
     "xp_h": 28.6,
-    "owned": 18.4,
+    "owned": 18.3,
     "prior": false,
     "benched": false,
     "value": 4.76
@@ -1995,7 +1995,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.86,
     "xp_h": 26.7,
-    "owned": 15.4,
+    "owned": 15.7,
     "prior": false,
     "benched": false,
     "value": 4.38
@@ -2031,7 +2031,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.67,
     "xp_h": 26.2,
-    "owned": 3.4,
+    "owned": 3.5,
     "prior": false,
     "benched": false,
     "value": 5.23
@@ -2053,9 +2053,9 @@
     "team": "BHA",
     "price": 4.9,
     "p_start": 0.84,
-    "xp_gw1": 4.34,
+    "xp_gw1": 4.35,
     "xp_h": 24.9,
-    "owned": 26.8,
+    "owned": 27.1,
     "prior": false,
     "benched": false,
     "value": 5.09
@@ -2075,14 +2075,14 @@
    {
     "name": "Hall",
     "team": "NEW",
-    "price": 5.2,
+    "price": 5.3,
     "p_start": 0.9,
-    "xp_gw1": 4.25,
-    "xp_h": 23.8,
-    "owned": 16.3,
+    "xp_gw1": 4.26,
+    "xp_h": 23.9,
+    "owned": 16.7,
     "prior": false,
     "benched": false,
-    "value": 4.58
+    "value": 4.5
    },
    {
     "name": "Gvardiol",
@@ -2091,7 +2091,7 @@
     "p_start": 0.83,
     "xp_gw1": 3.35,
     "xp_h": 23.4,
-    "owned": 26.4,
+    "owned": 26.5,
     "prior": false,
     "benched": false,
     "value": 4.11
@@ -2141,7 +2141,7 @@
     "p_start": 0.91,
     "xp_gw1": 6.58,
     "xp_h": 37.8,
-    "owned": 13.4,
+    "owned": 13.5,
     "prior": false,
     "benched": false,
     "value": 3.98
@@ -2149,14 +2149,14 @@
    {
     "name": "B.Fernandes",
     "team": "MUN",
-    "price": 12.0,
+    "price": 11.9,
     "p_start": 0.97,
     "xp_gw1": 6.65,
     "xp_h": 37.3,
-    "owned": 39.0,
+    "owned": 38.8,
     "prior": false,
     "benched": false,
-    "value": 3.11
+    "value": 3.14
    },
    {
     "name": "Mbeumo",
@@ -2165,7 +2165,7 @@
     "p_start": 0.95,
     "xp_gw1": 5.81,
     "xp_h": 32.4,
-    "owned": 20.9,
+    "owned": 20.8,
     "prior": false,
     "benched": false,
     "value": 4.11
@@ -2209,14 +2209,14 @@
    {
     "name": "Schade",
     "team": "BRE",
-    "price": 6.1,
+    "price": 6.2,
     "p_start": 0.95,
     "xp_gw1": 4.33,
-    "xp_h": 27.6,
-    "owned": 10.1,
+    "xp_h": 27.7,
+    "owned": 10.6,
     "prior": false,
     "benched": false,
-    "value": 4.53
+    "value": 4.46
    },
    {
     "name": "E.Le F\u00e9e",
@@ -2249,7 +2249,7 @@
     "p_start": 0.75,
     "xp_gw1": 3.88,
     "xp_h": 25.6,
-    "owned": 28.1,
+    "owned": 28.2,
     "prior": false,
     "benched": false,
     "value": 3.28
@@ -2261,7 +2261,7 @@
     "p_start": 0.93,
     "xp_gw1": 3.98,
     "xp_h": 25.4,
-    "owned": 4.1,
+    "owned": 4.0,
     "prior": false,
     "benched": false,
     "value": 4.03
@@ -2273,7 +2273,7 @@
     "p_start": 0.84,
     "xp_gw1": 4.15,
     "xp_h": 25.4,
-    "owned": 26.6,
+    "owned": 27.4,
     "prior": false,
     "benched": false,
     "value": 4.37
@@ -2285,7 +2285,7 @@
     "p_start": 0.96,
     "xp_gw1": 4.19,
     "xp_h": 25.2,
-    "owned": 33.4,
+    "owned": 33.2,
     "prior": false,
     "benched": false,
     "value": 3.61
@@ -2309,7 +2309,7 @@
     "p_start": 0.84,
     "xp_gw1": 4.26,
     "xp_h": 24.8,
-    "owned": 19.9,
+    "owned": 19.8,
     "prior": false,
     "benched": false,
     "value": 3.64
@@ -2335,7 +2335,7 @@
     "p_start": 0.96,
     "xp_gw1": 5.07,
     "xp_h": 30.0,
-    "owned": 3.4,
+    "owned": 3.5,
     "prior": false,
     "benched": false,
     "value": 5.46
@@ -2371,7 +2371,7 @@
     "p_start": 0.92,
     "xp_gw1": 3.45,
     "xp_h": 25.8,
-    "owned": 25.2,
+    "owned": 25.0,
     "prior": false,
     "benched": false,
     "value": 4.29
@@ -2395,7 +2395,7 @@
     "p_start": 0.79,
     "xp_gw1": 3.84,
     "xp_h": 23.0,
-    "owned": 22.2,
+    "owned": 22.3,
     "prior": false,
     "benched": false,
     "value": 2.53
@@ -2407,7 +2407,7 @@
     "p_start": 0.86,
     "xp_gw1": 3.58,
     "xp_h": 21.9,
-    "owned": 6.5,
+    "owned": 6.8,
     "prior": false,
     "benched": false,
     "value": 3.85
@@ -2443,7 +2443,7 @@
     "p_start": 0.78,
     "xp_gw1": 2.94,
     "xp_h": 18.2,
-    "owned": 3.1,
+    "owned": 3.4,
     "prior": false,
     "benched": false,
     "value": 3.24
@@ -2455,7 +2455,7 @@
     "p_start": 0.76,
     "xp_gw1": 3.21,
     "xp_h": 17.3,
-    "owned": 18.8,
+    "owned": 18.7,
     "prior": false,
     "benched": false,
     "value": 2.78
@@ -2513,7 +2513,7 @@
    "team": "IPS",
    "price": 5.5,
    "xp_h": 30.0,
-   "owned": 3.4
+   "owned": 3.5
   },
   {
    "name": "Silva",
@@ -2537,7 +2537,7 @@
    "team": "LEE",
    "price": 5.0,
    "xp_h": 26.8,
-   "owned": 5.4
+   "owned": 5.5
   },
   {
    "name": "Scott",
@@ -2553,7 +2553,7 @@
    "team": "BHA",
    "price": 5.0,
    "xp_h": 26.2,
-   "owned": 3.4
+   "owned": 3.5
   },
   {
    "name": "Gonzalo",
@@ -2569,7 +2569,7 @@
    "team": "MCI",
    "price": 6.3,
    "xp_h": 25.4,
-   "owned": 4.1
+   "owned": 4.0
   },
   {
    "name": "Khalaili",
@@ -2622,15 +2622,15 @@
     "pos": "MID",
     "opp": "LEE",
     "home": true,
-    "owned": 13.4,
-    "eo": 21.4,
+    "owned": 13.5,
+    "eo": 21.6,
     "xp": 6.82,
     "p_haul": 0.204,
     "p_blank": 0.087,
     "p_double_digit": 0.204,
     "ceiling": 14,
-    "swing_up": 10.72,
-    "swing_down": -2.92
+    "swing_up": 10.69,
+    "swing_down": -2.95
    },
    {
     "id": 427,
@@ -2639,15 +2639,15 @@
     "pos": "MID",
     "opp": "TOT",
     "home": true,
-    "owned": 20.9,
-    "eo": 33.4,
+    "owned": 20.8,
+    "eo": 33.3,
     "xp": 6.47,
     "p_haul": 0.163,
     "p_blank": 0.05,
     "p_double_digit": 0.163,
     "ceiling": 14,
-    "swing_up": 8.61,
-    "swing_down": -4.33
+    "swing_up": 8.63,
+    "swing_down": -4.31
    },
    {
     "id": 316,
@@ -2656,15 +2656,15 @@
     "pos": "FWD",
     "opp": "FUL",
     "home": true,
-    "owned": 3.4,
-    "eo": 5.4,
+    "owned": 3.5,
+    "eo": 5.6,
     "xp": 5.47,
     "p_haul": 0.066,
     "p_blank": 0.039,
     "p_double_digit": 0.066,
     "ceiling": 12,
-    "swing_up": 10.34,
-    "swing_down": -0.6
+    "swing_up": 10.33,
+    "swing_down": -0.61
    },
    {
     "id": 480,
@@ -2724,15 +2724,15 @@
     "pos": "DEF",
     "opp": "LIV",
     "home": false,
-    "owned": 18.4,
-    "eo": 29.4,
+    "owned": 18.3,
+    "eo": 29.3,
     "xp": 4.81,
     "p_haul": 0.053,
     "p_blank": 0.03,
     "p_double_digit": 0.053,
     "ceiling": 13,
-    "swing_up": 6.79,
-    "swing_down": -2.83
+    "swing_up": 6.8,
+    "swing_down": -2.82
    }
   ],
   "safest": "Haaland",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.6,
   "xp_h": 386.35,
   "source": "official FPL API",
-  "fetched_at": "2026-09-21T13:26:00+00:00",
+  "fetched_at": "2026-09-22T12:10:44+00:00",
   "deadline": "2026-10-10T10:00:00Z",
   "orphaned": false,
   "squad_from_gw": 5,
