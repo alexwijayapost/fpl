@@ -75,7 +75,7 @@
    "start": true,
    "captain": true,
    "vice": false,
-   "owned": 13.5,
+   "owned": 13.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -2091,7 +2091,7 @@
     "p_start": 0.83,
     "xp_gw1": 3.35,
     "xp_h": 23.4,
-    "owned": 26.6,
+    "owned": 26.7,
     "prior": false,
     "benched": false,
     "value": 4.11
@@ -2141,7 +2141,7 @@
     "p_start": 0.91,
     "xp_gw1": 6.58,
     "xp_h": 37.8,
-    "owned": 13.5,
+    "owned": 13.6,
     "prior": false,
     "benched": false,
     "value": 3.98
@@ -2443,7 +2443,7 @@
     "p_start": 0.78,
     "xp_gw1": 2.94,
     "xp_h": 18.2,
-    "owned": 3.6,
+    "owned": 3.7,
     "prior": false,
     "benched": false,
     "value": 3.24
@@ -2622,15 +2622,15 @@
     "pos": "MID",
     "opp": "LEE",
     "home": true,
-    "owned": 13.5,
-    "eo": 21.6,
+    "owned": 13.6,
+    "eo": 21.8,
     "xp": 6.82,
     "p_haul": 0.204,
     "p_blank": 0.087,
     "p_double_digit": 0.204,
     "ceiling": 14,
-    "swing_up": 10.69,
-    "swing_down": -2.95
+    "swing_up": 10.67,
+    "swing_down": -2.97
    },
    {
     "id": 427,
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.6,
   "xp_h": 386.35,
   "source": "official FPL API",
-  "fetched_at": "2026-09-24T09:03:01+00:00",
+  "fetched_at": "2026-09-24T12:22:21+00:00",
   "deadline": "2026-10-10T10:00:00Z",
   "orphaned": false,
   "squad_from_gw": 5,
