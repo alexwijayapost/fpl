@@ -195,9 +195,9 @@
    "pos": "GK",
    "team": "FUL",
    "price": 4.5,
-   "p_start": 0.952,
+   "p_start": 0.953,
    "xp_gw1": 3.59,
-   "xp_h": 21.2,
+   "xp_h": 21.3,
    "start": false,
    "captain": false,
    "vice": false,
@@ -209,7 +209,7 @@
     "pts_ast": 0.0,
     "pts_cs": 6.15,
     "pts_dc": 0.0,
-    "pts_bonus": 1.74,
+    "pts_bonus": 1.75,
     "pts_sv": 5.27,
     "pts_app": 10.86
    },
@@ -224,7 +224,7 @@
      "gw": 7,
      "opp": "HUL",
      "home": true,
-     "xp": 3.94
+     "xp": 3.95
     },
     {
      "gw": 8,
@@ -242,7 +242,7 @@
      "gw": 10,
      "opp": "NEW",
      "home": true,
-     "xp": 3.65
+     "xp": 3.66
     },
     {
      "gw": 11,
@@ -390,7 +390,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 25.0,
+   "owned": 24.9,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1836,7 +1836,7 @@
     "price": 4.5,
     "p_start": 0.95,
     "xp_gw1": 3.59,
-    "xp_h": 21.2,
+    "xp_h": 21.3,
     "owned": 3.3,
     "prior": false,
     "benched": false,
@@ -1897,7 +1897,7 @@
     "p_start": 0.95,
     "xp_gw1": 3.53,
     "xp_h": 20.2,
-    "owned": 21.7,
+    "owned": 21.6,
     "prior": false,
     "benched": false,
     "value": 4.49
@@ -1995,7 +1995,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.86,
     "xp_h": 26.7,
-    "owned": 15.9,
+    "owned": 16.0,
     "prior": false,
     "benched": false,
     "value": 4.38
@@ -2031,7 +2031,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.67,
     "xp_h": 26.2,
-    "owned": 3.5,
+    "owned": 3.6,
     "prior": false,
     "benched": false,
     "value": 5.23
@@ -2055,7 +2055,7 @@
     "p_start": 0.84,
     "xp_gw1": 4.35,
     "xp_h": 24.9,
-    "owned": 27.3,
+    "owned": 27.4,
     "prior": false,
     "benched": false,
     "value": 5.09
@@ -2079,7 +2079,7 @@
     "p_start": 0.9,
     "xp_gw1": 4.26,
     "xp_h": 23.9,
-    "owned": 16.9,
+    "owned": 17.0,
     "prior": false,
     "benched": false,
     "value": 4.5
@@ -2153,7 +2153,7 @@
     "p_start": 0.97,
     "xp_gw1": 6.65,
     "xp_h": 37.3,
-    "owned": 38.7,
+    "owned": 38.6,
     "prior": false,
     "benched": false,
     "value": 3.14
@@ -2213,7 +2213,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.33,
     "xp_h": 27.7,
-    "owned": 10.8,
+    "owned": 11.0,
     "prior": false,
     "benched": false,
     "value": 4.46
@@ -2249,7 +2249,7 @@
     "p_start": 0.75,
     "xp_gw1": 3.88,
     "xp_h": 25.6,
-    "owned": 28.2,
+    "owned": 28.3,
     "prior": false,
     "benched": false,
     "value": 3.28
@@ -2273,7 +2273,7 @@
     "p_start": 0.84,
     "xp_gw1": 4.15,
     "xp_h": 25.4,
-    "owned": 27.8,
+    "owned": 28.1,
     "prior": false,
     "benched": false,
     "value": 4.37
@@ -2285,7 +2285,7 @@
     "p_start": 0.96,
     "xp_gw1": 4.19,
     "xp_h": 25.2,
-    "owned": 33.1,
+    "owned": 33.0,
     "prior": false,
     "benched": false,
     "value": 3.61
@@ -2359,7 +2359,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.5,
     "xp_h": 25.8,
-    "owned": 3.8,
+    "owned": 3.9,
     "prior": false,
     "benched": false,
     "value": 4.3
@@ -2371,7 +2371,7 @@
     "p_start": 0.92,
     "xp_gw1": 3.45,
     "xp_h": 25.8,
-    "owned": 25.0,
+    "owned": 24.9,
     "prior": false,
     "benched": false,
     "value": 4.29
@@ -2383,7 +2383,7 @@
     "p_start": 0.85,
     "xp_gw1": 4.46,
     "xp_h": 24.6,
-    "owned": 8.1,
+    "owned": 8.2,
     "prior": false,
     "benched": false,
     "value": 4.39
@@ -2407,7 +2407,7 @@
     "p_start": 0.86,
     "xp_gw1": 3.58,
     "xp_h": 21.9,
-    "owned": 6.9,
+    "owned": 7.0,
     "prior": false,
     "benched": false,
     "value": 3.85
@@ -2443,7 +2443,7 @@
     "p_start": 0.78,
     "xp_gw1": 2.94,
     "xp_h": 18.2,
-    "owned": 3.5,
+    "owned": 3.6,
     "prior": false,
     "benched": false,
     "value": 3.24
@@ -2553,7 +2553,7 @@
    "team": "BHA",
    "price": 5.0,
    "xp_h": 26.2,
-   "owned": 3.5
+   "owned": 3.6
   },
   {
    "name": "Gonzalo",
@@ -2561,7 +2561,7 @@
    "team": "FUL",
    "price": 6.0,
    "xp_h": 25.8,
-   "owned": 3.8
+   "owned": 3.9
   },
   {
    "name": "Anderson",
@@ -2816,8 +2816,8 @@
   "options": [
    {
     "label": "Hold \u2014 no transfer",
-    "raw": 377.43,
-    "net": 377.43,
+    "raw": 377.44,
+    "net": 377.44,
     "best": false
    },
    {
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.6,
   "xp_h": 386.35,
   "source": "official FPL API",
-  "fetched_at": "2026-09-23T12:22:31+00:00",
+  "fetched_at": "2026-09-24T09:03:01+00:00",
   "deadline": "2026-10-10T10:00:00Z",
   "orphaned": false,
   "squad_from_gw": 5,
