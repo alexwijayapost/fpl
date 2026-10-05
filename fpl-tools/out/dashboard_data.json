@@ -2031,7 +2031,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.67,
     "xp_h": 26.2,
-    "owned": 3.7,
+    "owned": 3.8,
     "prior": false,
     "benched": false,
     "value": 5.23
@@ -2213,7 +2213,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.33,
     "xp_h": 27.7,
-    "owned": 11.8,
+    "owned": 11.9,
     "prior": false,
     "benched": false,
     "value": 4.46
@@ -2407,7 +2407,7 @@
     "p_start": 0.78,
     "xp_gw1": 2.93,
     "xp_h": 18.2,
-    "owned": 4.4,
+    "owned": 4.5,
     "prior": false,
     "benched": false,
     "value": 3.24
@@ -2545,7 +2545,7 @@
    "team": "BHA",
    "price": 5.0,
    "xp_h": 26.2,
-   "owned": 3.7
+   "owned": 3.8
   },
   {
    "name": "Gonzalo",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.1,
   "xp_h": 385.43,
   "source": "official FPL API",
-  "fetched_at": "2026-10-05T12:17:21+00:00",
+  "fetched_at": "2026-10-05T15:21:47+00:00",
   "deadline": "2026-10-10T10:00:00Z",
   "orphaned": false,
   "squad_from_gw": 5,
