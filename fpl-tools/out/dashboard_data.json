@@ -12,7 +12,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 50.6,
+   "owned": 50.7,
    "prior": false,
    "benched": false,
    "comp": {
@@ -75,7 +75,7 @@
    "start": true,
    "captain": true,
    "vice": false,
-   "owned": 14.5,
+   "owned": 14.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -327,7 +327,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 3.7,
+   "owned": 3.8,
    "prior": false,
    "benched": false,
    "comp": {
@@ -390,7 +390,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 24.6,
+   "owned": 24.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -768,7 +768,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 0.4,
+   "owned": 0.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1983,7 +1983,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.92,
     "xp_h": 28.2,
-    "owned": 0.4,
+    "owned": 0.5,
     "prior": false,
     "benched": false,
     "value": 5.64
@@ -2019,7 +2019,7 @@
     "p_start": 0.87,
     "xp_gw1": 4.59,
     "xp_h": 26.4,
-    "owned": 50.6,
+    "owned": 50.7,
     "prior": false,
     "benched": false,
     "value": 4.48
@@ -2043,7 +2043,7 @@
     "p_start": 0.85,
     "xp_gw1": 4.41,
     "xp_h": 25.3,
-    "owned": 28.4,
+    "owned": 28.5,
     "prior": false,
     "benched": false,
     "value": 5.06
@@ -2141,7 +2141,7 @@
     "p_start": 0.91,
     "xp_gw1": 6.58,
     "xp_h": 37.8,
-    "owned": 14.5,
+    "owned": 14.6,
     "prior": false,
     "benched": false,
     "value": 3.94
@@ -2237,7 +2237,7 @@
     "p_start": 0.85,
     "xp_gw1": 4.21,
     "xp_h": 25.8,
-    "owned": 30.4,
+    "owned": 30.5,
     "prior": false,
     "benched": false,
     "value": 4.37
@@ -2309,7 +2309,7 @@
     "p_start": 0.79,
     "xp_gw1": 3.88,
     "xp_h": 24.2,
-    "owned": 9.7,
+    "owned": 9.6,
     "prior": false,
     "benched": false,
     "value": 4.33
@@ -2335,7 +2335,7 @@
     "p_start": 0.96,
     "xp_gw1": 5.07,
     "xp_h": 30.0,
-    "owned": 3.7,
+    "owned": 3.8,
     "prior": false,
     "benched": false,
     "value": 5.46
@@ -2359,7 +2359,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.5,
     "xp_h": 25.8,
-    "owned": 4.4,
+    "owned": 4.5,
     "prior": false,
     "benched": false,
     "value": 4.3
@@ -2371,7 +2371,7 @@
     "p_start": 0.92,
     "xp_gw1": 3.45,
     "xp_h": 25.8,
-    "owned": 24.6,
+    "owned": 24.5,
     "prior": false,
     "benched": false,
     "value": 4.29
@@ -2407,7 +2407,7 @@
     "p_start": 0.78,
     "xp_gw1": 2.93,
     "xp_h": 18.2,
-    "owned": 5.1,
+    "owned": 5.2,
     "prior": false,
     "benched": false,
     "value": 3.24
@@ -2513,7 +2513,7 @@
    "team": "IPS",
    "price": 5.5,
    "xp_h": 30.0,
-   "owned": 3.7
+   "owned": 3.8
   },
   {
    "name": "Silva",
@@ -2521,7 +2521,7 @@
    "team": "BOU",
    "price": 5.0,
    "xp_h": 28.2,
-   "owned": 0.4
+   "owned": 0.5
   },
   {
    "name": "E.Le F\u00e9e",
@@ -2553,7 +2553,7 @@
    "team": "FUL",
    "price": 6.0,
    "xp_h": 25.8,
-   "owned": 4.4
+   "owned": 4.5
   },
   {
    "name": "Anderson",
@@ -2622,15 +2622,15 @@
     "pos": "MID",
     "opp": "LEE",
     "home": true,
-    "owned": 14.5,
-    "eo": 23.2,
+    "owned": 14.6,
+    "eo": 23.4,
     "xp": 6.82,
     "p_haul": 0.204,
     "p_blank": 0.087,
     "p_double_digit": 0.204,
     "ceiling": 14,
-    "swing_up": 10.48,
-    "swing_down": -3.16
+    "swing_up": 10.45,
+    "swing_down": -3.19
    },
    {
     "id": 427,
@@ -2656,15 +2656,15 @@
     "pos": "FWD",
     "opp": "FUL",
     "home": true,
-    "owned": 3.7,
-    "eo": 5.9,
+    "owned": 3.8,
+    "eo": 6.1,
     "xp": 5.47,
     "p_haul": 0.066,
     "p_blank": 0.039,
     "p_double_digit": 0.066,
     "ceiling": 12,
-    "swing_up": 10.29,
-    "swing_down": -0.65
+    "swing_up": 10.27,
+    "swing_down": -0.67
    },
    {
     "id": 480,
@@ -2724,15 +2724,15 @@
     "pos": "DEF",
     "opp": "CHE",
     "home": false,
-    "owned": 0.4,
-    "eo": 0.6,
+    "owned": 0.5,
+    "eo": 0.8,
     "xp": 4.73,
     "p_haul": 0.051,
     "p_blank": 0.03,
     "p_double_digit": 0.051,
     "ceiling": 13,
-    "swing_up": 9.4,
-    "swing_down": -0.06
+    "swing_up": 9.38,
+    "swing_down": -0.08
    }
   ],
   "safest": "Haaland",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.1,
   "xp_h": 385.46,
   "source": "official FPL API",
-  "fetched_at": "2026-10-08T14:08:02+00:00",
+  "fetched_at": "2026-10-08T15:55:43+00:00",
   "deadline": "2026-10-10T10:00:00Z",
   "orphaned": false,
   "squad_from_gw": 5,
