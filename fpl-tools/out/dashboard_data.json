@@ -642,7 +642,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 14.7,
+   "owned": 14.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -2007,7 +2007,7 @@
     "p_start": 0.87,
     "xp_gw1": 4.99,
     "xp_h": 27.6,
-    "owned": 35.8,
+    "owned": 35.9,
     "prior": false,
     "benched": false,
     "value": 5.41
@@ -2091,7 +2091,7 @@
     "p_start": 0.94,
     "xp_gw1": 4.52,
     "xp_h": 23.4,
-    "owned": 6.3,
+    "owned": 6.4,
     "prior": false,
     "benched": false,
     "value": 4.77
@@ -2177,7 +2177,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.37,
     "xp_h": 30.1,
-    "owned": 14.7,
+    "owned": 14.6,
     "prior": false,
     "benched": false,
     "value": 3.76
@@ -2225,7 +2225,7 @@
     "p_start": 0.88,
     "xp_gw1": 4.69,
     "xp_h": 27.1,
-    "owned": 39.9,
+    "owned": 40.0,
     "prior": false,
     "benched": false,
     "value": 4.51
@@ -2249,7 +2249,7 @@
     "p_start": 0.77,
     "xp_gw1": 5.43,
     "xp_h": 26.9,
-    "owned": 32.3,
+    "owned": 32.4,
     "prior": false,
     "benched": false,
     "value": 3.41
@@ -2443,7 +2443,7 @@
     "p_start": 0.82,
     "xp_gw1": 2.92,
     "xp_h": 18.1,
-    "owned": 2.8,
+    "owned": 2.9,
     "prior": false,
     "benched": false,
     "value": 2.75
@@ -2724,15 +2724,15 @@
     "pos": "MID",
     "opp": "ARS",
     "home": true,
-    "owned": 14.7,
-    "eo": 23.5,
+    "owned": 14.6,
+    "eo": 23.4,
     "xp": 4.67,
     "p_haul": 0.048,
     "p_blank": 0.03,
     "p_double_digit": 0.048,
     "ceiling": 9,
-    "swing_up": 7.14,
-    "swing_down": -2.2
+    "swing_up": 7.16,
+    "swing_down": -2.18
    }
   ],
   "safest": "Haaland",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 57.0,
   "xp_h": 379.62,
   "source": "official FPL API",
-  "fetched_at": "2026-10-15T12:12:55+00:00",
+  "fetched_at": "2026-10-15T13:45:44+00:00",
   "deadline": "2026-10-17T10:00:00Z",
   "orphaned": false,
   "squad_from_gw": 6,
