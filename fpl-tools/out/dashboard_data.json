@@ -75,7 +75,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 9.8,
+   "owned": 9.9,
    "prior": false,
    "benched": false,
    "comp": {
@@ -138,7 +138,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 45.5,
+   "owned": 45.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -642,7 +642,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 28.7,
+   "owned": 28.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -2153,7 +2153,7 @@
     "p_start": 0.95,
     "xp_gw1": 5.11,
     "xp_h": 32.8,
-    "owned": 9.8,
+    "owned": 9.9,
     "prior": false,
     "benched": false,
     "value": 5.29
@@ -2165,7 +2165,7 @@
     "p_start": 0.97,
     "xp_gw1": 5.73,
     "xp_h": 32.2,
-    "owned": 28.7,
+    "owned": 28.6,
     "prior": false,
     "benched": false,
     "value": 2.73
@@ -2201,7 +2201,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.12,
     "xp_h": 25.9,
-    "owned": 45.5,
+    "owned": 45.6,
     "prior": false,
     "benched": false,
     "value": 4.18
@@ -2261,7 +2261,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.28,
     "xp_h": 24.8,
-    "owned": 11.3,
+    "owned": 11.4,
     "prior": false,
     "benched": false,
     "value": 3.4
@@ -2297,7 +2297,7 @@
     "p_start": 0.93,
     "xp_gw1": 4.02,
     "xp_h": 24.0,
-    "owned": 1.1,
+    "owned": 1.2,
     "prior": false,
     "benched": false,
     "value": 4.45
@@ -2383,7 +2383,7 @@
     "p_start": 0.88,
     "xp_gw1": 3.51,
     "xp_h": 25.1,
-    "owned": 8.3,
+    "owned": 8.2,
     "prior": false,
     "benched": false,
     "value": 4.4
@@ -2395,7 +2395,7 @@
     "p_start": 0.95,
     "xp_gw1": 3.69,
     "xp_h": 23.5,
-    "owned": 4.6,
+    "owned": 4.7,
     "prior": false,
     "benched": false,
     "value": 3.85
@@ -2467,7 +2467,7 @@
     "p_start": 0.8,
     "xp_gw1": 2.95,
     "xp_h": 17.2,
-    "owned": 13.8,
+    "owned": 13.7,
     "prior": false,
     "benched": false,
     "value": 2.81
@@ -2593,7 +2593,7 @@
    "team": "FUL",
    "price": 5.4,
    "xp_h": 24.0,
-   "owned": 1.1
+   "owned": 1.2
   }
  ],
  "captain": {
@@ -2639,15 +2639,15 @@
     "pos": "MID",
     "opp": "BOU",
     "home": true,
-    "owned": 28.7,
-    "eo": 45.9,
+    "owned": 28.6,
+    "eo": 45.8,
     "xp": 6.33,
     "p_haul": 0.158,
     "p_blank": 0.03,
     "p_double_digit": 0.158,
     "ceiling": 14,
-    "swing_up": 6.85,
-    "swing_down": -5.81
+    "swing_up": 6.87,
+    "swing_down": -5.79
    },
    {
     "id": 68,
@@ -2656,15 +2656,15 @@
     "pos": "MID",
     "opp": "MUN",
     "home": false,
-    "owned": 9.8,
-    "eo": 15.7,
+    "owned": 9.9,
+    "eo": 15.8,
     "xp": 6.05,
     "p_haul": 0.118,
     "p_blank": 0.048,
     "p_double_digit": 0.118,
     "ceiling": 14,
-    "swing_up": 10.2,
-    "swing_down": -1.9
+    "swing_up": 10.18,
+    "swing_down": -1.92
    },
    {
     "id": 173,
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.8,
   "xp_h": 373.66,
   "source": "official FPL API",
-  "fetched_at": "2026-10-22T12:34:52+00:00",
+  "fetched_at": "2026-10-22T14:10:36+00:00",
   "deadline": "2026-10-23T17:30:00Z",
   "orphaned": false,
   "squad_from_gw": 7,
