@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-22T14:10:36+00:00",
+ "fetched_at": "2026-10-23T12:13:52+00:00",
  "source": "official FPL API",
  "events": [
   {
@@ -32,26 +32,26 @@
    "chip_plays": [
     {
      "chip_name": "bboost",
-     "num_played": 76603
+     "num_played": 84489
     },
     {
      "chip_name": "freehit",
-     "num_played": 48874
+     "num_played": 52691
     },
     {
      "chip_name": "wildcard",
-     "num_played": 120032
+     "num_played": 129101
     },
     {
      "chip_name": "3xc",
-     "num_played": 44844
+     "num_played": 48366
     }
    ],
    "most_selected": null,
    "most_transferred_in": null,
    "top_element": null,
    "top_element_info": null,
-   "transfers_made": 5325349,
+   "transfers_made": 5746605,
    "most_captained": null,
    "most_vice_captained": null
   }
