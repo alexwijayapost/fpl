@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-10-23T13:54:19+00:00",
+ "fetched_at": "2026-10-24T11:41:21+00:00",
  "source": "official FPL API",
  "events": [
   {
-   "id": 8,
-   "name": "Gameweek 8",
-   "deadline_time": "2026-10-23T17:30:00Z",
+   "id": 9,
+   "name": "Gameweek 9",
+   "deadline_time": "2026-10-31T11:00:00Z",
    "release_time": null,
    "average_entry_score": 0,
    "finished": false,
    "data_checked": false,
    "highest_scoring_entry": null,
-   "deadline_time_epoch": 1792776600,
+   "deadline_time_epoch": 1793444400,
    "deadline_time_game_offset": 0,
    "highest_score": null,
    "is_previous": false,
    "is_current": false,
    "is_next": true,
-   "cup_leagues_created": true,
-   "h2h_ko_matches_created": true,
+   "cup_leagues_created": false,
+   "h2h_ko_matches_created": false,
    "can_enter": true,
    "can_manage": true,
    "released": true,
@@ -29,45 +29,28 @@
     "element_types": [],
     "pick_multiplier": null
    },
-   "chip_plays": [
-    {
-     "chip_name": "bboost",
-     "num_played": 84489
-    },
-    {
-     "chip_name": "freehit",
-     "num_played": 52691
-    },
-    {
-     "chip_name": "wildcard",
-     "num_played": 129101
-    },
-    {
-     "chip_name": "3xc",
-     "num_played": 48366
-    }
-   ],
+   "chip_plays": [],
    "most_selected": null,
    "most_transferred_in": null,
    "top_element": null,
    "top_element_info": null,
-   "transfers_made": 5746605,
+   "transfers_made": 0,
    "most_captained": null,
    "most_vice_captained": null
   }
  ],
- "gw_next": 8,
- "gw_current": 7,
- "deadline": "2026-10-23T17:30:00Z",
- "gw": 8,
+ "gw_next": 9,
+ "gw_current": 8,
+ "deadline": "2026-10-31T11:00:00Z",
+ "gw": 9,
  "horizon": [
-  8,
   9,
   10,
   11,
   12,
-  13
+  13,
+  14
  ],
  "orphaned": false,
- "squad_from_gw": 7
+ "squad_from_gw": 8
 }
