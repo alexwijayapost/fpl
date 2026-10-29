@@ -75,7 +75,7 @@
    "start": true,
    "captain": false,
    "vice": true,
-   "owned": 20.2,
+   "owned": 20.3,
    "prior": false,
    "benched": false,
    "comp": {
@@ -831,7 +831,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 14.2,
+   "owned": 14.3,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1789,7 +1789,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.49,
     "xp_h": 25.7,
-    "owned": 14.2,
+    "owned": 14.3,
     "prior": false,
     "benched": false,
     "value": 5.46
@@ -1909,7 +1909,7 @@
     "p_start": 0.94,
     "xp_gw1": 3.02,
     "xp_h": 19.9,
-    "owned": 8.0,
+    "owned": 7.9,
     "prior": false,
     "benched": false,
     "value": 4.15
@@ -2091,7 +2091,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.02,
     "xp_h": 22.9,
-    "owned": 8.1,
+    "owned": 8.2,
     "prior": false,
     "benched": false,
     "value": 4.67
@@ -2141,7 +2141,7 @@
     "p_start": 0.96,
     "xp_gw1": 6.15,
     "xp_h": 35.9,
-    "owned": 20.2,
+    "owned": 20.3,
     "prior": false,
     "benched": false,
     "value": 5.61
@@ -2335,7 +2335,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.37,
     "xp_h": 27.4,
-    "owned": 3.4,
+    "owned": 3.3,
     "prior": false,
     "benched": false,
     "value": 4.98
@@ -2371,7 +2371,7 @@
     "p_start": 0.76,
     "xp_gw1": 3.92,
     "xp_h": 25.3,
-    "owned": 17.3,
+    "owned": 17.4,
     "prior": false,
     "benched": false,
     "value": 2.78
@@ -2383,7 +2383,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.16,
     "xp_h": 24.4,
-    "owned": 9.6,
+    "owned": 9.7,
     "prior": false,
     "benched": false,
     "value": 3.93
@@ -2395,7 +2395,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.95,
     "xp_h": 24.1,
-    "owned": 5.5,
+    "owned": 5.4,
     "prior": false,
     "benched": false,
     "value": 4.01
@@ -2431,7 +2431,7 @@
     "p_start": 0.86,
     "xp_gw1": 3.66,
     "xp_h": 21.5,
-    "owned": 13.9,
+    "owned": 14.1,
     "prior": false,
     "benched": false,
     "value": 3.17
@@ -2521,7 +2521,7 @@
    "team": "IPS",
    "price": 5.5,
    "xp_h": 27.4,
-   "owned": 3.4
+   "owned": 3.3
   },
   {
    "name": "Silva",
@@ -2577,7 +2577,7 @@
    "team": "FUL",
    "price": 6.0,
    "xp_h": 24.1,
-   "owned": 5.5
+   "owned": 5.4
   },
   {
    "name": "Iwobi",
@@ -2622,15 +2622,15 @@
     "pos": "MID",
     "opp": "LEE",
     "home": true,
-    "owned": 20.2,
-    "eo": 32.3,
+    "owned": 20.3,
+    "eo": 32.5,
     "xp": 6.96,
     "p_haul": 0.204,
     "p_blank": 0.039,
     "p_double_digit": 0.204,
     "ceiling": 14,
-    "swing_up": 9.42,
-    "swing_down": -4.5
+    "swing_up": 9.4,
+    "swing_down": -4.52
    },
    {
     "id": 4,
@@ -2856,7 +2856,7 @@
   "xp_gw1": 53.6,
   "xp_h": 370.59,
   "source": "official FPL API",
-  "fetched_at": "2026-10-29T13:47:57+00:00",
+  "fetched_at": "2026-10-29T15:41:33+00:00",
   "deadline": "2026-10-31T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 8,
