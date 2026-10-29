@@ -12,7 +12,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 22.7,
+   "owned": 23.0,
    "prior": false,
    "benched": false,
    "comp": {
@@ -75,7 +75,7 @@
    "start": true,
    "captain": false,
    "vice": true,
-   "owned": 19.3,
+   "owned": 20.2,
    "prior": false,
    "benched": false,
    "comp": {
@@ -138,7 +138,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 46.3,
+   "owned": 46.1,
    "prior": false,
    "benched": false,
    "comp": {
@@ -390,7 +390,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 17.0,
+   "owned": 16.9,
    "prior": false,
    "benched": false,
    "comp": {
@@ -453,7 +453,7 @@
    "start": true,
    "captain": true,
    "vice": false,
-   "owned": 78.2,
+   "owned": 78.3,
    "prior": false,
    "benched": false,
    "comp": {
@@ -516,7 +516,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 21.5,
+   "owned": 21.4,
    "prior": false,
    "benched": false,
    "comp": {
@@ -579,7 +579,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 11.9,
+   "owned": 11.8,
    "prior": false,
    "benched": false,
    "comp": {
@@ -768,7 +768,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 1.0,
+   "owned": 1.1,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1777,7 +1777,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.39,
     "xp_h": 27.6,
-    "owned": 6.1,
+    "owned": 6.2,
     "prior": false,
     "benched": false,
     "value": 5.52
@@ -1813,7 +1813,7 @@
     "p_start": 0.87,
     "xp_gw1": 3.92,
     "xp_h": 22.7,
-    "owned": 2.8,
+    "owned": 2.9,
     "prior": false,
     "benched": false,
     "value": 4.53
@@ -1861,7 +1861,7 @@
     "p_start": 0.96,
     "xp_gw1": 3.55,
     "xp_h": 20.8,
-    "owned": 7.6,
+    "owned": 7.5,
     "prior": false,
     "benched": false,
     "value": 3.79
@@ -1873,7 +1873,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.12,
     "xp_h": 20.7,
-    "owned": 22.4,
+    "owned": 22.3,
     "prior": false,
     "benched": false,
     "value": 4.51
@@ -1959,7 +1959,7 @@
     "p_start": 0.96,
     "xp_gw1": 4.86,
     "xp_h": 30.7,
-    "owned": 22.7,
+    "owned": 23.0,
     "prior": false,
     "benched": false,
     "value": 3.88
@@ -1983,7 +1983,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.66,
     "xp_h": 26.7,
-    "owned": 1.0,
+    "owned": 1.1,
     "prior": false,
     "benched": false,
     "value": 5.33
@@ -2007,7 +2007,7 @@
     "p_start": 0.89,
     "xp_gw1": 3.65,
     "xp_h": 26.1,
-    "owned": 42.6,
+    "owned": 42.5,
     "prior": false,
     "benched": false,
     "value": 4.93
@@ -2019,7 +2019,7 @@
     "p_start": 0.92,
     "xp_gw1": 4.35,
     "xp_h": 25.1,
-    "owned": 1.5,
+    "owned": 1.7,
     "prior": false,
     "benched": false,
     "value": 4.57
@@ -2079,7 +2079,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.99,
     "xp_h": 23.6,
-    "owned": 17.0,
+    "owned": 16.9,
     "prior": false,
     "benched": false,
     "value": 3.93
@@ -2091,7 +2091,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.02,
     "xp_h": 22.9,
-    "owned": 7.8,
+    "owned": 8.1,
     "prior": false,
     "benched": false,
     "value": 4.67
@@ -2141,7 +2141,7 @@
     "p_start": 0.96,
     "xp_gw1": 6.15,
     "xp_h": 35.9,
-    "owned": 19.3,
+    "owned": 20.2,
     "prior": false,
     "benched": false,
     "value": 5.61
@@ -2153,7 +2153,7 @@
     "p_start": 0.96,
     "xp_gw1": 5.17,
     "xp_h": 32.6,
-    "owned": 21.5,
+    "owned": 21.4,
     "prior": false,
     "benched": false,
     "value": 4.13
@@ -2165,7 +2165,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.74,
     "xp_h": 29.9,
-    "owned": 24.2,
+    "owned": 24.0,
     "prior": false,
     "benched": false,
     "value": 2.55
@@ -2177,7 +2177,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.61,
     "xp_h": 29.2,
-    "owned": 11.9,
+    "owned": 11.8,
     "prior": false,
     "benched": false,
     "value": 3.69
@@ -2201,7 +2201,7 @@
     "p_start": 0.9,
     "xp_gw1": 3.97,
     "xp_h": 26.0,
-    "owned": 46.3,
+    "owned": 46.1,
     "prior": false,
     "benched": false,
     "value": 4.19
@@ -2213,7 +2213,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.02,
     "xp_h": 25.2,
-    "owned": 17.5,
+    "owned": 17.4,
     "prior": false,
     "benched": false,
     "value": 3.76
@@ -2249,7 +2249,7 @@
     "p_start": 0.93,
     "xp_gw1": 4.08,
     "xp_h": 24.4,
-    "owned": 27.4,
+    "owned": 27.3,
     "prior": false,
     "benched": false,
     "value": 2.49
@@ -2261,7 +2261,7 @@
     "p_start": 0.72,
     "xp_gw1": 4.21,
     "xp_h": 24.2,
-    "owned": 38.3,
+    "owned": 38.1,
     "prior": false,
     "benched": false,
     "value": 3.03
@@ -2323,7 +2323,7 @@
     "p_start": 0.97,
     "xp_gw1": 7.06,
     "xp_h": 40.4,
-    "owned": 78.2,
+    "owned": 78.3,
     "prior": false,
     "benched": false,
     "value": 2.56
@@ -2371,7 +2371,7 @@
     "p_start": 0.76,
     "xp_gw1": 3.92,
     "xp_h": 25.3,
-    "owned": 16.8,
+    "owned": 17.3,
     "prior": false,
     "benched": false,
     "value": 2.78
@@ -2383,7 +2383,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.16,
     "xp_h": 24.4,
-    "owned": 8.7,
+    "owned": 9.6,
     "prior": false,
     "benched": false,
     "value": 3.93
@@ -2395,7 +2395,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.95,
     "xp_h": 24.1,
-    "owned": 5.6,
+    "owned": 5.5,
     "prior": false,
     "benched": false,
     "value": 4.01
@@ -2407,7 +2407,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.24,
     "xp_h": 23.5,
-    "owned": 8.9,
+    "owned": 9.0,
     "prior": false,
     "benched": false,
     "value": 3.01
@@ -2431,7 +2431,7 @@
     "p_start": 0.86,
     "xp_gw1": 3.66,
     "xp_h": 21.5,
-    "owned": 12.3,
+    "owned": 13.9,
     "prior": false,
     "benched": false,
     "value": 3.17
@@ -2455,7 +2455,7 @@
     "p_start": 0.75,
     "xp_gw1": 2.72,
     "xp_h": 17.1,
-    "owned": 5.7,
+    "owned": 5.6,
     "prior": false,
     "benched": false,
     "value": 2.27
@@ -2467,7 +2467,7 @@
     "p_start": 0.73,
     "xp_gw1": 2.89,
     "xp_h": 16.6,
-    "owned": 11.4,
+    "owned": 11.2,
     "prior": false,
     "benched": false,
     "value": 2.76
@@ -2513,7 +2513,7 @@
    "team": "LEE",
    "price": 5.0,
    "xp_h": 27.6,
-   "owned": 6.1
+   "owned": 6.2
   },
   {
    "name": "Emersonn",
@@ -2529,7 +2529,7 @@
    "team": "BOU",
    "price": 5.0,
    "xp_h": 26.7,
-   "owned": 1.0
+   "owned": 1.1
   },
   {
    "name": "Barry",
@@ -2545,7 +2545,7 @@
    "team": "BOU",
    "price": 5.5,
    "xp_h": 25.1,
-   "owned": 1.5
+   "owned": 1.7
   },
   {
    "name": "E.Le F\u00e9e",
@@ -2577,7 +2577,7 @@
    "team": "FUL",
    "price": 6.0,
    "xp_h": 24.1,
-   "owned": 5.6
+   "owned": 5.5
   },
   {
    "name": "Iwobi",
@@ -2605,7 +2605,7 @@
     "pos": "FWD",
     "opp": "BHA",
     "home": true,
-    "owned": 78.2,
+    "owned": 78.3,
     "eo": 100.0,
     "xp": 7.49,
     "p_haul": 0.239,
@@ -2622,15 +2622,15 @@
     "pos": "MID",
     "opp": "LEE",
     "home": true,
-    "owned": 19.3,
-    "eo": 30.9,
+    "owned": 20.2,
+    "eo": 32.3,
     "xp": 6.96,
     "p_haul": 0.204,
     "p_blank": 0.039,
     "p_double_digit": 0.204,
     "ceiling": 14,
-    "swing_up": 9.62,
-    "swing_down": -4.3
+    "swing_up": 9.42,
+    "swing_down": -4.5
    },
    {
     "id": 4,
@@ -2639,15 +2639,15 @@
     "pos": "DEF",
     "opp": "LIV",
     "home": false,
-    "owned": 22.7,
-    "eo": 36.3,
+    "owned": 23.0,
+    "eo": 36.8,
     "xp": 5.98,
     "p_haul": 0.135,
     "p_blank": 0.039,
     "p_double_digit": 0.135,
     "ceiling": 14,
-    "swing_up": 7.62,
-    "swing_down": -4.34
+    "swing_up": 7.56,
+    "swing_down": -4.4
    },
    {
     "id": 427,
@@ -2656,15 +2656,15 @@
     "pos": "MID",
     "opp": "CHE",
     "home": false,
-    "owned": 21.5,
-    "eo": 34.4,
+    "owned": 21.4,
+    "eo": 34.2,
     "xp": 5.77,
     "p_haul": 0.116,
     "p_blank": 0.037,
     "p_double_digit": 0.116,
     "ceiling": 13,
-    "swing_up": 7.57,
-    "swing_down": -3.97
+    "swing_up": 7.59,
+    "swing_down": -3.95
    },
    {
     "id": 566,
@@ -2673,15 +2673,15 @@
     "pos": "DEF",
     "opp": "LEE",
     "home": true,
-    "owned": 1.0,
-    "eo": 1.6,
+    "owned": 1.1,
+    "eo": 1.8,
     "xp": 5.2,
     "p_haul": 0.071,
     "p_blank": 0.03,
     "p_double_digit": 0.071,
     "ceiling": 13,
-    "swing_up": 10.23,
-    "swing_down": -0.17
+    "swing_up": 10.22,
+    "swing_down": -0.18
    },
    {
     "id": 388,
@@ -2690,15 +2690,15 @@
     "pos": "DEF",
     "opp": "BHA",
     "home": true,
-    "owned": 17.0,
-    "eo": 27.2,
+    "owned": 16.9,
+    "eo": 27.0,
     "xp": 4.96,
     "p_haul": 0.06,
     "p_blank": 0.03,
     "p_double_digit": 0.06,
     "ceiling": 13,
-    "swing_up": 7.22,
-    "swing_down": -2.7
+    "swing_up": 7.24,
+    "swing_down": -2.68
    },
    {
     "id": 480,
@@ -2707,15 +2707,15 @@
     "pos": "MID",
     "opp": "BRE",
     "home": false,
-    "owned": 11.9,
-    "eo": 19.0,
+    "owned": 11.8,
+    "eo": 18.9,
     "xp": 4.95,
     "p_haul": 0.084,
     "p_blank": 0.107,
     "p_double_digit": 0.084,
     "ceiling": 13,
-    "swing_up": 8.02,
-    "swing_down": -1.88
+    "swing_up": 8.03,
+    "swing_down": -1.87
    },
    {
     "id": 346,
@@ -2856,7 +2856,7 @@
   "xp_gw1": 53.6,
   "xp_h": 370.59,
   "source": "official FPL API",
-  "fetched_at": "2026-10-28T13:38:20+00:00",
+  "fetched_at": "2026-10-29T13:47:57+00:00",
   "deadline": "2026-10-31T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 8,
