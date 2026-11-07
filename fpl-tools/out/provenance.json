@@ -1,24 +1,24 @@
 {
- "fetched_at": "2026-11-06T16:25:20+00:00",
+ "fetched_at": "2026-11-07T13:38:04+00:00",
  "source": "official FPL API",
  "events": [
   {
-   "id": 10,
-   "name": "Gameweek 10",
-   "deadline_time": "2026-11-06T18:30:00Z",
+   "id": 11,
+   "name": "Gameweek 11",
+   "deadline_time": "2026-11-21T11:00:00Z",
    "release_time": null,
    "average_entry_score": 0,
    "finished": false,
    "data_checked": false,
    "highest_scoring_entry": null,
-   "deadline_time_epoch": 1793989800,
+   "deadline_time_epoch": 1795258800,
    "deadline_time_game_offset": 0,
    "highest_score": null,
    "is_previous": false,
    "is_current": false,
    "is_next": true,
-   "cup_leagues_created": true,
-   "h2h_ko_matches_created": true,
+   "cup_leagues_created": false,
+   "h2h_ko_matches_created": false,
    "can_enter": true,
    "can_manage": true,
    "released": true,
@@ -39,18 +39,18 @@
    "most_vice_captained": null
   }
  ],
- "gw_next": 10,
- "gw_current": 9,
- "deadline": "2026-11-06T18:30:00Z",
- "gw": 10,
+ "gw_next": 11,
+ "gw_current": 10,
+ "deadline": "2026-11-21T11:00:00Z",
+ "gw": 11,
  "horizon": [
-  10,
   11,
   12,
   13,
   14,
-  15
+  15,
+  16
  ],
  "orphaned": false,
- "squad_from_gw": 9
+ "squad_from_gw": 10
 }
