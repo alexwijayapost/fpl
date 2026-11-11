@@ -12,7 +12,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 26.0,
+   "owned": 26.1,
    "prior": false,
    "benched": false,
    "comp": {
@@ -138,7 +138,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 8.5,
+   "owned": 8.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -201,7 +201,7 @@
    "start": true,
    "captain": false,
    "vice": true,
-   "owned": 31.2,
+   "owned": 31.3,
    "prior": false,
    "benched": false,
    "comp": {
@@ -264,7 +264,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 47.6,
+   "owned": 47.7,
    "prior": false,
    "benched": false,
    "comp": {
@@ -516,7 +516,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 17.7,
+   "owned": 17.6,
    "prior": false,
    "benched": false,
    "comp": {
@@ -642,7 +642,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 19.2,
+   "owned": 19.1,
    "prior": false,
    "benched": false,
    "comp": {
@@ -705,7 +705,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 9.0,
+   "owned": 9.2,
    "prior": false,
    "benched": false,
    "comp": {
@@ -831,7 +831,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 3.6,
+   "owned": 3.7,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1809,14 +1809,14 @@
    {
     "name": "Verbruggen",
     "team": "BHA",
-    "price": 4.6,
+    "price": 4.7,
     "p_start": 0.97,
     "xp_gw1": 3.79,
     "xp_h": 23.5,
     "owned": 23.9,
     "prior": false,
     "benched": false,
-    "value": 5.1
+    "value": 4.99
    },
    {
     "name": "A.Becker",
@@ -1959,7 +1959,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.81,
     "xp_h": 30.1,
-    "owned": 9.0,
+    "owned": 9.2,
     "prior": false,
     "benched": false,
     "value": 5.69
@@ -1971,7 +1971,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.81,
     "xp_h": 29.5,
-    "owned": 26.0,
+    "owned": 26.1,
     "prior": false,
     "benched": false,
     "value": 3.64
@@ -1983,7 +1983,7 @@
     "p_start": 0.91,
     "xp_gw1": 4.55,
     "xp_h": 29.2,
-    "owned": 47.6,
+    "owned": 47.7,
     "prior": false,
     "benched": false,
     "value": 5.31
@@ -2007,7 +2007,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.61,
     "xp_h": 26.1,
-    "owned": 3.6,
+    "owned": 3.7,
     "prior": false,
     "benched": false,
     "value": 5.13
@@ -2031,7 +2031,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.67,
     "xp_h": 25.8,
-    "owned": 14.5,
+    "owned": 14.6,
     "prior": false,
     "benched": false,
     "value": 5.06
@@ -2141,7 +2141,7 @@
     "p_start": 0.97,
     "xp_gw1": 5.93,
     "xp_h": 34.2,
-    "owned": 31.2,
+    "owned": 31.3,
     "prior": false,
     "benched": false,
     "value": 5.11
@@ -2177,7 +2177,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.59,
     "xp_h": 29.4,
-    "owned": 19.2,
+    "owned": 19.1,
     "prior": false,
     "benched": false,
     "value": 3.72
@@ -2233,14 +2233,14 @@
    {
     "name": "Dewsbury-Hall",
     "team": "EVE",
-    "price": 6.6,
+    "price": 6.7,
     "p_start": 0.96,
-    "xp_gw1": 4.12,
+    "xp_gw1": 4.13,
     "xp_h": 25.6,
     "owned": 7.2,
     "prior": false,
     "benched": false,
-    "value": 3.87
+    "value": 3.82
    },
    {
     "name": "Iwobi",
@@ -2347,7 +2347,7 @@
     "p_start": 0.96,
     "xp_gw1": 5.05,
     "xp_h": 29.4,
-    "owned": 23.5,
+    "owned": 23.6,
     "prior": false,
     "benched": false,
     "value": 4.52
@@ -2359,7 +2359,7 @@
     "p_start": 0.79,
     "xp_gw1": 4.66,
     "xp_h": 27.8,
-    "owned": 24.9,
+    "owned": 25.0,
     "prior": false,
     "benched": false,
     "value": 2.99
@@ -2371,7 +2371,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.53,
     "xp_h": 26.4,
-    "owned": 30.7,
+    "owned": 30.9,
     "prior": false,
     "benched": false,
     "value": 3.71
@@ -2383,7 +2383,7 @@
     "p_start": 0.95,
     "xp_gw1": 4.14,
     "xp_h": 25.6,
-    "owned": 17.7,
+    "owned": 17.6,
     "prior": false,
     "benched": false,
     "value": 4.26
@@ -2395,7 +2395,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.02,
     "xp_h": 24.8,
-    "owned": 2.9,
+    "owned": 2.8,
     "prior": false,
     "benched": false,
     "value": 4.6
@@ -2419,7 +2419,7 @@
     "p_start": 0.88,
     "xp_gw1": 3.36,
     "xp_h": 21.2,
-    "owned": 9.9,
+    "owned": 9.8,
     "prior": false,
     "benched": false,
     "value": 3.65
@@ -2479,7 +2479,7 @@
     "p_start": 0.68,
     "xp_gw1": 2.33,
     "xp_h": 15.4,
-    "owned": 8.4,
+    "owned": 8.3,
     "prior": false,
     "benched": false,
     "value": 2.61
@@ -2491,7 +2491,7 @@
     "p_start": 0.69,
     "xp_gw1": 2.29,
     "xp_h": 14.1,
-    "owned": 1.5,
+    "owned": 1.6,
     "prior": false,
     "benched": false,
     "value": 2.67
@@ -2529,7 +2529,7 @@
    "team": "BOU",
    "price": 5.1,
    "xp_h": 26.1,
-   "owned": 3.6
+   "owned": 3.7
   },
   {
    "name": "Muharemovi\u0107",
@@ -2543,7 +2543,7 @@
    "name": "Dewsbury-Hall",
    "pos": "MID",
    "team": "EVE",
-   "price": 6.6,
+   "price": 6.7,
    "xp_h": 25.6,
    "owned": 7.2
   },
@@ -2561,7 +2561,7 @@
    "team": "IPS",
    "price": 5.4,
    "xp_h": 24.8,
-   "owned": 2.9
+   "owned": 2.8
   },
   {
    "name": "Jacquet",
@@ -2605,15 +2605,15 @@
     "pos": "MID",
     "opp": "NFO",
     "home": true,
-    "owned": 31.2,
-    "eo": 49.9,
+    "owned": 31.3,
+    "eo": 50.1,
     "xp": 6.91,
     "p_haul": 0.198,
     "p_blank": 0.032,
     "p_double_digit": 0.198,
     "ceiling": 14,
-    "swing_up": 6.92,
-    "swing_down": -6.9
+    "swing_up": 6.9,
+    "swing_down": -6.92
    },
    {
     "id": 411,
@@ -2639,15 +2639,15 @@
     "pos": "DEF",
     "opp": "NFO",
     "home": true,
-    "owned": 3.6,
-    "eo": 5.8,
+    "owned": 3.7,
+    "eo": 5.9,
     "xp": 5.94,
     "p_haul": 0.138,
     "p_blank": 0.03,
     "p_double_digit": 0.138,
     "ceiling": 14,
-    "swing_up": 11.2,
-    "swing_down": -0.68
+    "swing_up": 11.18,
+    "swing_down": -0.7
    },
    {
     "id": 249,
@@ -2690,15 +2690,15 @@
     "pos": "DEF",
     "opp": "HUL",
     "home": false,
-    "owned": 47.6,
-    "eo": 76.2,
+    "owned": 47.7,
+    "eo": 76.3,
     "xp": 5.38,
     "p_haul": 0.107,
     "p_blank": 0.088,
     "p_double_digit": 0.107,
     "ceiling": 13,
-    "swing_up": 2.57,
-    "swing_down": -8.19
+    "swing_up": 2.55,
+    "swing_down": -8.21
    },
    {
     "id": 427,
@@ -2707,15 +2707,15 @@
     "pos": "MID",
     "opp": "LIV",
     "home": false,
-    "owned": 19.2,
-    "eo": 30.7,
+    "owned": 19.1,
+    "eo": 30.6,
     "xp": 5.37,
     "p_haul": 0.087,
     "p_blank": 0.031,
     "p_double_digit": 0.087,
     "ceiling": 13,
-    "swing_up": 7.44,
-    "swing_down": -3.3
+    "swing_up": 7.46,
+    "swing_down": -3.28
    },
    {
     "id": 4,
@@ -2724,15 +2724,15 @@
     "pos": "DEF",
     "opp": "NEW",
     "home": false,
-    "owned": 26.0,
-    "eo": 41.6,
+    "owned": 26.1,
+    "eo": 41.8,
     "xp": 5.08,
     "p_haul": 0.056,
     "p_blank": 0.033,
     "p_double_digit": 0.056,
     "ceiling": 13,
-    "swing_up": 5.93,
-    "swing_down": -4.23
+    "swing_up": 5.92,
+    "swing_down": -4.24
    }
   ],
   "safest": "Tavernier",
@@ -2816,14 +2816,14 @@
   "options": [
    {
     "label": "Hold \u2014 no transfer",
-    "raw": 347.96,
-    "net": 347.96,
+    "raw": 347.95,
+    "net": 347.95,
     "best": false
    },
    {
     "label": "1 transfer: Kostoulas out",
-    "raw": 358.83,
-    "net": 358.83,
+    "raw": 358.82,
+    "net": 358.82,
     "best": false
    },
    {
@@ -2834,8 +2834,8 @@
    },
    {
     "label": "3 transfers: Kostoulas out, Gu\u00e9hi out, Khalaili out",
-    "raw": 373.53,
-    "net": 369.53,
+    "raw": 373.52,
+    "net": 369.52,
     "best": false
    },
    {
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.4,
   "xp_h": 378.13,
   "source": "official FPL API",
-  "fetched_at": "2026-11-10T15:16:50+00:00",
+  "fetched_at": "2026-11-11T14:46:30+00:00",
   "deadline": "2026-11-21T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 10,
