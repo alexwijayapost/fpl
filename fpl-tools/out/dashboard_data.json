@@ -1777,7 +1777,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.41,
     "xp_h": 28.0,
-    "owned": 6.4,
+    "owned": 6.5,
     "prior": false,
     "benched": false,
     "value": 5.59
@@ -2359,7 +2359,7 @@
     "p_start": 0.79,
     "xp_gw1": 4.66,
     "xp_h": 27.8,
-    "owned": 25.0,
+    "owned": 25.1,
     "prior": false,
     "benched": false,
     "value": 2.99
@@ -2513,7 +2513,7 @@
    "team": "LEE",
    "price": 5.0,
    "xp_h": 28.0,
-   "owned": 6.4
+   "owned": 6.5
   },
   {
    "name": "Hill",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.4,
   "xp_h": 378.13,
   "source": "official FPL API",
-  "fetched_at": "2026-11-12T15:39:00+00:00",
+  "fetched_at": "2026-11-12T17:11:39+00:00",
   "deadline": "2026-11-21T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 10,
