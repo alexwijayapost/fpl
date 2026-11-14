@@ -12,7 +12,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 26.1,
+   "owned": 26.2,
    "prior": false,
    "benched": false,
    "comp": {
@@ -138,7 +138,7 @@
    "start": false,
    "captain": false,
    "vice": false,
-   "owned": 8.6,
+   "owned": 8.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -264,7 +264,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 47.8,
+   "owned": 47.9,
    "prior": false,
    "benched": false,
    "comp": {
@@ -390,7 +390,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 10.7,
+   "owned": 10.8,
    "prior": false,
    "benched": false,
    "comp": {
@@ -642,7 +642,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 19.1,
+   "owned": 19.0,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1801,7 +1801,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.95,
     "xp_h": 24.4,
-    "owned": 47.5,
+    "owned": 47.6,
     "prior": false,
     "benched": false,
     "value": 3.94
@@ -1917,14 +1917,14 @@
    {
     "name": "Roefs",
     "team": "SUN",
-    "price": 4.9,
+    "price": 4.8,
     "p_start": 0.97,
     "xp_gw1": 3.24,
-    "xp_h": 20.3,
+    "xp_h": 20.2,
     "owned": 1.9,
     "prior": false,
     "benched": false,
-    "value": 4.14
+    "value": 4.22
    },
    {
     "name": "Rushworth",
@@ -1971,7 +1971,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.81,
     "xp_h": 29.5,
-    "owned": 26.1,
+    "owned": 26.2,
     "prior": false,
     "benched": false,
     "value": 3.64
@@ -1983,7 +1983,7 @@
     "p_start": 0.91,
     "xp_gw1": 4.55,
     "xp_h": 29.2,
-    "owned": 47.8,
+    "owned": 47.9,
     "prior": false,
     "benched": false,
     "value": 5.31
@@ -1995,7 +1995,7 @@
     "p_start": 0.93,
     "xp_gw1": 4.59,
     "xp_h": 26.3,
-    "owned": 3.0,
+    "owned": 3.1,
     "prior": false,
     "benched": false,
     "value": 4.69
@@ -2031,7 +2031,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.67,
     "xp_h": 25.8,
-    "owned": 14.7,
+    "owned": 14.8,
     "prior": false,
     "benched": false,
     "value": 5.06
@@ -2177,7 +2177,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.59,
     "xp_h": 29.4,
-    "owned": 19.1,
+    "owned": 19.0,
     "prior": false,
     "benched": false,
     "value": 3.72
@@ -2335,7 +2335,7 @@
     "p_start": 0.91,
     "xp_gw1": 5.17,
     "xp_h": 32.3,
-    "owned": 10.7,
+    "owned": 10.8,
     "prior": false,
     "benched": false,
     "value": 5.67
@@ -2347,7 +2347,7 @@
     "p_start": 0.96,
     "xp_gw1": 5.05,
     "xp_h": 29.4,
-    "owned": 23.8,
+    "owned": 23.9,
     "prior": false,
     "benched": false,
     "value": 4.52
@@ -2371,7 +2371,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.53,
     "xp_h": 26.4,
-    "owned": 31.2,
+    "owned": 31.3,
     "prior": false,
     "benched": false,
     "value": 3.71
@@ -2521,7 +2521,7 @@
    "team": "BOU",
    "price": 5.6,
    "xp_h": 26.3,
-   "owned": 3.0
+   "owned": 3.1
   },
   {
    "name": "Silva",
@@ -2673,15 +2673,15 @@
     "pos": "FWD",
     "opp": "BRE",
     "home": false,
-    "owned": 10.7,
-    "eo": 17.1,
+    "owned": 10.8,
+    "eo": 17.3,
     "xp": 5.46,
     "p_haul": 0.158,
     "p_blank": 0.089,
     "p_double_digit": 0.158,
     "ceiling": 15,
-    "swing_up": 9.05,
-    "swing_down": -1.87
+    "swing_up": 9.03,
+    "swing_down": -1.89
    },
    {
     "id": 115,
@@ -2690,15 +2690,15 @@
     "pos": "DEF",
     "opp": "HUL",
     "home": false,
-    "owned": 47.8,
-    "eo": 76.5,
+    "owned": 47.9,
+    "eo": 76.6,
     "xp": 5.38,
     "p_haul": 0.107,
     "p_blank": 0.088,
     "p_double_digit": 0.107,
     "ceiling": 13,
-    "swing_up": 2.53,
-    "swing_down": -8.23
+    "swing_up": 2.51,
+    "swing_down": -8.25
    },
    {
     "id": 427,
@@ -2707,15 +2707,15 @@
     "pos": "MID",
     "opp": "LIV",
     "home": false,
-    "owned": 19.1,
-    "eo": 30.6,
+    "owned": 19.0,
+    "eo": 30.4,
     "xp": 5.37,
     "p_haul": 0.087,
     "p_blank": 0.031,
     "p_double_digit": 0.087,
     "ceiling": 13,
-    "swing_up": 7.46,
-    "swing_down": -3.28
+    "swing_up": 7.48,
+    "swing_down": -3.26
    },
    {
     "id": 4,
@@ -2724,15 +2724,15 @@
     "pos": "DEF",
     "opp": "NEW",
     "home": false,
-    "owned": 26.1,
-    "eo": 41.8,
+    "owned": 26.2,
+    "eo": 41.9,
     "xp": 5.08,
     "p_haul": 0.056,
     "p_blank": 0.033,
     "p_double_digit": 0.056,
     "ceiling": 13,
-    "swing_up": 5.92,
-    "swing_down": -4.24
+    "swing_up": 5.9,
+    "swing_down": -4.26
    }
   ],
   "safest": "Tavernier",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.6,
   "xp_h": 379.4,
   "source": "official FPL API",
-  "fetched_at": "2026-11-13T16:49:48+00:00",
+  "fetched_at": "2026-11-14T13:50:16+00:00",
   "deadline": "2026-11-21T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 10,
