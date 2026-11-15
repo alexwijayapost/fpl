@@ -201,7 +201,7 @@
    "start": true,
    "captain": false,
    "vice": true,
-   "owned": 31.4,
+   "owned": 31.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -327,7 +327,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 48.1,
+   "owned": 48.2,
    "prior": false,
    "benched": false,
    "comp": {
@@ -705,7 +705,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 9.4,
+   "owned": 9.5,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1959,7 +1959,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.81,
     "xp_h": 30.1,
-    "owned": 9.4,
+    "owned": 9.5,
     "prior": false,
     "benched": false,
     "value": 5.69
@@ -2019,7 +2019,7 @@
     "p_start": 0.97,
     "xp_gw1": 3.93,
     "xp_h": 25.9,
-    "owned": 6.4,
+    "owned": 6.5,
     "prior": false,
     "benched": false,
     "value": 5.07
@@ -2141,7 +2141,7 @@
     "p_start": 0.97,
     "xp_gw1": 5.93,
     "xp_h": 34.2,
-    "owned": 31.4,
+    "owned": 31.5,
     "prior": false,
     "benched": false,
     "value": 5.11
@@ -2165,7 +2165,7 @@
     "p_start": 0.92,
     "xp_gw1": 4.63,
     "xp_h": 29.8,
-    "owned": 48.1,
+    "owned": 48.2,
     "prior": false,
     "benched": false,
     "value": 4.73
@@ -2189,7 +2189,7 @@
     "p_start": 0.91,
     "xp_gw1": 4.57,
     "xp_h": 29.4,
-    "owned": 20.4,
+    "owned": 20.3,
     "prior": false,
     "benched": false,
     "value": 2.53
@@ -2297,7 +2297,7 @@
     "p_start": 0.95,
     "xp_gw1": 3.96,
     "xp_h": 23.8,
-    "owned": 5.6,
+    "owned": 5.7,
     "prior": false,
     "benched": false,
     "value": 3.3
@@ -2347,7 +2347,7 @@
     "p_start": 0.96,
     "xp_gw1": 5.05,
     "xp_h": 29.4,
-    "owned": 23.9,
+    "owned": 24.0,
     "prior": false,
     "benched": false,
     "value": 4.52
@@ -2359,7 +2359,7 @@
     "p_start": 0.79,
     "xp_gw1": 4.66,
     "xp_h": 27.8,
-    "owned": 25.1,
+    "owned": 25.2,
     "prior": false,
     "benched": false,
     "value": 2.99
@@ -2371,7 +2371,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.53,
     "xp_h": 26.4,
-    "owned": 31.3,
+    "owned": 31.4,
     "prior": false,
     "benched": false,
     "value": 3.71
@@ -2537,7 +2537,7 @@
    "team": "LEE",
    "price": 5.1,
    "xp_h": 25.9,
-   "owned": 6.4
+   "owned": 6.5
   },
   {
    "name": "Dewsbury-Hall",
@@ -2593,7 +2593,7 @@
    "team": "LIV",
    "price": 7.2,
    "xp_h": 23.8,
-   "owned": 5.6
+   "owned": 5.7
   }
  ],
  "captain": {
@@ -2605,15 +2605,15 @@
     "pos": "MID",
     "opp": "NFO",
     "home": true,
-    "owned": 31.4,
-    "eo": 50.2,
+    "owned": 31.5,
+    "eo": 50.4,
     "xp": 6.91,
     "p_haul": 0.198,
     "p_blank": 0.032,
     "p_double_digit": 0.198,
     "ceiling": 14,
-    "swing_up": 6.88,
-    "swing_down": -6.94
+    "swing_up": 6.85,
+    "swing_down": -6.97
    },
    {
     "id": 411,
@@ -2816,26 +2816,26 @@
   "options": [
    {
     "label": "Hold \u2014 no transfer",
-    "raw": 348.96,
-    "net": 348.96,
+    "raw": 349.02,
+    "net": 349.02,
     "best": false
    },
    {
     "label": "1 transfer: Kostoulas out",
-    "raw": 360.06,
-    "net": 360.06,
+    "raw": 360.1,
+    "net": 360.1,
     "best": false
    },
    {
     "label": "2 transfers: Kostoulas out, Khalaili out",
-    "raw": 368.27,
-    "net": 368.27,
+    "raw": 368.28,
+    "net": 368.28,
     "best": false
    },
    {
     "label": "3 transfers: Kostoulas out, Gu\u00e9hi out, Khalaili out",
-    "raw": 374.77,
-    "net": 370.77,
+    "raw": 374.78,
+    "net": 370.78,
     "best": false
    },
    {
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.6,
   "xp_h": 379.4,
   "source": "official FPL API",
-  "fetched_at": "2026-11-14T13:50:16+00:00",
+  "fetched_at": "2026-11-15T14:24:01+00:00",
   "deadline": "2026-11-21T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 10,
