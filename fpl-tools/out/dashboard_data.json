@@ -2127,7 +2127,7 @@
     "p_start": 0.94,
     "xp_gw1": 3.79,
     "xp_h": 22.9,
-    "owned": 18.0,
+    "owned": 17.9,
     "prior": false,
     "benched": false,
     "value": 4.4
@@ -2371,7 +2371,7 @@
     "p_start": 0.89,
     "xp_gw1": 4.53,
     "xp_h": 26.4,
-    "owned": 32.3,
+    "owned": 32.4,
     "prior": false,
     "benched": false,
     "value": 3.71
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.6,
   "xp_h": 379.4,
   "source": "official FPL API",
-  "fetched_at": "2026-11-19T16:08:06+00:00",
+  "fetched_at": "2026-11-19T17:48:14+00:00",
   "deadline": "2026-11-21T11:00:00Z",
   "orphaned": false,
   "squad_from_gw": 10,
