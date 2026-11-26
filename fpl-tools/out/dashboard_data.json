@@ -642,7 +642,7 @@
    "start": true,
    "captain": false,
    "vice": false,
-   "owned": 76.9,
+   "owned": 76.8,
    "prior": false,
    "benched": false,
    "comp": {
@@ -1777,7 +1777,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.97,
     "xp_h": 27.8,
-    "owned": 8.3,
+    "owned": 8.4,
     "prior": false,
     "benched": false,
     "value": 5.45
@@ -1801,7 +1801,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.17,
     "xp_h": 23.7,
-    "owned": 24.9,
+    "owned": 25.0,
     "prior": false,
     "benched": false,
     "value": 5.05
@@ -1945,7 +1945,7 @@
     "p_start": 0.97,
     "xp_gw1": 2.91,
     "xp_h": 18.4,
-    "owned": 3.3,
+    "owned": 3.4,
     "prior": false,
     "benched": false,
     "value": 4.08
@@ -2031,7 +2031,7 @@
     "p_start": 0.97,
     "xp_gw1": 4.21,
     "xp_h": 25.2,
-    "owned": 20.0,
+    "owned": 20.1,
     "prior": false,
     "benched": false,
     "value": 4.85
@@ -2225,7 +2225,7 @@
     "p_start": 0.96,
     "xp_gw1": 4.24,
     "xp_h": 26.7,
-    "owned": 11.8,
+    "owned": 11.9,
     "prior": false,
     "benched": false,
     "value": 3.61
@@ -2261,7 +2261,7 @@
     "p_start": 0.92,
     "xp_gw1": 4.19,
     "xp_h": 25.3,
-    "owned": 1.9,
+    "owned": 2.0,
     "prior": false,
     "benched": false,
     "value": 4.6
@@ -2323,7 +2323,7 @@
     "p_start": 0.97,
     "xp_gw1": 5.16,
     "xp_h": 37.5,
-    "owned": 76.9,
+    "owned": 76.8,
     "prior": false,
     "benched": false,
     "value": 2.37
@@ -2359,7 +2359,7 @@
     "p_start": 0.81,
     "xp_gw1": 4.7,
     "xp_h": 29.5,
-    "owned": 27.7,
+    "owned": 27.8,
     "prior": false,
     "benched": false,
     "value": 3.14
@@ -2371,7 +2371,7 @@
     "p_start": 0.96,
     "xp_gw1": 4.98,
     "xp_h": 27.7,
-    "owned": 17.8,
+    "owned": 17.9,
     "prior": false,
     "benched": false,
     "value": 4.62
@@ -2431,7 +2431,7 @@
     "p_start": 0.81,
     "xp_gw1": 3.48,
     "xp_h": 19.9,
-    "owned": 8.6,
+    "owned": 8.5,
     "prior": false,
     "benched": false,
     "value": 3.5
@@ -2545,7 +2545,7 @@
    "team": "BRE",
    "price": 5.5,
    "xp_h": 25.3,
-   "owned": 1.9
+   "owned": 2.0
   },
   {
    "name": "Iwobi",
@@ -2856,7 +2856,7 @@
   "xp_gw1": 55.9,
   "xp_h": 378.74,
   "source": "official FPL API",
-  "fetched_at": "2026-11-26T17:23:25+00:00",
+  "fetched_at": "2026-11-26T18:41:53+00:00",
   "deadline": "2026-11-27T18:30:00Z",
   "orphaned": false,
   "squad_from_gw": 11,
